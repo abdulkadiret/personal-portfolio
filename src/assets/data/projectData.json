@@ -1,0 +1,68 @@
+[
+    {
+      "id": 1,
+      "title": "CYF Quiz",
+      "description": "It is a learning evaluation tool to help CYF students test their knowledge on training modules.",
+      "technologies": [
+        "React (React Hooks)",
+        "Express.js",
+        "mongoDB",
+        "SCSS",
+        "Bootstrap",
+        "React-bootstrap",
+        "Git",
+        "Github",
+        "VSCode",
+        "Slack",
+        "Heroku"
+      ],
+      "sourceCode": "https://github.com/CodeYourFuture/project-quiz",
+      "link": "https://mern-quiz-app.herokuapp.com",
+      "image": "/poster_8.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Edesia",
+      "description": "A full stack web application to connect food banks with volunteer drivers to collect surplus food from local stores around Glasgow. The app displays the store locations and available food on a map and registered drivers can pick up delivery requests. It uses JWT for both authentication and authorization. It has a login system and displays different content for drivers and administrators. The admin can add, delete and update deliveries. Drivers can view and update their personal details once registered.",
+      "technologies": [
+        "React",
+        "Node.js",
+        "Express.js",
+        "PostgreSQL",
+        "Knex.js",
+        "Bootstrap",
+        "CSS"
+      ],
+      "sourceCode": "https://github.com/CodeYourFuture/edesia",
+      "link": "https://edesia-staging.herokuapp.com",
+      "image": "/poster_8.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Booking App",
+      "description": "This app allows to capture details of reservations and the restaurant concierge will look at the list of reservations that have been made, and allows the guests to mark their status as seated when they arrive.",
+      "technologies": [
+        "React (React Hooks)",
+        "Redux",
+        "Redux-persist",
+        "React-hook-form",
+        "Bootstrap",
+        "React-bootstrap",
+        "Jest",
+        "React-testing-library"
+      ],
+      "sourceCode": "https://github.com/abdulkadiret/booking-app",
+      "link": "https://akey-booking-app.netlify.app/",
+      "image": "/poster_8.jpg"
+    },
+    {
+      "id": 4,
+      "title": "ToDo App",
+      "description": "It Add a todo item/ Display todo items in a list/ Edit a todo item/ Delete a todo item/ Mark a todo item as: completed/ Undo mark completed/ Clear-completed todo items/ Toggle/Un-toggle all todo items/ Filter todo items as: All, Active, Completed",
+      "technologies": ["React (React Hooks)", "React-bootstrap", "Bootstrap"],
+      "sourceCode": "https://github.com/abdulkadiret/Todo-App",
+      "link": "https://epic-payne-61e591.netlify.app/",
+      "image": "/poster_8.jpg"
+    }
+  ]
+  

@@ -1,0 +1,55 @@
+[
+    {
+      "id": 1,
+      "institution": "Glasgow Clyde College",
+      "location": "Glasgow, UK",
+      "course": "Professional Development Award (PDA) in Software Development",
+      "date": "September 2020 – December 2020",
+      "description": [
+        "I developed skills in software analysis, design, implementation and testing - in addition to applying them in the final project and in many coursework projects."
+      ]
+    },
+    {
+      "id": 2,
+      "institution": "Code Division",
+      "location": "Glasgow, UK",
+      "course": "SQA accredited (Level 7) Software Development",
+      "date": "May 2020 – July 2020",
+      "description": [
+        "I developed my knowledge of programming, algorithms, data types, data structures, modularity, and object oriented programming in Java, user centered design and testing techniques.",
+        "I applied the knowledge and skills I gained in many coursework projects."
+      ]
+    },
+    {
+      "id": 3,
+      "institution": "CodeYourFuture",
+      "location": "Glasgow, UK",
+      "course": "Full Stack Web Development Course",
+      "date": "January 2018 – September 2018",
+      "description": [
+        "Completed nine-month full-stack course for developing web applications.", "I learned HTML5, CSS3, JavaScript (ES6), React, Node, Express, SQLite, PostgreSQL, Bootstrap, Git, GitHub and Jest Testing Framework.", "For my final project, I worked with a team of three developers, as well as a product owner and a scrum master, to develop a full stack web application to connect food banks with volunteer drivers to collect surplus food from local stores around Glasgow."
+      ]
+    },
+    {
+      "id": 4,
+      "institution": "Jimma University",
+      "location": "Jimma, Ethiopia",
+      "course": "Master of Public Health (MPH)",
+      "date": "September 2012 – June 2014",
+      "description": [
+        "I developed more on my skills in problem solving, working effectively with others as demonstrated through the completion of many group works.", "I successfully completed my  dissertation, with the title of: Nutritional status and associated factors among primary school adolescents of pastoral and agro-pastoral communities, Mieso Woreda, Somali Region, Ethiopia: A comparative cross-sectional study."
+      ],
+      "link": "https://academicjournals.org/journal/JPHE/article-full-text-pdf/1A09E4861214"
+    },
+    {
+      "id": 5,
+      "institution": "Jimma University",
+      "location": "Jimma, Ethiopia",
+      "course": "BSc in Environmental Health",
+      "date": "September 2012 – June 2014",
+      "description": [
+        "I gained collaboration and problem solving skills along with several social skills such as interacting and networking with new diverse background students, adapting to a new environment and involved in extracurricular activities."
+      ]
+    }
+  ]
+  

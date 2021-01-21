@@ -1,0 +1,33 @@
+[
+    {
+      "id": 1,
+      "company": "CodeYourFuture",
+      "location": "Glasgow, UK",
+      "title": "Technical Mentor (Volunteer role)",
+      "date": "January 2019 – ongoing",
+      "role": [
+        "I use the skills I learned as a trainee at CYF to give back to the community.", "I also utilise my organisational skills from my public health career by helping organise delivery of classes and supporting as a teaching assistant to deliver the CYF Full Stack curriculum.", "I also provide support to trainees through 1-to-1 mentorship and giving constructive feedback.", "Alongside that, I work as part of a small developer team consisting of trainees and mentors on internal CYF projects."
+      ]
+    },
+    {
+      "id": 2,
+      "company": "CodeYourFuture",
+      "location": "Glasgow, UK",
+      "title": "Full Stack Developer",
+      "date": "April 2020 – November 2020",
+      "role": [
+        "Worked with a team of three developers in an Agile setting to build a learning evaluation tool for CYF to help students test their knowledge on training modules.", "I was involved from the beginning of the project, from developing the concept through to implementing features using brainstorming, planning, daily standups, and retrospectives.", "I worked across the entire application, building user interfaces using React (React Hooks), backend APIs with Express.js and working on the mongoDB database.", "Throughout the project, we collaborated closely through pair programming and frequent discussions."
+      ]
+    },
+    {
+      "id": 3,
+      "company": "CodeYourFuture",
+      "location": "Glasgow, UK",
+      "title": "Trainee Full Stack Developer",
+      "date": "Jan 2018 – Sep 2018",
+      "role": [
+        "I worked on both the frontend and backend of the project taking responsibility for building new features and fixing bugs.", "I participated in Scrum ceremonies from sprint planning, daily standups and retrospectives. I used project management tools like Trello to track my progress throughout each sprint, opened PRs and implemented any code review comments while remaining active and communicative on slack.", "The app was built in an Agile environment following the Model View Controller(MVC) design pattern using different technologies, tools and processes such as React, Node, PostgreSQL, Bootstrap, Git, GitHub, VSCode and Heroku."
+      ]
+    }
+  ]
+  
