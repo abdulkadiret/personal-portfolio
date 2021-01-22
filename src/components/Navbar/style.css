@@ -50,3 +50,11 @@
   transform: scaleX(1);
   transform-origin: left;
 }
+
+.navbar .active {
+  background: #202020;
+  border-top-left-radius: 0.2rem;
+  border-top-right-radius: 0.2rem;
+  color: #f0f0f0ed;
+  transition: all 200ms ease-out;
+}
