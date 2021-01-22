@@ -1,0 +1,19 @@
+.navbar {
+  background: transparent;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  transition: background 250ms ease-in;
+}
+
+.nav-link {
+  padding-bottom: 0;
+}
+
+.logo {
+  width: 7rem;
+  object-fit: contain;
+}
