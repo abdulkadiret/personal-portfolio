@@ -58,3 +58,21 @@
   color: #f0f0f0ed;
   transition: all 200ms ease-out;
 }
+
+.cv__link {
+  position: relative;
+  top: 5px;
+  background-color: transparent;
+  color: #202020;
+  border: none;
+}
+
+.cv__link:hover,
+.cv__link:focus,
+.cv__link:active {
+  background-color: transparent;
+  color: #202020;
+  border-color: transparent;
+  outline: 0;
+  box-shadow: inset 0 0 1px 0 #202020, 0 0 1px 1px #202020;
+}
