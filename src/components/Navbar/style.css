@@ -76,3 +76,13 @@
   outline: 0;
   box-shadow: inset 0 0 1px 0 #202020, 0 0 1px 1px #202020;
 }
+
+.download__icon {
+  height: 30px;
+  width: auto;
+  position: relative;
+  top: 0;
+  right: 0px;
+  filter: brightness(var(--brightness)) invert(var(--invert));
+  border-color: #000;
+}

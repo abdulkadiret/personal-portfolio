@@ -3,6 +3,7 @@ import './style.css';
 import { Navbar, Nav } from 'react-bootstrap';
 import { Link } from 'react-scroll';
 import logo from '../../assets/images/logo.png';
+import DownloadIcon from '../../assets/images/download-icon.gif';
 
 const Navigation = () => {
   return (
@@ -89,6 +90,12 @@ const Navigation = () => {
               className='cv__link btn mr-3'
             >
               CV
+              <img
+                className='download__icon'
+                src={DownloadIcon}
+                alt='download icon'
+                aria-hidden='true'
+              />
             </a>
           </span>
         </Navbar.Collapse>
