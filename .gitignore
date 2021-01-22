@@ -17,6 +17,9 @@
 # to ignore any .env files
 .env.* 
 
+#eslintcache
+.eslintcache
+
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
