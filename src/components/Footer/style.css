@@ -1,4 +1,7 @@
-#footer {
-  min-height: 80px;
-  background: purple;
+.footer__copyright {
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f0f0f0ed;
 }
