@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './style.css';
 import { Navbar, Nav } from 'react-bootstrap';
 import { Link } from 'react-scroll';
@@ -6,9 +6,49 @@ import logo from '../../assets/images/logo.png';
 import DownloadIcon from '../../assets/images/download-icon.gif';
 
 const Navigation = () => {
+  const [navbar, setNavbar] = useState({ showNavbar: true, navbarBg: false });
+  const [scrollPos, setScrollPos] = useState(0);
+
+  const handleScroll = () => {
+    setScrollPos(document.body.getBoundingClientRect().top);
+    if (scrollPos >= 0) {
+      setNavbar({ ...navbar, showNavbar: true, navbarBg: true });
+    } else if (scrollPos >= -180) {
+      setNavbar({ ...navbar, showNavbar: true, navbarBg: false });
+    } else if (document.body.getBoundingClientRect().top > scrollPos) {
+      setNavbar({ ...navbar, showNavbar: true, navbarBg: true });
+    } else {
+      setNavbar({ ...navbar, showNavbar: false, navbarBg: false });
+    }
+  };
+
+  const getClass = () => {
+    if (navbar.showNavbar === true && navbar.navbarBg === false) {
+      return 'class_1';
+    } else if (navbar.showNavbar === true && navbar.navbarBg === true) {
+      return 'class_2';
+    } else if (navbar.showNavbar === false && navbar.navbarBg === false) {
+      return 'class_3';
+    } else {
+      return '';
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  });
+
   return (
     <>
-      <Navbar collapseOnSelect expand='lg' variant='light'>
+      <Navbar
+        className={getClass()}
+        collapseOnSelect
+        expand='lg'
+        variant='light'
+      >
         <Navbar.Brand href='/' className='navbar-logo'>
           <img className='logo' src={logo} alt='akey logo' />
         </Navbar.Brand>

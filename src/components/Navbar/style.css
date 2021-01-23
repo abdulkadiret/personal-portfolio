@@ -86,3 +86,28 @@
   filter: brightness(var(--brightness)) invert(var(--invert));
   border-color: #000;
 }
+
+.class_1 {
+  visibility: visible;
+  transition: all 1s;
+  /* background: transparent; */
+}
+
+.class_2 {
+  background: #f0f0f0ed;
+  -webkit-box-shadow: inset 0px 0px 1px #202020;
+  -moz-box-shadow: inset 0px 0px 1px #202020;
+  box-shadow: inset 0px 0px 1px #202020;
+  visibility: visible;
+  transition: all 1s;
+}
+
+.class_3 {
+  background: #f0f0f0ed;
+  -webkit-box-shadow: inset 0px 0px 1px #202020;
+  -moz-box-shadow: inset 0px 0px 1px #202020;
+  box-shadow: inset 0px 0px 1px #202020;
+  visibility: visible;
+  transition: all 1s;
+  transform: translateY(-100%);
+}
