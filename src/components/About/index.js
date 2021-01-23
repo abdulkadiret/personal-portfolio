@@ -2,6 +2,7 @@ import React from 'react';
 import './style.css';
 import { Container } from 'react-bootstrap';
 import ProfilePicture from '../../assets/images/profile-picture.jpg';
+import data from '../../assets/data/skillData.json';
 
 const About = ({ className }) => {
   return (
@@ -41,6 +42,28 @@ const About = ({ className }) => {
             </li>
           </ul>
         </>
+        <div className='mt-5'>
+          <h2 className='center'>Skills</h2>
+          <Container>
+            <div class='row justify-content-between'>
+              {data.map(({ id, domainName, skills }) => (
+                <ul
+                  key={id}
+                  className='skills__list d-flex flex-column align-items-center col-xl-2 col-lg-6 col-sm-12 ml-auto'
+                >
+                  <h3 className='domain align-self-center'>{domainName}</h3>
+                  <div className='d-flex flex-column'>
+                    {skills.map((skill, index) => (
+                      <li key={index} className='ml-3 pl-2'>
+                        {skill}
+                      </li>
+                    ))}
+                  </div>
+                </ul>
+              ))}
+            </div>
+          </Container>
+        </div>
       </Container>
     </section>
   );
