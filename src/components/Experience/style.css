@@ -1,4 +1,62 @@
 #experience {
   min-height: 100vh;
-  background: hotpink;
+}
+
+.experience__btn {
+  border-color: #202020;
+  background-color: transparent;
+  color: #202020;
+}
+
+.experience__btn:first-child {
+  padding-left: 0.5rem;
+}
+
+.experience__btn:last-child {
+  padding-right: 0.5rem;
+}
+
+.experience__btn:hover {
+  color: #b96c00;
+}
+
+.experience__btn:focus,
+.experience__btn:active {
+  color: #007bff;
+  outline: none;
+  background: #131324f6;
+}
+
+.experience__wrapper {
+  background: transparent;
+  box-sizing: border-box;
+  box-shadow: inset 0 0 1px 0 #202020, 0 0 1px 1px #202020;
+  padding: 1rem;
+  padding-left: 2rem;
+  border-radius: 5px;
+}
+
+.roles {
+  font-size: 18px;
+  font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+}
+
+.experience > .at {
+  font-size: 19px;
+  color: #007bff;
+}
+
+.company__name {
+  color: #b96c00;
+}
+
+.date {
+  font-size: 16px;
+  font-family: Courier, monospace, 'Times New Roman', Times, Gotham, Helvetica;
+}
+
+.experiences__list {
+  list-style-type: circle;
+  padding-left: 0;
+  font-size: 17px;
 }

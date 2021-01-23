@@ -2,7 +2,7 @@ import React from 'react';
 import './style.css';
 import { Container } from 'react-bootstrap';
 import ProfilePicture from '../../assets/images/profile-picture.jpg';
-import data from '../../assets/data/skillData.json';
+import data from '../../assets/data/skillData';
 
 const About = ({ className }) => {
   return (
