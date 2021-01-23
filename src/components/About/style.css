@@ -1,4 +1,72 @@
 #about {
+  background: #f0f0f0ed;
   min-height: 100vh;
-  background: burlywood;
+  color: #202020;
+}
+
+.center {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.center::after {
+  content: '';
+  display: block;
+  width: 4rem;
+  height: 0.1rem;
+  margin: 0.75rem auto 1.5rem;
+  background: #007bff;
+  opacity: 0.25;
+}
+
+.skills__list {
+  list-style-type: circle;
+}
+
+.domain {
+  font-size: 1.5rem;
+}
+
+.avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image__cropper {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  overflow: hidden;
+  border-radius: 100%;
+  background: #f0f0f0ed no-repeat center;
+  background-size: cover;
+}
+
+#profile__picture {
+  position: relative;
+  top: -13.5rem;
+  right: 5rem;
+  margin: 0 auto;
+  height: auto;
+  width: 150%;
+}
+
+.personal__description {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.index__finger__emoji {
+  list-style: none;
+}
+
+.index__finger__emoji > li {
+  padding-left: 1.5rem;
+  text-indent: -2.2rem;
+}
+
+.index__finger__emoji > li::before {
+  content: '\1F449';
+  padding-right: 1rem;
 }

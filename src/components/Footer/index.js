@@ -3,7 +3,7 @@ import './style.css';
 
 const Footer = () => {
   return (
-    <footer class='footer'>
+    <footer id='footer'>
       <div className='footer__copyright'>
         <span>Copyright © AkeyDev 2021</span>
       </div>

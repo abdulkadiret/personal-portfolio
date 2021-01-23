@@ -1,8 +1,8 @@
 import React from 'react';
 import './style.css';
 
-const Projects = () => {
-  return <section id='projects'></section>;
+const Projects = ({ className }) => {
+  return <section id='projects' className={className}></section>;
 };
 
 export default Projects;

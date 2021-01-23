@@ -9,12 +9,12 @@ import Footer from '../components/Footer';
 
 const Content = () => {
   return (
-    <main id='main'>
+    <main id='main' className='main_content'>
       <Hero />
-      <About />
-      <Experience />
-      <Projects />
-      <Contact />
+      <About className='main_section' />
+      <Experience className='main_section' />
+      <Projects className='main_section' />
+      <Contact className='main_section' />
       <Footer />
     </main>
   );
