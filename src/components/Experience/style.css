@@ -60,3 +60,33 @@
   padding-left: 0;
   font-size: 17px;
 }
+
+.banner {
+  height: 10rem;
+}
+
+.cv__link__2 {
+  font-size: 30px;
+  background-color: #f0f0f0ed;
+  color: #202020;
+  border: none;
+}
+
+.cv__link__2:hover,
+.cv__link__2:focus,
+.cv__link__2:active {
+  background-color: transparent;
+  color: #202020;
+  border-color: transparent;
+  outline: 0;
+  box-shadow: inset 0 0 1px 0 #202020, 0 0 1px 1px #202020;
+}
+
+.download__icon__2 {
+  height: 45px;
+  width: auto;
+  position: relative;
+  top: 2px;
+  right: 0;
+  filter: brightness(var(--brightness)) invert(var(--invert));
+}

@@ -2,38 +2,59 @@ import React, { useState } from 'react';
 import './style.css';
 import data from '../../assets/data/experianceData';
 import { Container, ButtonGroup, Card } from 'react-bootstrap';
+import DownloadIcon from '../../assets/images/download-icon.gif';
 
 const Experience = ({ className }) => {
   const [myExperience, setMyExperience] = useState(1);
 
   return (
-    <section id='experience' className={className}>
-      <Container className='experience__content px-sm-5 col-lg-8 col-lg-offset-2'>
-        <h1 className='center'>Experience</h1>
-        <ButtonGroup
-          className='text-center d-flex justify-content-center mb-2'
-          size='md'
-          role='group'
-        >
-          {data.map(({ id, title }) => (
-            <button
-              type='button'
-              key={id}
-              id={`${id}`}
-              className='btn experience__btn'
-              onClick={() => setMyExperience(id)}
-            >
-              <span>{title}</span>
-            </button>
-          ))}
-        </ButtonGroup>
-        <div className='col px-0'>
-          {myExperience === 1 && <ExperienceDetail id='1' />}
-          {myExperience === 2 && <ExperienceDetail id='2' />}
-          {myExperience === 3 && <ExperienceDetail id='3' />}
-        </div>
-      </Container>
-    </section>
+    <>
+      <section id='experience' className={className}>
+        <Container className='experience__content px-sm-5 col-lg-8 col-lg-offset-2'>
+          <h1 className='center'>Experience</h1>
+          <ButtonGroup
+            className='text-center d-flex justify-content-center mb-2'
+            size='md'
+            role='group'
+          >
+            {data.map(({ id, title }) => (
+              <button
+                type='button'
+                key={id}
+                id={`${id}`}
+                className='btn experience__btn'
+                onClick={() => setMyExperience(id)}
+              >
+                <span>{title}</span>
+              </button>
+            ))}
+          </ButtonGroup>
+          <div className='col px-0'>
+            {myExperience === 1 && <ExperienceDetail id='1' />}
+            {myExperience === 2 && <ExperienceDetail id='2' />}
+            {myExperience === 3 && <ExperienceDetail id='3' />}
+          </div>
+        </Container>
+      </section>
+      <div className='banner d-flex justify-content-center align-items-center'>
+        <span>
+          <a
+            href='https://drive.google.com/file/d/1Dbc_yHM5JgPvxndbFLwm6wWiwz89Cp2s/view'
+            target='_blank'
+            rel='noopener noreferrer'
+            className='cv__link__2 btn'
+          >
+            CV
+            <img
+              className='download__icon__2'
+              src={DownloadIcon}
+              alt='download icon'
+              aria-hidden='true'
+            />
+          </a>
+        </span>
+      </div>
+    </>
   );
 };
 
