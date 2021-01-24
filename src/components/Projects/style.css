@@ -1,4 +1,84 @@
 #projects {
   min-height: 100vh;
-  background: aqua;
+}
+
+.technologies {
+  list-style: none;
+}
+
+.technology {
+  font-size: 12px;
+  border: 1px solid #249524;
+  border-radius: 3px;
+  padding: 0.1rem 0.2rem;
+}
+
+.img__container {
+  box-shadow: inset 0 0 1px 0 rgba(210, 210, 210, 0.8),
+    0 0 1px 4px rgba(210, 210, 210, 0.8);
+  overflow: hidden;
+}
+
+.img__container img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.5s, filter 1.5s ease-in-out;
+  filter: grayscale(100%);
+}
+
+.img__container:hover img {
+  filter: grayscale(0);
+  transform: scale(1.1);
+}
+
+.horizontal__card__body {
+  max-height: 250px;
+  overflow: auto;
+  padding-bottom: 10px;
+}
+
+/*to hide scrollbar*/
+::-webkit-scrollbar {
+  display: none;
+}
+
+.projects__container {
+  margin-bottom: 20px;
+}
+
+.inner__left {
+  display: inline-block;
+  margin-left: 0.5rem;
+  vertical-align: top;
+  text-align: center;
+  padding: 5px;
+}
+
+.card__text {
+  font-size: 15px;
+}
+
+.live__app__icon {
+  width: 25px;
+  height: 25px;
+  object-fit: contain;
+  filter: brightness(0.9) invert(0.1);
+  border-color: rgb(24, 23, 23);
+}
+
+.source__code__icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  filter: brightness(0.9) invert(0.1);
+  border-color: #000;
+}
+
+.live__app__link:hover {
+  transform: translateY(-3px);
+}
+
+.source__code__link:hover {
+  transform: translateY(3px);
 }
