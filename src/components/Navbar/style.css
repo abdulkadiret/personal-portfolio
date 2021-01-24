@@ -111,3 +111,23 @@
   transition: all 1s;
   transform: translateY(-100%);
 }
+
+.scroll__to__top {
+  position: fixed;
+  z-index: 20;
+  bottom: 0.5rem;
+  right: 1.5rem;
+  animation: fadeIn 700ms ease-in-out 1s both;
+  cursor: pointer;
+}
+
+/*Emoji */
+.point__up__emoji {
+  font-size: 27px;
+  position: relative;
+  bottom: 0px;
+  left: auto;
+  right: -0.5rem;
+  z-index: 10;
+  transition: top ease 0.5s;
+}

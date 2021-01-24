@@ -8,6 +8,7 @@ import DownloadIcon from '../../assets/images/download-icon.gif';
 const Navigation = () => {
   const [navbar, setNavbar] = useState({ showNavbar: true, navbarBg: false });
   const [scrollPos, setScrollPos] = useState(0);
+  const [showPointUpIcon, setShowPointUpIcon] = useState(false);
 
   const handleScroll = () => {
     setScrollPos(document.body.getBoundingClientRect().top);
@@ -39,6 +40,25 @@ const Navigation = () => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
+  });
+
+  const toggleIconVisibility = () => {
+    if (window.pageYOffset > 301) {
+      setShowPointUpIcon(true);
+    } else {
+      setShowPointUpIcon(false);
+    }
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', toggleIconVisibility);
   });
 
   return (
@@ -140,6 +160,13 @@ const Navigation = () => {
           </span>
         </Navbar.Collapse>
       </Navbar>
+      <div className='scroll__to__top'>
+        {showPointUpIcon && (
+          <div onClick={() => scrollToTop()}>
+            <span className='point__up__emoji'>&#9757;</span>
+          </div>
+        )}
+      </div>
     </>
   );
 };
