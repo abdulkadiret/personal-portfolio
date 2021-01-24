@@ -25,6 +25,8 @@
   color: #007bff;
   outline: none;
   background: #131324f6;
+  border: 1px solid #202020;
+  box-shadow: none;
 }
 
 .experience__wrapper {
