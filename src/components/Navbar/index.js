@@ -4,12 +4,10 @@ import { Navbar, Nav } from 'react-bootstrap';
 import { Link } from 'react-scroll';
 import logo from '../../assets/images/logo.png';
 import DownloadIcon from '../../assets/images/download-icon.gif';
-import SlideUp from '../../assets/images/slide-up.png';
 
 const Navigation = () => {
   const [navbar, setNavbar] = useState({ showNavbar: true, navbarBg: false });
   const [scrollPos, setScrollPos] = useState(0);
-  const [showPointUpIcon, setShowPointUpIcon] = useState(false);
 
   const handleScroll = () => {
     setScrollPos(document.body.getBoundingClientRect().top);
@@ -43,139 +41,99 @@ const Navigation = () => {
     };
   });
 
-  const toggleIconVisibility = () => {
-    if (window.pageYOffset > 301) {
-      setShowPointUpIcon(true);
-    } else {
-      setShowPointUpIcon(false);
-    }
-  };
-
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
-  };
-
-  useEffect(() => {
-    window.addEventListener('scroll', toggleIconVisibility);
-  });
-
   return (
-    <>
-      <Navbar
-        className={getClass()}
-        collapseOnSelect
-        expand='lg'
-        variant='light'
-      >
-        <Navbar.Brand href='/' className='navbar-logo'>
-          <img className='logo' src={logo} alt='akey logo' />
-        </Navbar.Brand>
-        <Navbar.Toggle
-          className='nav_toggle'
-          aria-controls='responsive-navbar-nav'
-        />
-        <Navbar.Collapse id='responsive-navbar-nav'>
-          <Nav className='ml-auto'>
-            <Nav.Link>
-              <Link
-                href='#about'
-                activeClass='active'
-                to='about'
-                spy={true}
-                smooth={true}
-                offset={-67}
-                duration={500}
-                delay={300}
-                className='nav-links'
-              >
-                About
-              </Link>
-            </Nav.Link>
-
-            <Nav.Link>
-              <Link
-                href='#experience'
-                activeClass='active'
-                to='experience'
-                spy={true}
-                smooth={true}
-                offset={-67}
-                duration={500}
-                delay={300}
-                className='nav-links'
-              >
-                Experience
-              </Link>
-            </Nav.Link>
-
-            <Nav.Link>
-              <Link
-                href='#projects'
-                activeClass='active'
-                to='projects'
-                spy={true}
-                smooth={true}
-                offset={-67}
-                duration={500}
-                delay={300}
-                className='nav-links'
-              >
-                Projects
-              </Link>
-            </Nav.Link>
-
-            <Nav.Link>
-              <Link
-                href='#contact'
-                activeClass='active'
-                to='contact'
-                spy={true}
-                smooth={true}
-                offset={-67}
-                duration={500}
-                delay={300}
-                className='nav-links'
-              >
-                Contact
-              </Link>
-            </Nav.Link>
-          </Nav>
-          <span>
-            <a
-              href='https://drive.google.com/file/d/1Dbc_yHM5JgPvxndbFLwm6wWiwz89Cp2s/view'
-              target='_blank'
-              rel='noopener noreferrer'
-              className='cv__link btn mr-3'
+    <Navbar className={getClass()} collapseOnSelect expand='lg' variant='light'>
+      <Navbar.Brand href='/' className='navbar-logo'>
+        <img className='logo' src={logo} alt='akey logo' />
+      </Navbar.Brand>
+      <Navbar.Toggle
+        className='nav_toggle'
+        aria-controls='responsive-navbar-nav'
+      />
+      <Navbar.Collapse id='responsive-navbar-nav'>
+        <Nav className='ml-auto'>
+          <Nav.Link>
+            <Link
+              href='#about'
+              activeClass='active'
+              to='about'
+              spy={true}
+              smooth={true}
+              offset={-67}
+              duration={500}
+              delay={300}
+              className='nav-links'
             >
-              CV
-              <img
-                className='download__icon'
-                src={DownloadIcon}
-                alt='download icon'
-                aria-hidden='true'
-              />
-            </a>
-          </span>
-        </Navbar.Collapse>
-      </Navbar>
-      <div className='scroll__to__top'>
-        {showPointUpIcon && (
-          <div onClick={() => scrollToTop()}>
-            <span className='point_up_emoji'>
-              <img
-                className='slideUp__icon'
-                src={SlideUp}
-                alt='point up icon'
-                aria-hidden='true'
-              />
-            </span>
-          </div>
-        )}
-      </div>
-    </>
+              About
+            </Link>
+          </Nav.Link>
+
+          <Nav.Link>
+            <Link
+              href='#experience'
+              activeClass='active'
+              to='experience'
+              spy={true}
+              smooth={true}
+              offset={-67}
+              duration={500}
+              delay={300}
+              className='nav-links'
+            >
+              Experience
+            </Link>
+          </Nav.Link>
+
+          <Nav.Link>
+            <Link
+              href='#projects'
+              activeClass='active'
+              to='projects'
+              spy={true}
+              smooth={true}
+              offset={-67}
+              duration={500}
+              delay={300}
+              className='nav-links'
+            >
+              Projects
+            </Link>
+          </Nav.Link>
+
+          <Nav.Link>
+            <Link
+              href='#contact'
+              activeClass='active'
+              to='contact'
+              spy={true}
+              smooth={true}
+              offset={-67}
+              duration={500}
+              delay={300}
+              className='nav-links'
+            >
+              Contact
+            </Link>
+          </Nav.Link>
+        </Nav>
+        <span>
+          <a
+            href='https://drive.google.com/file/d/1Dbc_yHM5JgPvxndbFLwm6wWiwz89Cp2s/view'
+            target='_blank'
+            rel='noopener noreferrer'
+            className='cv__link btn mr-3'
+          >
+            CV
+            <img
+              className='download__icon'
+              src={DownloadIcon}
+              alt='download icon'
+              aria-hidden='true'
+            />
+          </a>
+        </span>
+      </Navbar.Collapse>
+    </Navbar>
   );
 };
 

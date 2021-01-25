@@ -70,3 +70,27 @@
   border-right: 3px solid #202020;
   border-bottom: 3px solid #202020;
 }
+
+.scroll__to__top {
+  position: fixed;
+  z-index: 20;
+  bottom: 0.5rem;
+  right: 1.5rem;
+  cursor: pointer;
+}
+
+.slideUp__icon {
+  height: 32px;
+  width: auto;
+  position: relative;
+  bottom: 0px;
+  left: auto;
+  right: -0.3rem;
+  z-index: 10;
+  transition: top ease 0.5s;
+  filter: brightness(0.8) invert(0.2);
+}
+
+.slideUp__icon:hover {
+  top: -0.2rem;
+}
