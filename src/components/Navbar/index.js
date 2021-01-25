@@ -4,6 +4,7 @@ import { Navbar, Nav } from 'react-bootstrap';
 import { Link } from 'react-scroll';
 import logo from '../../assets/images/logo.png';
 import DownloadIcon from '../../assets/images/download-icon.gif';
+import DarkMode from '../DarkMode/index';
 
 const Navigation = () => {
   const [navbar, setNavbar] = useState({ showNavbar: true, navbarBg: false });
@@ -131,6 +132,9 @@ const Navigation = () => {
               aria-hidden='true'
             />
           </a>
+        </span>
+        <span className='darkMode'>
+          <DarkMode />
         </span>
       </Navbar.Collapse>
     </Navbar>
