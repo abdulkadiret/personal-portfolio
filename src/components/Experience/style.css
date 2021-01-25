@@ -90,5 +90,5 @@
   position: relative;
   top: 2px;
   right: 0;
-  filter: brightness(var(--brightness)) invert(var(--invert));
+  filter: brightness(0.8) invert(0.2);
 }

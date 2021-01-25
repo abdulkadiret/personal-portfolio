@@ -4,6 +4,7 @@ import { Navbar, Nav } from 'react-bootstrap';
 import { Link } from 'react-scroll';
 import logo from '../../assets/images/logo.png';
 import DownloadIcon from '../../assets/images/download-icon.gif';
+import SlideUp from '../../assets/images/slide-up.png';
 
 const Navigation = () => {
   const [navbar, setNavbar] = useState({ showNavbar: true, navbarBg: false });
@@ -163,7 +164,14 @@ const Navigation = () => {
       <div className='scroll__to__top'>
         {showPointUpIcon && (
           <div onClick={() => scrollToTop()}>
-            <span className='point__up__emoji'>&#9757;</span>
+            <span className='point_up_emoji'>
+              <img
+                className='slideUp__icon'
+                src={SlideUp}
+                alt='point up icon'
+                aria-hidden='true'
+              />
+            </span>
           </div>
         )}
       </div>

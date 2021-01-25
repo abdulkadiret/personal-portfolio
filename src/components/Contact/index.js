@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import './style.css';
 import { Container, Form, Col, Card } from 'react-bootstrap';
-import TextareaAutosize from 'react-autosize-textarea';
 
 const Contact = ({ className }) => {
   const [userInputData, setUserInputData] = useState({

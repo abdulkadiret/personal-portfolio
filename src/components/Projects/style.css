@@ -63,7 +63,7 @@
   width: 25px;
   height: 25px;
   object-fit: contain;
-  filter: brightness(0.9) invert(0.1);
+  filter: brightness(0.8) invert(0.2);
   border-color: rgb(24, 23, 23);
 }
 
@@ -71,7 +71,7 @@
   width: 20px;
   height: 20px;
   object-fit: contain;
-  filter: brightness(0.9) invert(0.1);
+  filter: brightness(0.8) invert(0.2);
   border-color: #000;
 }
 
