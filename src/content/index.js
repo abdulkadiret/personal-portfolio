@@ -6,6 +6,7 @@ import Contact from '../components/Contact';
 import Experience from '../components/Experience';
 import Hero from '../components/Hero';
 import Footer from '../components/Footer';
+import Side from '../components/Side';
 
 const Content = () => {
   const aboutSectionRef = useRef(null);
@@ -16,6 +17,7 @@ const Content = () => {
       <Experience className='main_section' />
       <Projects className='main_section' />
       <Contact className='main_section' />
+      <Side />
       <Footer />
     </main>
   );
