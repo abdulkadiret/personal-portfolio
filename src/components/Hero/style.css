@@ -44,3 +44,29 @@
   display: block;
   text-transform: uppercase;
 }
+
+.scroll__to__ref {
+  position: absolute;
+  bottom: 3rem;
+  cursor: pointer;
+}
+
+.indicator {
+  width: 40px;
+  margin-top: -2rem;
+  transform: rotate(45deg);
+}
+
+.indicator span {
+  display: block;
+  border: none;
+  border-right: 5px solid #505050;
+  border-bottom: 5px solid #505050;
+  width: 20px;
+  height: 20px;
+}
+
+.indicator span:hover {
+  border-right: 3px solid #202020;
+  border-bottom: 3px solid #202020;
+}

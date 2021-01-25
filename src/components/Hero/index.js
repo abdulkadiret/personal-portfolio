@@ -2,9 +2,15 @@ import React from 'react';
 import './style.css';
 import Video from '../../assets/videos/video_1.mp4';
 
-const Hero = () => {
+const Hero = ({ aboutSectionRef }) => {
+  const scrollToRef = (ref) => {
+    window.scroll({
+      top: ref.current.offsetTop,
+      behavior: 'smooth',
+    });
+  };
   return (
-    <section id='intro' className='hero_background'>
+    <section id='intro'>
       <video className='hero_background' autoPlay loop muted>
         <source src={Video} type='video.mp4' />
       </video>
@@ -15,6 +21,14 @@ const Hero = () => {
           <span className='name'>Abdulkadir</span>
           <span className='role'>I'm a Full-Stack Developer</span>
         </h1>
+      </div>
+      <div
+        className='scroll__to__ref'
+        onClick={() => scrollToRef(aboutSectionRef)}
+      >
+        <div className='indicator'>
+          <span></span>
+        </div>
       </div>
     </section>
   );
