@@ -4,9 +4,9 @@ import { Container } from 'react-bootstrap';
 import ProfilePicture from '../../assets/images/profile-picture.jpg';
 import data from '../../assets/data/skillData';
 
-const About = ({ className }) => {
+const About = ({ className, aboutSectionRef }) => {
   return (
-    <section id='about' className={className}>
+    <section id='about' className={className} ref={aboutSectionRef}>
       <Container className='about__content px-sm-5 col-lg-8 col-lg-offset-2'>
         <h1 className='center'>about myself</h1>
         <picture className='avatar my-3'>
