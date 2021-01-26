@@ -1,6 +1,6 @@
-.main_section {
-  min-height: 100vh;
-  background: #f0f0f0ed;
-  color: #202020;
+.main__section {
+  /* min-height: 100vh; */
+  background: var(--background-color);
+  color: var(--text-color);
   padding: 2rem 0;
 }

@@ -28,7 +28,7 @@
   letter-spacing: 1px;
   font-size: 24px;
   font-family: 'MisoRegular';
-  color: #b96c00;
+  color: var(--daisy);
 }
 
 .go__to__home::after {
@@ -37,7 +37,7 @@
   left: 0;
   width: 100%;
   height: 0;
-  background: #202020;
+  background: var(--text-color);
   border-radius: 40%;
   content: '';
   transition: height 0.2s, transform 0.5s;

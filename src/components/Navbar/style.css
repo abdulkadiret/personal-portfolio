@@ -21,7 +21,7 @@
 .nav-links {
   position: relative;
   transition: 0.5s;
-  color: #202020;
+  color: var(--text-color);
   margin: 0 0.2rem;
   padding: 0.3rem 0.3rem;
   text-decoration: none;
@@ -35,14 +35,14 @@
   left: 0;
   width: 100%;
   height: 0.2rem;
-  background: #202020;
+  background: var(--text-color);
   transform: scaleX(0);
   transform-origin: right;
   transition: transform 0.5s;
 }
 
 .nav-links:hover {
-  color: #202020;
+  color: var(--text-color);
   text-decoration: none;
 }
 
@@ -52,10 +52,10 @@
 }
 
 .navbar .active {
-  background: #202020;
+  background: var(--text-color);
   border-top-left-radius: 0.2rem;
   border-top-right-radius: 0.2rem;
-  color: #f0f0f0ed;
+  color: var(--nav-background-color);
   transition: all 200ms ease-out;
 }
 
@@ -63,7 +63,7 @@
   position: relative;
   top: 5px;
   background-color: transparent;
-  color: #202020;
+  color: var(--text-color);
   border: none;
 }
 
@@ -71,10 +71,10 @@
 .cv__link:focus,
 .cv__link:active {
   background-color: transparent;
-  color: #202020;
+  color: var(--text-color);
   border-color: transparent;
   outline: 0;
-  box-shadow: inset 0 0 1px 0 #202020, 0 0 1px 1px #202020;
+  box-shadow: 0 0 5px 3px var(--primary-color);
 }
 
 .download__icon {
@@ -83,7 +83,7 @@
   position: relative;
   top: 0;
   right: 0px;
-  filter: brightness(0.8) invert(0.2);
+  filter: brightness(var(--brightness)) invert(var(--invert));
   border-color: #000;
 }
 
@@ -94,19 +94,19 @@
 }
 
 .class_2 {
-  background: #f0f0f0ed;
-  -webkit-box-shadow: inset 0px 0px 1px #202020;
-  -moz-box-shadow: inset 0px 0px 1px #202020;
-  box-shadow: inset 0px 0px 1px #202020;
+  background: var(--nav-background-color);
+  -webkit-box-shadow: inset 0px 0px 1px var(--text-color);
+  -moz-box-shadow: inset 0px 0px 1px var(--text-color);
+  box-shadow: inset 0px 0px 1px var(--text-color);
   visibility: visible;
   transition: all 1s;
 }
 
 .class_3 {
-  background: #f0f0f0ed;
-  -webkit-box-shadow: inset 0px 0px 1px #202020;
-  -moz-box-shadow: inset 0px 0px 1px #202020;
-  box-shadow: inset 0px 0px 1px #202020;
+  background: var(--nav-background-color);
+  -webkit-box-shadow: inset 0px 0px 1px var(--text-color);
+  -moz-box-shadow: inset 0px 0px 1px var(--text-color);
+  box-shadow: inset 0px 0px 1px var(--text-color);
   visibility: visible;
   transition: all 1s;
   transform: translateY(-100%);

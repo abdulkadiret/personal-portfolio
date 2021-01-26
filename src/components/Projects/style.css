@@ -8,14 +8,13 @@
 
 .technology {
   font-size: 12px;
-  border: 1px solid #249524;
+  border: 1px solid var(--lime-green);
   border-radius: 3px;
   padding: 0.1rem 0.2rem;
 }
 
 .img__container {
-  box-shadow: inset 0 0 1px 0 rgba(210, 210, 210, 0.8),
-    0 0 1px 4px rgba(210, 210, 210, 0.8);
+  box-shadow: inset 0 0 1px 0 var(--frame-color), 0 0 1px 4px var(--frame-color);
   overflow: hidden;
 }
 
@@ -63,7 +62,7 @@
   width: 25px;
   height: 25px;
   object-fit: contain;
-  filter: brightness(0.8) invert(0.2);
+  filter: brightness(var(--brightness)) invert(var(--invert));
   border-color: rgb(24, 23, 23);
 }
 
@@ -71,14 +70,16 @@
   width: 20px;
   height: 20px;
   object-fit: contain;
-  filter: brightness(0.8) invert(0.2);
+  filter: brightness(var(--brightness)) invert(var(--invert));
   border-color: #000;
 }
 
 .live__app__link:hover {
-  transform: translateY(-3px);
+  /* transform: translateY(-3px); */
+  box-shadow: 0 0 5px 3px var(--primary-color);
 }
 
 .source__code__link:hover {
-  transform: translateY(3px);
+  /* transform: translateY(3px); */
+  box-shadow: 0 0 5px 3px var(--primary-color);
 }

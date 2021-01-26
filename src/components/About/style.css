@@ -1,7 +1,6 @@
 #about {
-  background: #f0f0f0ed;
-  min-height: 100vh;
-  color: #202020;
+  background: var(--background-color);
+  color: var(--text-color);
 }
 
 .center {
@@ -15,7 +14,7 @@
   width: 4rem;
   height: 0.1rem;
   margin: 0.75rem auto 1.5rem;
-  background: #007bff;
+  background: var(--link-color);
   opacity: 0.25;
 }
 
@@ -39,7 +38,7 @@
   object-fit: contain;
   overflow: hidden;
   border-radius: 100%;
-  background: #f0f0f0ed no-repeat center;
+  background: var(--background-color) no-repeat center;
   background-size: cover;
 }
 

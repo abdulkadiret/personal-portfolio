@@ -1,5 +1,4 @@
 #contact {
-  min-height: 100vh;
   z-index: 1;
   background: transparent;
 }
@@ -10,9 +9,9 @@
 }
 
 .content__wrapper {
-  background: #f0f0f0ed;
+  background: var(--background-color);
   box-sizing: border-box;
-  box-shadow: inset 0 0 1px 0 #202020, 0 0 1px 1px #202020;
+  box-shadow: inset 0 0 1px 0 var(--text-color), 0 0 1px 1px var(--text-color);
   border-radius: 5px;
 }
 
@@ -23,8 +22,8 @@
 
 .send__btn {
   background: none;
-  border: 0.1rem solid #202020;
-  color: #202020;
+  border: 0.1rem solid var(--text-color);
+  color: var(--text-color);
   font-weight: bold;
   width: 100%;
   display: block;
@@ -33,9 +32,9 @@
 .send__btn:hover,
 .send__btn:focus,
 .send__btn:active {
-  background: #202020;
-  border: 0.1rem solid #202020;
-  color: #e5e5e5;
+  background: var(--buttonHover-color);
+  border: 0.1rem solid var(--buttonHover-color);
+  color: var(--buttonText-color);
 }
 
 .btn-primary:focus,
@@ -53,7 +52,7 @@
 .form__label {
   font-size: 0.8rem;
   display: block;
-  color: #202020;
+  color: var(--text-color);
   pointer-events: none;
   opacity: 1;
   transform: translateY(-1.7rem);
@@ -65,11 +64,11 @@
 .form__control {
   box-shadow: none;
   background-color: transparent;
-  color: #202020;
+  color: var(--text-color);
   font-family: Courier, monospace, 'Times New Roman', Times, Gotham, Helvetica,
     Arial, sans-serif, serif;
   border-radius: 0px;
-  border-color: #202020;
+  border-color: var(--text-color);
   border-style: none none solid none;
   width: 100%;
   transition: all 0.5s;
@@ -82,9 +81,9 @@
 .form__control:-webkit-autofill:active {
   transition: all 5000s ease-in-out 0s;
   transition-property: background-color, color;
-  box-shadow: 0 0 0 0 #f0f0f0dc inset !important;
-  -webkit-box-shadow: 0 0 0 0 #f0f0f0dc inset !important;
-  -webkit-text-fill-color: #202020;
+  box-shadow: 0 0 0 0 var(--background-color) inset !important;
+  -webkit-box-shadow: 0 0 0 0 var(--background-color) inset !important;
+  -webkit-text-fill-color: var(--text-color);
 }
 
 .form__control::placeholder {
@@ -95,8 +94,8 @@
   box-shadow: none;
   outline: none;
   background-color: transparent;
-  border-bottom: 2px solid #249524;
-  color: #202020;
+  border-bottom: 2px solid var(--lime-green);
+  color: var(--text-color);
 }
 
 .form__group:focus-within {
@@ -111,7 +110,7 @@
 .form__control:not(:placeholder-shown) + .form__label {
   transform: translateY(-3.3rem) scale(0.8);
   font-size: 1.2rem;
-  color: #249524;
+  color: var(--lime-green);
 }
 
 .subject__label__ref {

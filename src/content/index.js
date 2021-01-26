@@ -11,12 +11,12 @@ import Side from '../components/Side';
 const Content = () => {
   const aboutSectionRef = useRef(null);
   return (
-    <main id='main' className='main_content'>
+    <main id='main' className='main__content'>
       <Hero aboutSectionRef={aboutSectionRef} />
-      <About className='main_section' aboutSectionRef={aboutSectionRef} />
-      <Experience className='main_section' />
-      <Projects className='main_section' />
-      <Contact className='main_section' />
+      <About className='main__section' aboutSectionRef={aboutSectionRef} />
+      <Experience className='main__section' />
+      <Projects className='main__section' />
+      <Contact className='main__section' />
       <Side />
       <Footer />
     </main>
