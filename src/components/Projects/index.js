@@ -2,7 +2,6 @@ import React from 'react';
 import './style.css';
 import { Container, Card } from 'react-bootstrap';
 import data from '../../assets/data/projectData';
-import CYFQuiz from '../../assets/images/quiz-app.png';
 import LiveApp from '../../assets/images/external-link.png';
 import SourceCode from '../../assets/images/source-code.png';
 
@@ -33,7 +32,7 @@ const Projects = ({ className }) => {
                   <div className='col card__left col-md-7'>
                     <div className='img__container'>
                       <img
-                        src={CYFQuiz}
+                        src={image}
                         alt='screenshot of the project'
                         className='position-relative'
                       />
