@@ -44,7 +44,7 @@ const Navigation = () => {
 
   return (
     <Navbar className={getClass()} collapseOnSelect expand='lg' variant='light'>
-      <Navbar.Brand href='/' className='navbar-logo'>
+      <Navbar.Brand href='/' className='navbar-logo' data-aos='fade-down'>
         <img className='logo' src={logo} alt='akey logo' />
       </Navbar.Brand>
       <Navbar.Toggle
@@ -53,7 +53,7 @@ const Navigation = () => {
       />
       <Navbar.Collapse id='responsive-navbar-nav'>
         <Nav className='ml-auto'>
-          <Nav.Link>
+          <Nav.Link data-aos='fade-down'>
             <Link
               href='#about'
               activeClass='active'
@@ -69,7 +69,7 @@ const Navigation = () => {
             </Link>
           </Nav.Link>
 
-          <Nav.Link>
+          <Nav.Link data-aos='fade-down'>
             <Link
               href='#experience'
               activeClass='active'
@@ -85,7 +85,7 @@ const Navigation = () => {
             </Link>
           </Nav.Link>
 
-          <Nav.Link>
+          <Nav.Link data-aos='fade-down'>
             <Link
               href='#projects'
               activeClass='active'
@@ -101,7 +101,7 @@ const Navigation = () => {
             </Link>
           </Nav.Link>
 
-          <Nav.Link>
+          <Nav.Link data-aos='fade-down'>
             <Link
               href='#contact'
               activeClass='active'
@@ -123,6 +123,7 @@ const Navigation = () => {
             target='_blank'
             rel='noopener noreferrer'
             className='cv__link btn mr-3'
+            data-aos='fade-down'
           >
             CV
             <img
@@ -133,7 +134,7 @@ const Navigation = () => {
             />
           </a>
         </span>
-        <span className='darkMode'>
+        <span className='darkMode' data-aos='fade-down'>
           <DarkMode />
         </span>
       </Navbar.Collapse>
