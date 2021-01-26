@@ -16,12 +16,16 @@
   padding-right: 0.5rem;
 }
 
-.experience__btn:hover {
+.btn-primary:hover {
   color: var(--daisy);
+  background: transparent;
+  border-color: var(--text-color);
 }
 
-.experience__btn:focus,
-.experience__btn:active {
+.btn-primary:not(:disabled):not(.disabled):active,
+.btn-primary:not(:disabled):not(.disabled).active,
+.btn-primary:not(:disabled):not(.disabled):active:focus,
+.btn-primary:not(:disabled):not(.disabled).active:focus {
   color: var(--primary-color);
   outline: none;
   background: var(--buttonHover-color);

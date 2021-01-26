@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './style.css';
 import data from '../../assets/data/experianceData';
-import { Container, ButtonGroup, Card } from 'react-bootstrap';
+import { Container, ButtonGroup, Card, Button } from 'react-bootstrap';
 import DownloadIcon from '../../assets/images/download-icon.gif';
 
 const Experience = ({ className }) => {
@@ -21,15 +21,16 @@ const Experience = ({ className }) => {
             data-aos='fade-up'
           >
             {data.map(({ id, title }) => (
-              <button
+              <Button
                 type='button'
                 key={id}
                 id={`${id}`}
+                active={id === myExperience}
                 className='btn experience__btn'
                 onClick={() => setMyExperience(id)}
               >
                 <span>{title}</span>
-              </button>
+              </Button>
             ))}
           </ButtonGroup>
           <div className='col px-0' data-aos='fade-up'>
