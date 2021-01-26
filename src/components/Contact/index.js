@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './style.css';
 import { Container, Form, Col, Card } from 'react-bootstrap';
+import TextareaAutosize from 'react-autosize-textarea';
 
 const Contact = ({ className }) => {
   const [userInputData, setUserInputData] = useState({
@@ -97,10 +98,10 @@ const Contact = ({ className }) => {
                 </Form.Label>
               </Form.Group>
               <Form.Group className='form__group' id='text__area'>
-                <Form.Control
+                <TextareaAutosize
+                  required
                   as='textarea'
                   rows={2}
-                  required
                   type='text'
                   name='message'
                   placeholder='Write Message'
