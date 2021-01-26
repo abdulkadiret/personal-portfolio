@@ -111,3 +111,7 @@
   transition: all 1s;
   transform: translateY(-100%);
 }
+
+.navbar-light .navbar-toggler {
+  border-color: var(--lighter-gray);
+}
