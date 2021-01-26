@@ -8,7 +8,7 @@ import Facebook from '../../assets/images/facebook.svg';
 const SideElements = () => (
   <aside id='side'>
     <div className='left__side d-none d-lg-block'>
-      <ul className='left__side__socialLinks'>
+      <ul className='left__side__socialLinks' data-aos='fade-right'>
         <li>
           <a
             href='https://github.com/abdulkadiret'
@@ -64,7 +64,7 @@ const SideElements = () => (
       </ul>
     </div>
     <div className='right__side d-none d-lg-block'>
-      <div className='right__side__mailto'>
+      <div className='right__side__mailto' data-aos='fade-left'>
         <a
           href='mailto:akey.maneth@gmail.com'
           target='_blank'

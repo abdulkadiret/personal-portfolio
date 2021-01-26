@@ -11,11 +11,14 @@ const Experience = ({ className }) => {
     <>
       <section id='experience' className={className}>
         <Container className='experience__content px-sm-5 col-lg-8 col-lg-offset-2'>
-          <h1 className='center'>Experience</h1>
+          <h1 className='center' data-aos='fade-up'>
+            Experience
+          </h1>
           <ButtonGroup
             className='text-center d-flex justify-content-center mb-2'
             size='md'
             role='group'
+            data-aos='fade-up'
           >
             {data.map(({ id, title }) => (
               <button
@@ -29,7 +32,7 @@ const Experience = ({ className }) => {
               </button>
             ))}
           </ButtonGroup>
-          <div className='col px-0'>
+          <div className='col px-0' data-aos='fade-up'>
             {myExperience === 1 && <ExperienceDetail id='1' />}
             {myExperience === 2 && <ExperienceDetail id='2' />}
             {myExperience === 3 && <ExperienceDetail id='3' />}
@@ -43,6 +46,7 @@ const Experience = ({ className }) => {
             target='_blank'
             rel='noopener noreferrer'
             className='cv__link__2 btn'
+            data-aos='zoom-in-up'
           >
             CV
             <img

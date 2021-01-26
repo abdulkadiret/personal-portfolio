@@ -29,10 +29,10 @@ const Contact = ({ className }) => {
   return (
     <section id='contact' className={className}>
       <Container className='contact__content col-lg-8 col-lg-offset-2'>
-        <Card className='content__wrapper p-3'>
-          <div>
+        <Card className='content__wrapper p-3' data-aos='fade-up'>
+          <div data-aos='fade-up'>
             <h1 className='contact'>Get in touch</h1>
-            <p className='text-center  pb-3' style={{ fontSize: '18px' }}>
+            <p className='text-center pb-3' style={{ fontSize: '18px' }}>
               Whether you want to get in touch, talk about a project
               collaboration, or just say hi,
               <span className='d-block'>feel free to shoot me an email!</span>
@@ -46,6 +46,7 @@ const Contact = ({ className }) => {
                   md={5}
                   controlId='formGridFullname'
                   className='form__group'
+                  data-aos='fade-up'
                 >
                   <Form.Control
                     required
@@ -65,6 +66,7 @@ const Contact = ({ className }) => {
                   md={5}
                   controlId='formGridEmail'
                   className='form__group ml-auto'
+                  data-aos='fade-up'
                 >
                   <Form.Control
                     required
@@ -80,7 +82,7 @@ const Contact = ({ className }) => {
                   </Form.Label>
                 </Form.Group>
               </Form.Row>
-              <Form.Group className='form__group'>
+              <Form.Group className='form__group' data-aos='fade-up'>
                 <Form.Control
                   required
                   type='text'
@@ -97,7 +99,11 @@ const Contact = ({ className }) => {
                   Subject<span aria-hidden='true'>*</span>
                 </Form.Label>
               </Form.Group>
-              <Form.Group className='form__group' id='text__area'>
+              <Form.Group
+                className='form__group'
+                id='text__area'
+                data-aos='fade-up'
+              >
                 <TextareaAutosize
                   required
                   as='textarea'
@@ -116,7 +122,11 @@ const Contact = ({ className }) => {
                   Message<span aria-hidden='true'>*</span>
                 </Form.Label>
               </Form.Group>
-              <div className='d-flex justify-content-center col-md-4 col-sm-12 m-auto'>
+              <div
+                className='d-flex justify-content-center col-md-4 col-sm-12 m-auto'
+                data-aos='fade-up'
+                data-aos-anchor='#text__area'
+              >
                 <button className='send__btn btn'>Send Message</button>
               </div>
             </Form>

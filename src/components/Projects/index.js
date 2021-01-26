@@ -10,7 +10,9 @@ const Projects = ({ className }) => {
   return (
     <section id='projects' className={className}>
       <Container className='about__content px-sm-5 col-lg-8 col-lg-offset-2'>
-        <h1 className='title center'>Projects</h1>
+        <h1 className='title center' data-aos='fade-up'>
+          Projects
+        </h1>
         <div>
           {data.map(
             ({
@@ -26,6 +28,7 @@ const Projects = ({ className }) => {
                 <div
                   key={id}
                   className='row horizontal__card justify-content-md-center'
+                  data-aos='fade-up'
                 >
                   <div className='col card__left col-md-7'>
                     <div className='img__container'>
