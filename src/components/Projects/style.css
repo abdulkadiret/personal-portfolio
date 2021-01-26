@@ -32,12 +32,19 @@
 }
 
 .horizontal__card__body {
-  max-height: 250px;
+  background: transparent;
+  border: 1px solid var(--frame-color);
+  max-height: 230px;
   overflow: auto;
   padding-bottom: 10px;
 }
 
-/*to hide scrollbar*/
+.card__title {
+  background: var(--frame-color);
+  text-align: center;
+}
+
+/*hide scrollbar*/
 ::-webkit-scrollbar {
   display: none;
 }
@@ -75,11 +82,9 @@
 }
 
 .live__app__link:hover {
-  /* transform: translateY(-3px); */
   box-shadow: 0 0 5px 3px var(--primary-color);
 }
 
 .source__code__link:hover {
-  /* transform: translateY(3px); */
   box-shadow: 0 0 5px 3px var(--primary-color);
 }

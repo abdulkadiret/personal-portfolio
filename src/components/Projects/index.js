@@ -1,6 +1,6 @@
 import React from 'react';
 import './style.css';
-import { Container } from 'react-bootstrap';
+import { Container, Card } from 'react-bootstrap';
 import data from '../../assets/data/projectData';
 import CYFQuiz from '../../assets/images/quiz-app.png';
 import LiveApp from '../../assets/images/external-link.png';
@@ -81,15 +81,13 @@ const Projects = ({ className }) => {
                       </div>
                     </div>
                   </div>
-                  <div
-                    className='col
-                    card__right col-md-5
-                    horizontal__card__body col-sm-6 d-none d-md-block'
-                  >
+                  <div className='col card__right col-md-5 col-sm-6 d-none d-md-block'>
                     <h4 className='card__title mb-1'>{title}</h4>
-                    <span className='card__text project__description'>
-                      {description}
-                    </span>
+                    <Card className='horizontal__card__body p-2'>
+                      <span className='card__text project__description'>
+                        {description}
+                      </span>
+                    </Card>
                   </div>
                 </div>
               </div>
