@@ -3,6 +3,7 @@ import './style.css';
 import data from '../../assets/data/experianceData';
 import { Container, ButtonGroup, Card, Button } from 'react-bootstrap';
 import DownloadIcon from '../../assets/images/download-icon.gif';
+import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
 const Experience = ({ className }) => {
   const [myExperience, setMyExperience] = useState(1);
@@ -67,30 +68,39 @@ const ExperienceDetail = ({ id }) => {
   const foundExperience = data.find((item) => item.id === Number(id));
   if (foundExperience) {
     return (
-      <Card key={foundExperience.id} className='experience__wrapper'>
-        <h2 className='experience'>
-          <span className='roles pr-1'>{foundExperience.title}</span>
-          <span className='pr-1 at'>@</span>
-          <span className='at'>
-            <a
-              href='https://codeyourfuture.io/'
-              target='_blank'
-              rel='noopener noreferrer'
-              className='company__name'
-            >
-              {foundExperience.company}
-            </a>
-          </span>
-        </h2>
-        <h3 className='date'>{foundExperience.date}</h3>
-        <ul className='experiences__list'>
-          {foundExperience.role.map((list, index) => (
-            <li className='list__items' key={index}>
-              {list}
-            </li>
-          ))}
-        </ul>
-      </Card>
+      <TransitionGroup key={foundExperience.id} className='experience__wrapper'>
+        <CSSTransition
+          key={foundExperience.id}
+          appear={true}
+          timeout={10000}
+          classNames='fade'
+        >
+          <div>
+            <h2 className='experience'>
+              <span className='roles pr-1'>{foundExperience.title}</span>
+              <span className='pr-1 at'>@</span>
+              <span className='at'>
+                <a
+                  href='https://codeyourfuture.io/'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='company__name'
+                >
+                  {foundExperience.company}
+                </a>
+              </span>
+            </h2>
+            <h3 className='date'>{foundExperience.date}</h3>
+            <ul className='experiences__list'>
+              {foundExperience.role.map((list, index) => (
+                <li className='list__items' key={index}>
+                  {list}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </CSSTransition>
+      </TransitionGroup>
     );
   } else {
     return null;
