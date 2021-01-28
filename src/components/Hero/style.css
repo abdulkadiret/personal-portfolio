@@ -35,11 +35,11 @@
   z-index: 1;
 }
 
-.wave_hand {
+.wave__hand {
   transform-origin: 70% 70%;
 }
 
-.wave_hand:hover {
+.wave__hand:hover {
   animation: wave-animation 2.5s ease-in-out 0s alternate 2 none running;
   transform-origin: 70% 70%;
   display: inline-block;

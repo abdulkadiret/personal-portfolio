@@ -32,6 +32,8 @@
   --transparent-blue: #0e0e25ea;
   --lighter-gray: #505050;
   --primary-color: #007bff;
+  --light-transparent-gray: rgba(210, 210, 210, 0.85);
+  --light-midnight-blue: rgba(19, 19, 35, 0.85);
 }
 
 body.light {
@@ -49,6 +51,7 @@ body.light {
   --background-color: var(--transparent-gray);
   --chevron-color: var(--lighter-gray);
   --frame-color: var(--transparent-grey);
+  --side-bg-color: var(--light-transparent-gray);
 }
 
 body.dark {
@@ -66,6 +69,7 @@ body.dark {
   --background-color: var(--midnight-blue);
   --chevron-color: var(--iridium);
   --frame-color: var(--light-blue);
+  --side-bg-color: var(--light-midnight-blue);
 }
 
 body {
