@@ -10,13 +10,14 @@
   transition: background-color 0.3s ease-in-out, filter 0.3s ease-in-out;
   margin-top: 0.4rem;
   position: relative;
-  top: 4px;
+  top: 0;
 }
 
 @media (max-width: 991px) {
   #darkMode {
     position: fixed;
     right: 5.1rem;
+    top: 12.5px;
   }
 }
 

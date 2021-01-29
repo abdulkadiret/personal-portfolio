@@ -57,15 +57,11 @@
 }
 
 .index__finger__emoji {
-  list-style: none;
+  margin-left: 0.7rem;
 }
 
 .index__finger__emoji > li {
-  padding-left: 1.5rem;
-  text-indent: -2.2rem;
-}
-
-.index__finger__emoji > li::before {
-  content: '\1F449';
-  padding-right: 1rem;
+  list-style: '\1F449';
+  list-style-position: outside;
+  padding-left: 0.7rem;
 }
