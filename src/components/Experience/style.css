@@ -44,27 +44,33 @@
 
 .roles {
   font-size: 18px;
-  font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+  font-family: 'Arvo', serif, 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono',
+    monospace;
 }
 
 .experience > .at {
   font-size: 19px;
   color: var(--primary-color);
+  font-family: 'Lato', sans-serif, 'Times New Roman';
 }
 
 .company__name {
   color: var(--daisy);
+  font-family: 'Arvo', serif, 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono',
+    monospace;
 }
 
 .date {
   font-size: 16px;
-  font-family: Courier, monospace, 'Times New Roman', Times, Gotham, Helvetica;
+  font-family: 'Lato', sans-serif, 'Times New Roman';
+  font-weight: normal;
 }
 
 .experiences__list {
   list-style-type: circle;
   padding-left: 0;
-  font-size: 17px;
+  /* font-size: 17px; */
+  font-family: 'Lato', sans-serif, 'Times New Roman';
 }
 
 .banner {

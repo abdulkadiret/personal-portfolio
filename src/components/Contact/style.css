@@ -37,6 +37,12 @@
   color: var(--buttonText-color);
 }
 
+.btn {
+  border-radius: 0;
+  background: none;
+  outline: none;
+}
+
 .btn-primary:focus,
 .btn-primary.focus,
 .btn:focus,
