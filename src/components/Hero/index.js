@@ -43,8 +43,9 @@ const Hero = ({ aboutSectionRef }) => {
         name='hero_content'
         data-aos='zoom-in'
       >
-        <h1>
-          Hi!<span className='wave__hand'>&#128075;</span>
+        <h1 className='intro__heading'>
+          <span className='greeting'>Hi!</span>
+          <span className='wave__hand'>&#128075;</span>
           <span className='intro_text'>my name is</span>
           <span className='name'>Abdulkadir</span>
           <span className='role'>I'm a Full-Stack Developer</span>

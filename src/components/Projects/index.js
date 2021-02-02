@@ -8,7 +8,7 @@ import SourceCode from '../../assets/images/source-code.png';
 const Projects = ({ className }) => {
   return (
     <section id='projects' className={className}>
-      <Container className='about__content px-sm-5 col-lg-8 col-lg-offset-2'>
+      <Container className='about__content px-sm-1 px-md-5 px-lg-1 px-xl-5 col-lg-8 col-lg-offset-2'>
         <h1 className='title center' data-aos='fade-up'>
           Projects
         </h1>
@@ -36,6 +36,7 @@ const Projects = ({ className }) => {
                         alt='screenshot of the project'
                         className='position-relative'
                       />
+                      <span>{title}</span>
                     </div>
                     <div>
                       <span>
@@ -83,12 +84,16 @@ const Projects = ({ className }) => {
                       </div>
                     </div>
                   </div>
-                  <div className='col card__right col-md-5 col-sm-6 d-none d-md-block'>
-                    <h4 className='card__title mb-1'>{title}</h4>
-                    <Card className='horizontal__card__body p-2'>
-                      <span className='card__text project__description'>
-                        {description}
-                      </span>
+                  <div className='col col-md-5 col-sm-6 d-none d-md-block'>
+                    <Card className='card__right'>
+                      <Card.Body className='right__card__body'>
+                        <Card.Title className='right__card__title'>
+                          {title}
+                        </Card.Title>
+                        <Card.Text className='right__card__text project__description p-2'>
+                          {description}
+                        </Card.Text>
+                      </Card.Body>
                     </Card>
                   </div>
                 </div>

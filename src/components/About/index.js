@@ -7,7 +7,7 @@ import data from '../../assets/data/skillData';
 const About = ({ className, aboutSectionRef }) => {
   return (
     <section id='about' className={className} ref={aboutSectionRef}>
-      <Container className='about__content px-sm-5 col-lg-8 col-lg-offset-2'>
+      <Container className='about__content px-sm-1 px-md-5 px-lg-1 px-xl-5 col-lg-8 col-lg-offset-2'>
         <h1 className='center' data-aos='fade-up'>
           about myself
         </h1>
@@ -53,7 +53,7 @@ const About = ({ className, aboutSectionRef }) => {
               {data.map(({ id, domainName, skills }) => (
                 <ul
                   key={id}
-                  className='skills__list d-flex flex-column align-items-center col-xl-2 col-lg-6 col-sm-12 ml-auto'
+                  className='skills__list d-flex flex-column align-items-center col-md-6 col-xl-3 ml-auto'
                 >
                   <h3 className='domain align-self-center' data-aos='fade-up'>
                     {domainName}

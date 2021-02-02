@@ -15,26 +15,21 @@
   border-radius: 5px;
 }
 
-.contact {
-  text-align: center;
-  text-transform: uppercase;
-}
-
 .send__btn {
   background: none;
   border: 0.1rem solid var(--text-color);
   color: var(--text-color);
-  font-weight: bold;
   width: 100%;
   display: block;
+  transition: background-color 0.5s;
 }
 
 .send__btn:hover,
 .send__btn:focus,
 .send__btn:active {
   background: var(--buttonHover-color);
-  border: 0.1rem solid var(--buttonHover-color);
   color: var(--buttonText-color);
+  font-weight: bold;
 }
 
 .btn {
@@ -100,7 +95,7 @@
   box-shadow: none;
   outline: none;
   background-color: transparent;
-  border-bottom: 2px solid var(--lime-green);
+  border-bottom: 2px solid var(--primary-color);
   color: var(--text-color);
 }
 
@@ -116,7 +111,7 @@
 .form__control:not(:placeholder-shown) + .form__label {
   transform: translateY(-3.3rem) scale(0.8);
   font-size: 1.2rem;
-  color: var(--lime-green);
+  color: var(--primary-color);
 }
 
 .subject__label__ref {

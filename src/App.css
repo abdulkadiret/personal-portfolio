@@ -9,14 +9,15 @@
   --blue-black: #090f21;
   --indigo: #4b0082;
   --blue: #007bff;
-  --midnight-blue: #131324f6;
+  --transparent-midnight-blue: #131324dc;
+  --midnight-blue: #131324;
   --light-blue: #393947be;
   --transparent-grey: rgba(210, 210, 210, 0.8);
   --light-navy: #172a45;
   --lightest-navy: #303c55;
   --white: #e5e5e5;
-  --gray: #f0f0f0ed;
   --transparent-gray: #f0f0f0dc;
+  --gray: #f0f0f0;
   --light-cyan: #e0ffff;
   --light-yellow: #ffffe0;
   --iridium: #9c9c92;
@@ -29,11 +30,8 @@
   --daisy: #b96c00;
   --bright-pink: #ff007f;
   --accent-color: #dfdfa7;
-  --transparent-blue: #0e0e25ea;
   --lighter-gray: #505050;
   --primary-color: #007bff;
-  --light-transparent-gray: rgba(210, 210, 210, 0.85);
-  --light-midnight-blue: rgba(19, 19, 35, 0.85);
 }
 
 body.light {
@@ -42,16 +40,15 @@ body.light {
   --toggleIcon: url('././assets/images/moon.svg');
   --brightness: 0.8;
   --invert: 0.2;
-  --nav-background-color: var(--gray);
   --text-color: var(--black);
   --link-color: var(--blue);
   --buttonHover-color: var(--midnight-blue);
   --buttonText-color: var(--white);
   --label-color: var(--daisy);
-  --background-color: var(--transparent-gray);
+  --background-color: var(--gray);
   --chevron-color: var(--lighter-gray);
   --frame-color: var(--transparent-grey);
-  --side-bg-color: var(--light-transparent-gray);
+  --transparent-bg: var(--transparent-gray);
 }
 
 body.dark {
@@ -60,7 +57,6 @@ body.dark {
   --toggleIcon: url('././assets/images/sun.svg');
   --brightness: 0.2;
   --invert: 0.8;
-  --nav-background-color: var(--midnight-blue);
   --text-color: var(--white);
   --link-color: var(--daisy);
   --buttonHover-color: var(--white);
@@ -69,7 +65,7 @@ body.dark {
   --background-color: var(--midnight-blue);
   --chevron-color: var(--iridium);
   --frame-color: var(--light-blue);
-  --side-bg-color: var(--light-midnight-blue);
+  --transparent-bg: var(--transparent-midnight-blue);
 }
 
 body {

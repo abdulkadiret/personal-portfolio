@@ -1,25 +1,37 @@
 #experience {
-  min-height: 100vh;
+  background: var(--background-color);
+}
+
+.button__group {
+  box-shadow: inset 0 0 1px 0 var(--text-color), 0 0 1px 1px var(--text-color);
 }
 
 .experience__btn {
+  font-family: 'Lato', sans-serif, 'Times New Roman';
+  border-top: none;
+  border-bottom: none;
   border-color: var(--text-color);
   background-color: transparent;
   color: var(--text-color);
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
 }
 
 .experience__btn:first-child {
   padding-left: 0.5rem;
+  border-left: none;
 }
 
 .experience__btn:last-child {
   padding-right: 0.5rem;
+  border-right: none;
 }
 
 .btn-primary:hover {
   color: var(--daisy);
   background: transparent;
   border-color: var(--text-color);
+  font-weight: bold;
 }
 
 .btn-primary:not(:disabled):not(.disabled):active,
@@ -29,8 +41,9 @@
   color: var(--primary-color);
   outline: none;
   background: var(--buttonHover-color);
-  border: 1px solid var(--text-color);
+  border: none;
   box-shadow: none;
+  font-weight: bold;
 }
 
 .experience__wrapper {
@@ -40,16 +53,19 @@
   padding: 1rem;
   padding-left: 2rem;
   border-radius: 5px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 
 .roles {
   font-size: 18px;
   font-family: 'Arvo', serif, 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono',
     monospace;
+  font-weight: bold;
 }
 
 .experience > .at {
-  font-size: 19px;
+  font-size: 18px;
   color: var(--primary-color);
   font-family: 'Lato', sans-serif, 'Times New Roman';
 }
@@ -58,12 +74,14 @@
   color: var(--daisy);
   font-family: 'Arvo', serif, 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono',
     monospace;
+  font-weight: bold;
 }
 
 .date {
   font-size: 16px;
   font-family: 'Lato', sans-serif, 'Times New Roman';
   font-weight: normal;
+  margin-bottom: 1.5rem;
 }
 
 .experiences__list {
@@ -78,10 +96,13 @@
 }
 
 .cv__link__2 {
-  font-size: 30px;
+  font-size: 28px;
   background-color: var(--background-color);
   color: var(--text-color);
   border: none;
+  font-family: 'Arvo', serif, 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono',
+    monospace;
+  font-weight: normal;
 }
 
 .cv__link__2:hover,
@@ -92,6 +113,7 @@
   border-color: transparent;
   outline: 0;
   box-shadow: 0 0 5px 3px var(--primary-color);
+  font-weight: bold;
 }
 
 .download__icon__2 {

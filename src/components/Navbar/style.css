@@ -6,7 +6,7 @@
   left: 0;
   width: 100%;
   z-index: 100;
-  transition: background 250ms ease-in;
+  transition: background-color 250ms ease-in;
 }
 
 .nav-link {
@@ -55,7 +55,7 @@
   background: var(--text-color);
   border-top-left-radius: 0.2rem;
   border-top-right-radius: 0.2rem;
-  color: var(--nav-background-color);
+  color: var(--background-color);
   transition: all 200ms ease-out;
 }
 
@@ -94,7 +94,7 @@
 }
 
 .class_2 {
-  background: var(--nav-background-color);
+  background: var(--background-color);
   -webkit-box-shadow: inset 0px 0px 1px var(--text-color);
   -moz-box-shadow: inset 0px 0px 1px var(--text-color);
   box-shadow: inset 0px 0px 1px var(--text-color);
@@ -103,7 +103,7 @@
 }
 
 .class_3 {
-  background: var(--nav-background-color);
+  background: var(--background-color);
   -webkit-box-shadow: inset 0px 0px 1px var(--text-color);
   -moz-box-shadow: inset 0px 0px 1px var(--text-color);
   box-shadow: inset 0px 0px 1px var(--text-color);
@@ -118,6 +118,6 @@
 
 @media (max-width: 992px) {
   .navbar {
-    background: var(--nav-background-color);
+    background: var(--background-color);
   }
 }

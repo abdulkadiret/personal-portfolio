@@ -74,11 +74,13 @@
 
 .intro_text {
   font-size: 1.4rem;
+  font-weight: normal;
 }
 
 .name {
   display: block;
   text-transform: uppercase;
+  font-weight: bold;
 }
 
 .scroll__to__ref {

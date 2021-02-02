@@ -2,46 +2,102 @@
   background: var(--background-color);
 }
 
+.card {
+  border: none;
+}
+
 .technologies {
   list-style: none;
 }
 
 .technology {
   font-size: 12px;
-  border: 1px solid var(--lime-green);
+  border: 1px solid var(--primary-color);
   border-radius: 3px;
   padding: 0.1rem 0.2rem;
+  font-family: 'Lato', sans-serif, 'Times New Roman';
 }
 
-.img__container {
+.card__left .img__container {
+  position: relative;
+  display: inline-block;
   box-shadow: inset 0 0 1px 0 var(--frame-color), 0 0 1px 4px var(--frame-color);
   overflow: hidden;
 }
 
-.img__container img {
+.card__left .img__container span {
+  position: absolute;
+  bottom: -2rem;
+  left: 0;
+  width: 100%;
+  height: 2rem;
+  background: var(--transparent-bg);
+  color: var(--text-color);
+  text-align: center;
+  font-family: 'Arvo', serif, 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono',
+    monospace;
+  font-weight: bold;
+  font-size: 18px;
+  transition: all 1s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 992px) {
+  .card__left:hover span {
+    bottom: 0;
+  }
+}
+
+.card__left .img__container img {
   width: 100%;
   height: auto;
   object-fit: cover;
-  transition: transform 0.5s, filter 1.5s ease-in-out;
+  transition: transform 1.5s, filter 1.5s ease-in-out;
   filter: grayscale(100%);
 }
 
-.img__container:hover img {
+.horizontal__card:hover .img__container > img {
   filter: grayscale(0);
   transform: scale(1.1);
 }
 
-.horizontal__card__body {
+.card__right {
   background: transparent;
-  border: 1px solid var(--frame-color);
-  max-height: 230px;
-  overflow: auto;
-  padding-bottom: 10px;
+  padding: 0.5rem;
+  padding-bottom: 0;
 }
 
-.card__title {
-  background: var(--frame-color);
+.card__right {
+  background-color: transparent;
+  transition: all 1.5s ease-in-out;
+}
+
+.horizontal__card:hover .card__right {
+  background-color: var(--frame-color);
+}
+
+.right__card__body {
+  padding: 0;
+}
+
+.right__card__title {
   text-align: center;
+  font-family: 'Arvo', serif, 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono',
+    monospace;
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.right__card__text {
+  max-height: 195px;
+  overflow: auto;
+  padding: 0 !important;
+  font-family: 'Lato', sans-serif, 'Times New Roman';
+  font-size: 16px;
+  scrollbar-width: none;
 }
 
 /*hide scrollbar*/
@@ -50,7 +106,7 @@
 }
 
 .projects__container {
-  margin-bottom: 20px;
+  padding-bottom: 2rem;
 }
 
 .inner__left {
@@ -58,11 +114,7 @@
   margin-left: 0.5rem;
   vertical-align: top;
   text-align: center;
-  padding: 5px;
-}
-
-.card__text {
-  font-size: 15px;
+  padding-left: 5px;
 }
 
 .live__app__icon {
@@ -87,4 +139,10 @@
 
 .source__code__link:hover {
   box-shadow: 0 0 5px 3px var(--primary-color);
+}
+
+@media (max-width: 576px) {
+  .horizontal__card {
+    padding-left: 20px;
+  }
 }

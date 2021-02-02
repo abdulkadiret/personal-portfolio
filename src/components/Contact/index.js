@@ -28,10 +28,10 @@ const Contact = ({ className }) => {
 
   return (
     <section id='contact' className={className}>
-      <Container className='contact__content col-lg-8 col-lg-offset-2'>
+      <Container className='contact__content px-sm-1 px-md-5 px-lg-1 px-xl-5 col-lg-8 col-lg-offset-2'>
         <Card className='content__wrapper p-3' data-aos='fade-up'>
           <div data-aos='fade-up'>
-            <h1 className='contact'>Get in touch</h1>
+            <h1 className='center'>Get in touch</h1>
             <p className='text-center pb-3' style={{ fontSize: '18px' }}>
               Whether you want to get in touch, talk about a project
               collaboration, or just say hi,

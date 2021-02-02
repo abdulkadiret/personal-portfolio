@@ -11,12 +11,12 @@ const Experience = ({ className }) => {
   return (
     <>
       <section id='experience' className={className}>
-        <Container className='experience__content px-sm-5 col-lg-8 col-lg-offset-2'>
+        <Container className='experience__content px-sm-1 px-md-5 px-lg-1 px-xl-5 col-lg-8 col-lg-offset-2'>
           <h1 className='center' data-aos='fade-up'>
             Experience
           </h1>
           <ButtonGroup
-            className='text-center d-flex justify-content-center mb-2'
+            className='button__group text-center d-flex justify-content-center'
             size='md'
             role='group'
             data-aos='fade-up'
