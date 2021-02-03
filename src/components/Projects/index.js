@@ -9,7 +9,7 @@ const Projects = ({ className }) => {
   return (
     <section id='projects' className={className}>
       <Container className='about__content px-sm-1 px-md-5 px-lg-1 px-xl-5 col-lg-8 col-lg-offset-2'>
-        <h1 className='title center' data-aos='fade-up'>
+        <h1 className='center' data-aos='fade-up'>
           Projects
         </h1>
         <div>
