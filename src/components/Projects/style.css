@@ -40,7 +40,7 @@
     monospace;
   font-weight: bold;
   font-size: 18px;
-  transition: all 1s ease-in-out;
+  transition: all 1.2s linear;
   display: flex;
   align-items: center;
   justify-content: center;
