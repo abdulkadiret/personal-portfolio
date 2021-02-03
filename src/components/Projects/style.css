@@ -16,6 +16,8 @@
   border-radius: 3px;
   padding: 0.1rem 0.2rem;
   font-family: 'Lato', sans-serif, 'Times New Roman';
+  background-color: transparent;
+  transition: all 1.5s ease-in-out;
 }
 
 .card__left .img__container {
@@ -78,6 +80,10 @@
   background-color: var(--frame-color);
 }
 
+.horizontal__card:hover .tech .technology {
+  background-color: var(--frame-color);
+}
+
 .right__card__body {
   padding: 0;
 }
@@ -117,27 +123,15 @@
   padding-left: 5px;
 }
 
+.source__code__icon,
 .live__app__icon {
-  width: 25px;
-  height: 25px;
-  object-fit: contain;
-  filter: brightness(var(--brightness)) invert(var(--invert));
-  border-color: rgb(24, 23, 23);
+  width: 22px;
+  height: 22px;
+  transition: all 0.5s ease-in-out;
 }
 
-.source__code__icon {
-  width: 20px;
-  height: 20px;
-  object-fit: contain;
-  filter: brightness(var(--brightness)) invert(var(--invert));
-  border-color: #000;
-}
-
-.live__app__link:hover {
-  box-shadow: 0 0 5px 3px var(--primary-color);
-}
-
-.source__code__link:hover {
+.source__code__icon:hover,
+.live__app__icon:hover {
   box-shadow: 0 0 5px 3px var(--primary-color);
 }
 

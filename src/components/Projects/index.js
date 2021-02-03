@@ -2,8 +2,8 @@ import React from 'react';
 import './style.css';
 import { Container, Card } from 'react-bootstrap';
 import data from '../../assets/data/projectData';
-import LiveApp from '../../assets/images/external-link.png';
-import SourceCode from '../../assets/images/source-code.png';
+import LiveApp from '../../assets/images/external-link.svg';
+import SourceCode from '../../assets/images/source-code.svg';
 
 const Projects = ({ className }) => {
   return (
@@ -45,7 +45,7 @@ const Projects = ({ className }) => {
                           target='_blank'
                           rel='noopener noreferrer'
                           class='live__app__link position-absolute'
-                          style={{ top: 0, left: -14 }}
+                          style={{ top: -5, left: -13 }}
                         >
                           <img
                             src={LiveApp}
@@ -61,7 +61,7 @@ const Projects = ({ className }) => {
                           target='_blank'
                           rel='noopener noreferrer'
                           class='source__code__link position-absolute'
-                          style={{ top: 50, left: -12 }}
+                          style={{ top: 50, left: -13 }}
                         >
                           <img
                             src={SourceCode}
