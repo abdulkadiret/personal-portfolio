@@ -45,7 +45,7 @@ const Projects = ({ className }) => {
                           target='_blank'
                           rel='noopener noreferrer'
                           class='live__app__link position-absolute'
-                          style={{ top: -5, left: -13 }}
+                          style={{ top: 0, left: -15 }}
                         >
                           <img
                             src={LiveApp}
@@ -61,7 +61,7 @@ const Projects = ({ className }) => {
                           target='_blank'
                           rel='noopener noreferrer'
                           class='source__code__link position-absolute'
-                          style={{ top: 50, left: -13 }}
+                          style={{ top: 50, left: -15 }}
                         >
                           <img
                             src={SourceCode}
