@@ -44,7 +44,7 @@ const Experience = ({ className }) => {
       <div className='banner d-flex justify-content-center align-items-center'>
         <span>
           <a
-            href='https://drive.google.com/file/d/1Dbc_yHM5JgPvxndbFLwm6wWiwz89Cp2s/view'
+            href='https://drive.google.com/file/d/1BsuZFuWce9dsfdkxsdzKedplYJ8TgNEt/view'
             target='_blank'
             rel='noopener noreferrer'
             className='cv__link__2 btn'
