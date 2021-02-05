@@ -46,13 +46,13 @@ UI Desktop, Mobile and Ipad views on dark and light mode:
 
 ### Live Demo
 
-You can see it [here](http://akey-portfolio.web.app/)
+You can see it [here](http://akey-portfolio.web.app/){:target="_blank" rel="noopener"}
 
 ## Tech Stack
 
-- [React.js (Hooks)](https://reactjs.org/docs/getting-started.html) for building the user interfaces (UI).
-- [React-router-dom](https://reactrouter.com/web/guides/quick-start) for rendering its respective component which path is currently active and its path matches the URL.
-- [React-bootstrap](https://react-bootstrap.github.io/) for styling the UI.
+- [React.js (Hooks)](https://reactjs.org/docs/getting-started.html){:target="_blank" rel="noopener"} for building the user interfaces (UI).
+- [React-router-dom](https://reactrouter.com/web/guides/quick-start){:target="_blank" rel="noopener"} for rendering its respective component which path is currently active and its path matches the URL.
+- [React-bootstrap](https://react-bootstrap.github.io/){target="_blank" rel="noopener"} for styling the UI.
 - [Bootstrap 4](https://getbootstrap.com) for faster and easier styling of the UI.
 - [CSS3](https://www.w3schools.com/cssref) for styling the UI.
 - [React-scroll](https://github.com/fisshy/react-scroll) for silky smooth animating your vertical scrolling.
@@ -73,11 +73,11 @@ $ npm start
 
 ## Features
 
-- Used **Bootstrap** to make it 100% responsive
-- Used **React-scroll** to added smooth scrolling to the app and smooth scroll to top functionality
-- Used **AOS** to give a silky smooth fade-in animation for elements on the page as you scroll the page
-- Used **React-autosize-textarea** to automatically adjusts textarea height to match the content
-- It has **dark/light mode**.
+- Used Bootstrap to make it 100% responsive
+- Used React-scroll to added smooth scrolling to the app and smooth scroll to top functionality
+- Used AOS to give a silky smooth fade-in animation for elements on the page as you scroll the page
+- Used React-autosize-textarea to automatically adjusts textarea height to match the content
+- It has dark/light mode.
 
 ## Authors
 
