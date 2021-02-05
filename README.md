@@ -20,24 +20,29 @@ This is my personal portfolio website. I created it to give an insight to myself
 UI Desktop, Mobile and Ipad views:
 
 #### Landing section
-
-<a src='images/screenshots/hero-section.png'>
+<kbd>
+<img src='images/screenshots/hero-section.png' alt="landing section" aria-hidden="true">
+</kbd>
 
 #### About section
-
-<a src='images/screenshots/about-section.png'>
+<kbd>
+<img src='images/screenshots/about-section.png' alt="about section" aria-hidden="true">
+</kbd>
 
 #### Experience section
-
-<a src='images/screenshots/experience-section.png'>
+<kbd>
+<img src='images/screenshots/experience-section.png' alt="experience section" aria-hidden="true">
+</kbd>
 
 #### Projects section
-
-<a src='images/screenshots/projects-section.png'>
+<kbd>
+<img src='images/screenshots/projects-section.png' alt="projects section" aria-hidden="true">
+</kbd>
 
 #### Contact section
-
-<a src='images/screenshots/contact-section.png'>
+<kbd>
+<img src='images/screenshots/contact-section.png' alt="contact section" aria-hidden="true">
+</kbd>
 
 ### Live Demo
 
@@ -77,7 +82,7 @@ $ npm start
 ## Authors
 
 I'm Abdulkadir Awel a full stack developer.  
-You can find me here at: [<img valign="middle" src="images/social-icons/github.svg" alt="github icon" aria-hidden="true"/>](https://github.com/abdulkadiret) [<img valign="middle" src="images/social-icons/github.svg" alt="linkedin icon" aria-hidden="true"/>](https://www.linkedin.com/in/abdulkadir-awel-23781a1a4/)
+You can find me here at: [<img valign="middle" src="images/social-icons/github.svg" alt="github icon" aria-hidden="true"/>](https://github.com/abdulkadiret) [<img valign="middle" src="images/social-icons/linkedIn.png" alt="linkedin icon" width='43px' aria-hidden="true"/>](https://www.linkedin.com/in/abdulkadir-awel-23781a1a4/)
 
 ## Credits
 
