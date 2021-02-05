@@ -46,7 +46,7 @@ UI Desktop, Mobile and Ipad views on dark and light mode:
 
 ### Live Demo
 
-You can see it [here](http://akey-portfolio.web.app/){:target="_blank" rel="noopener"}
+You can see it [here](http://akey-portfolio.web.app/){target="_blank"}
 
 ## Tech Stack
 
