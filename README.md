@@ -17,7 +17,7 @@ This is my personal portfolio website. I created it to give an insight to myself
 
 ### Screenshots of the UI
 
-UI Desktop, Mobile and Ipad views:
+UI Desktop, Mobile and Ipad views on dark and light mode:
 
 #### Landing section
 <kbd>
