@@ -1,70 +1,88 @@
-# Getting Started with Create React App
+# Akey Personal Portfolio Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of Contents
 
-## Available Scripts
+1. [Overview](#overview)  
+   [1.1. Screenshots of the UI](#screenshots-of-the-ui)  
+   [1.2. Live Demo](#live-demo)
+2. [Tech Stack](#tech-stack)
+3. [Installation](#installation)
+4. [Features](#features)
+5. [Authors](#authors)
+6. [Credits](#credits)
 
-In the project directory, you can run:
+## Overview
 
-### `yarn start`
+This is my personal portfolio website. I created it to give an insight to myself and show a collection of some projects that I completed so far.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Screenshots of the UI
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+UI Desktop, Mobile and Ipad views:
 
-### `yarn test`
+#### Landing section
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<a src='images/screenshots/hero-section.png'>
 
-### `yarn build`
+#### About section
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<a src='images/screenshots/about-section.png'>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### Experience section
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<a src='images/screenshots/experience-section.png'>
 
-### `yarn eject`
+#### Projects section
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+<a src='images/screenshots/projects-section.png'>
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### Contact section
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+<a src='images/screenshots/contact-section.png'>
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Live Demo
 
-## Learn More
+You can see it [here](http://akey-portfolio.web.app/)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Tech Stack
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- [React.js (Hooks)](https://reactjs.org/docs/getting-started.html) for building the user interfaces (UI).
+- [React-router-dom](https://reactrouter.com/web/guides/quick-start) for rendering its respective component which path is currently active and its path matches the URL.
+- [React-bootstrap](https://react-bootstrap.github.io/) for styling the UI.
+- [Bootstrap 4](https://getbootstrap.com) for faster and easier styling of the UI.
+- [CSS3](https://www.w3schools.com/cssref) for styling the UI.
+- [React-scroll](https://github.com/fisshy/react-scroll) for silky smooth animating your vertical scrolling.
+- [AOS - Animate on scroll library](https://github.com/michalsnik/aos) for animating elements on as you scroll the page.
+- [React-transition-group](https://reactcommunity.org/react-transition-group/) for applying transitions to elements entering and leaving the DOM in a declarative and efficient way.
+- [React-autosize-textarea](https://github.com/buildo/react-autosize-textarea) for automatically adjust textarea height to match the content.
+- [Firebase](https://firebase.google.com/docs/hosting) for hosting the website.
+- [Prettier](https://prettier.io/) for formatting the code.
 
-### Code Splitting
+## Installation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```
+$ git clone https://github.com/abdulkadiret/personal-portfolio
+$ cd ../path/to/the/file
+$ npm install
+$ npm start
+```
 
-### Analyzing the Bundle Size
+## Features
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Used **Bootstrap** to make it 100% responsive
+- Used **React-scroll** to added smooth scrolling to the app and smooth scroll to top functionality
+- Used **AOS** to give a silky smooth fade-in animation for elements on the page as you scroll the page
+- Used **React-autosize-textarea** to automatically adjusts textarea height to match the content
+- It has **dark/light mode**.
 
-### Making a Progressive Web App
+## Authors
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+I'm Abdulkadir Awel a full stack developer.  
+You can find me here at: [<img valign="middle" src="images/social-icons/github.svg" alt="github icon" aria-hidden="true"/>](https://github.com/abdulkadiret) [<img valign="middle" src="images/social-icons/github.svg" alt="linkedin icon" aria-hidden="true"/>](https://www.linkedin.com/in/abdulkadir-awel-23781a1a4/)
 
-### Advanced Configuration
+## Credits
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Thanks to:
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[Google Fonts](https://fonts.google.com/) for the use of fonts.  
+[icon8](https://icons8.com/) and [flaticon](https://www.flaticon.com/) for the use of social media icons.  
+[Pexeles](https://www.pexels.com/) for the use of Background images.
