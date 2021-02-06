@@ -40,7 +40,7 @@
 }
 
 .wave__hand:hover {
-  animation: wave-animation 2.5s ease-in-out 0s alternate 2 none running;
+  animation: wave-animation 2.5s ease-in-out 0s alternate 1 none running;
   transform-origin: 70% 70%;
   display: inline-block;
 }
