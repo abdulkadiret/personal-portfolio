@@ -90,7 +90,7 @@ If you liked the repo then kindly support it by giving it a star :star:
 
 Thanks to:
 
-[Pexeles](https://www.pexels.com/) for the background images.
+[Pexeles](https://www.pexels.com/) for the background images.  
 [icon8](https://icons8.com/) and [flaticon](https://www.flaticon.com/) for the social media icons.  
 [Google Fonts](https://fonts.google.com/) for the fonts.  
 
