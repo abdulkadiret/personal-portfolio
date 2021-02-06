@@ -109,7 +109,7 @@
 .cv__link__2:active {
   background-color: var(--background-color);
   color: var(--text-color);
-  border-color: transparent;
+  border: none;
   outline: 0;
   box-shadow: 0 0 3px 3px var(--primary-color);
   font-weight: bold;
