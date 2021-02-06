@@ -97,9 +97,9 @@
 
 .cv__link__2 {
   font-size: 28px;
-  background-color: var(--background-color);
+  background: none;
   color: var(--text-color);
-  border: none;
+  border: 0.1rem solid var(--text-color);
   font-family: 'Arvo', serif, 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono',
     monospace;
   font-weight: normal;
@@ -108,7 +108,7 @@
 .cv__link__2:hover,
 .cv__link__2:focus,
 .cv__link__2:active {
-  background-color: transparent;
+  background-color: var(--background-color);
   color: var(--text-color);
   border-color: transparent;
   outline: 0;
