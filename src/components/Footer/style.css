@@ -18,8 +18,7 @@
 }
 
 .footer__social__content > li > a:hover {
-  /* transform: translateY(-1px); */
-  box-shadow: 0 0 5px 3px var(--primary-color);
+  box-shadow: 0 0 3px 3px var(--primary-color);
 }
 
 .footer__copyright {

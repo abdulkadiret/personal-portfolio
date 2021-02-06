@@ -27,8 +27,10 @@
 .send__btn:hover,
 .send__btn:focus,
 .send__btn:active {
-  background: var(--buttonHover-color);
-  color: var(--buttonText-color);
+  border-color: transparent;
+  outline: 0;
+  box-shadow: 0 0 3px 3px var(--primary-color);
+  color: var(--text-color);
   font-weight: bold;
 }
 

@@ -87,7 +87,6 @@
 .experiences__list {
   list-style-type: circle;
   padding-left: 0;
-  /* font-size: 17px; */
   font-family: 'Lato', sans-serif, 'Times New Roman';
 }
 
@@ -112,7 +111,7 @@
   color: var(--text-color);
   border-color: transparent;
   outline: 0;
-  box-shadow: 0 0 5px 3px var(--primary-color);
+  box-shadow: 0 0 3px 3px var(--primary-color);
   font-weight: bold;
 }
 
