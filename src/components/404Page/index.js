@@ -6,7 +6,11 @@ import './style.css';
 const NotFoundPage = () => {
   return (
     <div id='page__notFound' variant='light'>
-      <Container className='page__container'>
+      <Container
+        className='page__container'
+        data-aos='fade-down'
+        data-aos-delay='500'
+      >
         <h1 className='display-1 font-weight-bolder'>404</h1>
         <p className='text-center text-muted'>
           Opps! sorry, but the page you were trying to view does not exist.
