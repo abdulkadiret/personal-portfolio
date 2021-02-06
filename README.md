@@ -16,31 +16,43 @@
 This is my personal portfolio website. I created it to give an insight to myself and show a collection of some projects that I completed so far.
 
 ### Screenshots of the UI
+
 Screenshots of Desktop, Mobile and Ipad views on dark and light mode:
 
 #### Landing section
+
 <kbd>
 <img src='images/screenshots/hero-section.png' alt="landing section" aria-hidden="true">
 </kbd>
 
 #### About section
+
 <kbd>
 <img src='images/screenshots/about-section.png' alt="about section" aria-hidden="true">
 </kbd>
 
 #### Experience section
+
 <kbd>
 <img src='images/screenshots/experience-section.png' alt="experience section" aria-hidden="true">
 </kbd>
 
 #### Projects section
+
 <kbd>
 <img src='images/screenshots/projects-section.png' alt="projects section" aria-hidden="true">
 </kbd>
 
 #### Contact section
+
 <kbd>
 <img src='images/screenshots/contact-section.png' alt="contact section" aria-hidden="true">
+</kbd>
+
+#### 404 page
+
+<kbd>
+<img src='images/screenshots/404 page.png' alt="404 page" aria-hidden="true">
 </kbd>
 
 ### Live Demo
@@ -77,14 +89,14 @@ $ npm start
 - Used AOS to give a smooth fade-in animation for elements on the page as you scroll the page
 - Used React-autosize-textarea to automatically adjusts textarea height to match the content
 - Has dark/light mode
-- Has a custome 404 page to give users a way out of the error page 
+- Has a custome 404 page to give users a way out of the error page
 
 ## Authors
 
 I'm Abdulkadir Awel a full stack developer.  
 You can get in touch with me on my LinkedIn Profile: [<img valign="middle" src="images/social-icons/linkedIn.png" alt="linkedin icon" width='43px' aria-hidden="true"/>](https://www.linkedin.com/in/abdulkadir-awel-23781a1a4/)  
 You can also follow my GitHub Profile to stay updated about my latest projects: [<img valign="middle" src="images/social-icons/github.svg" alt="github icon" aria-hidden="true"/>](https://github.com/abdulkadiret)  
-If you liked the repo then kindly support it by giving it a star :star:  
+If you liked the repo then kindly support it by giving it a star :star:
 
 ## Credits
 
@@ -92,5 +104,4 @@ Thanks to:
 
 [Pexeles](https://www.pexels.com/) for the background images.  
 [icon8](https://icons8.com/) and [flaticon](https://www.flaticon.com/) for the social media icons.  
-[Google Fonts](https://fonts.google.com/) for the fonts.  
-
+[Google Fonts](https://fonts.google.com/) for the fonts.
