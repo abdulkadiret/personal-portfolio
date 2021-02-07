@@ -21,7 +21,7 @@
   color: var(--text-color);
   width: 100%;
   display: block;
-  transition: all 0.2s;
+  transition: all 0.2s linear;
 }
 
 .send__btn:hover,
@@ -32,6 +32,7 @@
   box-shadow: 0 0 3px 3px var(--primary-color);
   color: var(--text-color);
   font-weight: bold;
+  transition: all 0.2s linear;
 }
 
 .btn {
@@ -68,8 +69,8 @@
   box-shadow: none;
   background-color: transparent;
   color: var(--text-color);
-  font-family: Courier, monospace, 'Times New Roman', Times, Gotham, Helvetica,
-    Arial, sans-serif, serif;
+  font-family: 'Lato', sans-serif, 'Times New Roman';
+
   border-radius: 0px;
   border-color: var(--text-color);
   border-style: none none solid none;

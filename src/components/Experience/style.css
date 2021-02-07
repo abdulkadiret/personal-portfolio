@@ -102,6 +102,7 @@
   font-family: 'Arvo', serif, 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono',
     monospace;
   font-weight: normal;
+  transition: all 0.2s linear;
 }
 
 .cv__link__2:hover,
@@ -113,6 +114,7 @@
   outline: 0;
   box-shadow: 0 0 3px 3px var(--primary-color);
   font-weight: bold;
+  transition: all 0.2s linear;
 }
 
 .download__icon__2 {
