@@ -123,7 +123,7 @@ const Contact = ({ className }) => {
                 </Form.Label>
               </Form.Group>
               <div
-                className='d-flex justify-content-center col-md-4 col-sm-12 m-auto'
+                className='d-flex justify-content-center col-md-4 col-sm-12 m-auto py-1'
                 data-aos='fade-up'
                 data-aos-anchor='#text__area'
               >

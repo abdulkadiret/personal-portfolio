@@ -42,23 +42,21 @@ const Experience = ({ className }) => {
         </Container>
       </section>
       <div className='banner d-flex justify-content-center align-items-center'>
-        <span>
-          <a
-            href='https://drive.google.com/file/d/1BsuZFuWce9dsfdkxsdzKedplYJ8TgNEt/view'
-            target='_blank'
-            rel='noopener noreferrer'
-            className='cv__link__2 btn'
-            data-aos='zoom-in-up'
-          >
-            CV
-            <img
-              className='download__icon__2'
-              src={DownloadIcon}
-              alt='download icon'
-              aria-hidden='true'
-            />
-          </a>
-        </span>
+        <a
+          href='https://drive.google.com/file/d/1BsuZFuWce9dsfdkxsdzKedplYJ8TgNEt/view'
+          target='_blank'
+          rel='noopener noreferrer'
+          className='cv__link__2 btn'
+          data-aos='zoom-in-up'
+        >
+          CV
+          <img
+            className='download__icon__2'
+            src={DownloadIcon}
+            alt='download icon'
+            aria-hidden='true'
+          />
+        </a>
       </div>
     </>
   );
