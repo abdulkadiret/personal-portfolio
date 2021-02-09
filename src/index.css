@@ -36,6 +36,10 @@ h2 {
 }
 
 /*Bootstrap 4 Tooltip*/
+.tooltip {
+  position: relative;
+  z-index: 10;
+}
 .tooltip .arrow {
   background-color: transparent;
 }
