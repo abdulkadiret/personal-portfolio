@@ -116,7 +116,8 @@
   outline: 0;
   box-shadow: 0 0 3px 3px var(--primary-color);
   font-weight: bold;
-  transition: all 0.2s linear;
+  transition: font-size 0.1ms linear;
+  transition: background-color 0.2s linear;
 }
 
 .download__icon__2 {
@@ -134,6 +135,7 @@
   opacity: 0;
   z-index: 1;
 }
+
 .fade-appear.fade-appear-active {
   opacity: 1;
   transition: opacity 1000ms linear;
@@ -144,6 +146,7 @@
   opacity: 0;
   z-index: 1;
 }
+
 .fade-enter.fade-enter-active {
   opacity: 1;
   transition: opacity 5000ms linear 5000ms;
@@ -153,10 +156,12 @@
 .fade-exit {
   opacity: 1;
 }
+
 .fade-exit.fade-exit-active {
   opacity: 0;
   transition: opacity 5000ms linear;
 }
+
 .fade-exit-done {
   opacity: 0;
 }
