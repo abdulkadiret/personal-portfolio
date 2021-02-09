@@ -103,6 +103,7 @@
   font-family: 'Arvo', serif, 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono',
     monospace;
   font-weight: normal;
+  transition: font-size 0.1ms linear;
   transition: background-color 0.2s linear;
 }
 
