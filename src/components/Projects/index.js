@@ -4,6 +4,8 @@ import { Container, Card } from 'react-bootstrap';
 import data from '../../assets/data/projectData';
 import LiveApp from '../../assets/images/external-link.svg';
 import SourceCode from '../../assets/images/source-code.svg';
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
+import Tooltip from 'react-bootstrap/Tooltip';
 
 const Projects = ({ className }) => {
   return (
@@ -47,12 +49,20 @@ const Projects = ({ className }) => {
                           class='live__app__link position-absolute'
                           style={{ top: 0, left: -15 }}
                         >
-                          <img
-                            src={LiveApp}
-                            className='live__app__icon'
-                            alt='demo of the project'
-                            aria-hidden='true'
-                          />
+                          <OverlayTrigger
+                            placement='top'
+                            trigger={['hover']}
+                            overlay={
+                              <Tooltip className='right'>Live demo</Tooltip>
+                            }
+                          >
+                            <img
+                              src={LiveApp}
+                              className='live__app__icon'
+                              alt='demo of the project'
+                              aria-hidden='true'
+                            />
+                          </OverlayTrigger>
                         </a>
                       </span>
                       <span>
@@ -63,12 +73,20 @@ const Projects = ({ className }) => {
                           class='source__code__link position-absolute'
                           style={{ top: 50, left: -15 }}
                         >
-                          <img
-                            src={SourceCode}
-                            className='source__code__icon'
-                            alt='source code'
-                            aria-hidden='true'
-                          />
+                          <OverlayTrigger
+                            placement='bottom'
+                            trigger={['hover']}
+                            overlay={
+                              <Tooltip className='right'>Source code</Tooltip>
+                            }
+                          >
+                            <img
+                              src={SourceCode}
+                              className='source__code__icon'
+                              alt='source code'
+                              aria-hidden='true'
+                            />
+                          </OverlayTrigger>
                         </a>
                       </span>
                     </div>

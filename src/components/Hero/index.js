@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import './style.css';
 import Video from '../../assets/videos/video_1.mp4';
 import SlideUp from '../../assets/images/slide-up.png';
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
+import Tooltip from 'react-bootstrap/Tooltip';
 
 const Hero = ({ aboutSectionRef }) => {
   const [showPointUpIcon, setShowPointUpIcon] = useState(false);
@@ -58,19 +60,32 @@ const Hero = ({ aboutSectionRef }) => {
         onClick={() => scrollToRef(aboutSectionRef)}
       >
         <div className='indicator'>
-          <span></span>
+          <OverlayTrigger
+            placement='top'
+            trigger={['hover']}
+            overlay={<Tooltip className='top'>Scroll down</Tooltip>}
+          >
+            <span></span>
+          </OverlayTrigger>
         </div>
       </div>
+
       <div className='scroll__to__top'>
         {showPointUpIcon && (
           <div onClick={() => scrollToTop()}>
             <span className='point__up__emoji'>
-              <img
-                className='slideUp__icon'
-                src={SlideUp}
-                alt='point up icon'
-                aria-hidden='true'
-              />
+              <OverlayTrigger
+                placement='top'
+                trigger={['hover']}
+                overlay={<Tooltip className='top'>Go to top</Tooltip>}
+              >
+                <img
+                  className='slideUp__icon'
+                  src={SlideUp}
+                  alt='point up icon'
+                  aria-hidden='true'
+                />
+              </OverlayTrigger>
             </span>
           </div>
         )}

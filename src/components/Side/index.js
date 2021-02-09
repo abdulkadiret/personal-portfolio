@@ -4,6 +4,8 @@ import Github from '../../assets/images/github.svg';
 import Linkedin from '../../assets/images/linkedin.svg';
 import Twitter from '../../assets/images/twitter.svg';
 import Facebook from '../../assets/images/facebook.svg';
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
+import Tooltip from 'react-bootstrap/Tooltip';
 
 const SideElements = () => (
   <aside id='side'>
@@ -15,12 +17,18 @@ const SideElements = () => (
             target='_blank'
             rel='noopener noreferrer'
           >
-            <img
-              src={Github}
-              className='social__icons'
-              alt='github'
-              aria-hidden='true'
-            />
+            <OverlayTrigger
+              placement='right'
+              trigger={['hover']}
+              overlay={<Tooltip className='right'>Github</Tooltip>}
+            >
+              <img
+                src={Github}
+                className='social__icons'
+                alt='github'
+                aria-hidden='true'
+              />
+            </OverlayTrigger>
           </a>
         </li>
         <li>
@@ -29,12 +37,18 @@ const SideElements = () => (
             target='_blank'
             rel='noopener noreferrer'
           >
-            <img
-              src={Linkedin}
-              className='social__icons'
-              alt='linkedin'
-              aria-hidden='true'
-            />
+            <OverlayTrigger
+              placement='right'
+              trigger={['hover']}
+              overlay={<Tooltip className='right'>Linkedin</Tooltip>}
+            >
+              <img
+                src={Linkedin}
+                className='social__icons'
+                alt='linkedin'
+                aria-hidden='true'
+              />
+            </OverlayTrigger>
           </a>
         </li>
         <li>
@@ -43,22 +57,34 @@ const SideElements = () => (
             target='_blank'
             rel='noopener noreferrer'
           >
-            <img
-              src={Twitter}
-              className='social__icons'
-              alt='twitter'
-              aria-hidden='true'
-            />
+            <OverlayTrigger
+              placement='right'
+              trigger={['hover']}
+              overlay={<Tooltip className='right'>Twitter</Tooltip>}
+            >
+              <img
+                src={Twitter}
+                className='social__icons'
+                alt='twitter'
+                aria-hidden='true'
+              />
+            </OverlayTrigger>
           </a>
         </li>
         <li>
           <a href='#' target='_blank' rel='noopener noreferrer'>
-            <img
-              src={Facebook}
-              className='social__icons'
-              alt='facebook'
-              aria-hidden='true'
-            />
+            <OverlayTrigger
+              placement='right'
+              trigger={['hover']}
+              overlay={<Tooltip className='right'>Facebook</Tooltip>}
+            >
+              <img
+                src={Facebook}
+                className='social__icons'
+                alt='facebook'
+                aria-hidden='true'
+              />
+            </OverlayTrigger>
           </a>
         </li>
       </ul>

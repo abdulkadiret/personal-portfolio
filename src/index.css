@@ -34,3 +34,65 @@ h1 {
 h2 {
   font-size: 32px;
 }
+
+/*Bootstrap 4 Tooltip*/
+.tooltip .arrow {
+  background-color: transparent;
+}
+
+.tooltip.top > .arrow {
+  margin: 0 0 4px 0;
+}
+
+.tooltip.right .arrow {
+  margin: 0 0 0 4px;
+}
+
+.tooltip > .tooltip-inner {
+  text-align: center;
+  font-size: 12px;
+  border-radius: 5px;
+  color: white;
+  background-color: var(--lighter-gray);
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.15);
+}
+
+.tooltip.top > .tooltip-inner {
+  margin: 0 0 4px 0;
+}
+
+.tooltip.bottom > .tooltip-inner {
+  margin: 4px 0 0 0;
+}
+
+.tooltip.left > .tooltip-inner {
+  margin: 0 4px 0 0;
+}
+
+.tooltip.right > .tooltip-inner {
+  margin: 0 0 0 4px;
+}
+
+.bs-tooltip-top,
+.bs-tooltip-right,
+.bs-tooltip-left,
+.bs-tooltip-bottom {
+  background-color: transparent;
+  opacity: 1 !important;
+}
+
+.tooltip.bs-tooltip-top .arrow:before,
+.tooltip.bs-tooltip-bottom .arrow:before {
+  border-top-color: var(--lighter-gray);
+  border-right-color: transparent;
+  border-bottom-color: var(--lighter-gray);
+  border-left-color: transparent;
+}
+
+.tooltip.bs-tooltip-right .arrow:before,
+.tooltip.bs-tooltip-left .arrow:before {
+  border-top-color: transparent;
+  border-right-color: var(--lighter-gray);
+  border-bottom-color: transparent;
+  border-left-color: var(--lighter-gray);
+}
