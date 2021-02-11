@@ -77,7 +77,7 @@ const Hero = ({ aboutSectionRef }) => {
               <OverlayTrigger
                 placement='top'
                 trigger={['hover']}
-                overlay={<Tooltip className='top'>Go to top</Tooltip>}
+                overlay={<Tooltip className='top'>Back to top</Tooltip>}
               >
                 <img
                   className='slideUp__icon'
