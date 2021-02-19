@@ -70,10 +70,9 @@
   background-color: transparent;
   color: var(--text-color);
   font-family: 'Lato', sans-serif, 'Times New Roman';
-
   border-radius: 0px;
-  border-color: var(--text-color);
-  border-style: none none solid none;
+  border: none;
+  border-bottom: 1.3px solid var(--text-color);
   width: 100%;
   transition: all 0.5s;
   padding: 0rem;
@@ -98,7 +97,7 @@
   box-shadow: none;
   outline: none;
   background-color: transparent;
-  border-bottom: 2px solid var(--primary-color);
+  border-bottom: 1.3px solid var(--primary-color);
   color: var(--text-color);
 }
 
@@ -125,12 +124,29 @@
 
 .form__group textarea:focus + .form__label {
   position: absolute;
-  top: 30px;
-  left: 0;
+  top: 35px;
+  left: 4px;
 }
 
 .form__group textarea:not(:placeholder-shown) + .form__label {
   position: absolute;
-  top: 30px;
-  left: 0;
+  top: 35px;
+  left: 4px;
+}
+
+.error__message {
+  color: #ff5050;
+  padding: 0.5em 0;
+  height: 1em;
+  position: absolute;
+  top: 36px;
+  font-size: 0.75em;
+}
+
+.textarea__error__msg {
+  top: 22px;
+}
+
+.error {
+  border-bottom: 1.3px solid #ff5050;
 }
