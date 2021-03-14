@@ -41,7 +41,8 @@
   transition: transform 0.5s;
 }
 
-.nav-links:hover {
+.nav-links:hover,
+.nav-links:focus {
   color: var(--text-color);
   text-decoration: none;
 }

@@ -19,7 +19,7 @@ const SideElements = () => (
           >
             <OverlayTrigger
               placement='right'
-              trigger={['hover']}
+              trigger={['hover', 'focus']}
               overlay={<Tooltip className='right'>Github</Tooltip>}
             >
               <img
@@ -39,7 +39,7 @@ const SideElements = () => (
           >
             <OverlayTrigger
               placement='right'
-              trigger={['hover']}
+              trigger={['hover', 'focus']}
               overlay={<Tooltip className='right'>Linkedin</Tooltip>}
             >
               <img
@@ -59,7 +59,7 @@ const SideElements = () => (
           >
             <OverlayTrigger
               placement='right'
-              trigger={['hover']}
+              trigger={['hover', 'focus']}
               overlay={<Tooltip className='right'>Twitter</Tooltip>}
             >
               <img
@@ -75,7 +75,7 @@ const SideElements = () => (
           <a href='#' target='_blank' rel='noopener noreferrer'>
             <OverlayTrigger
               placement='right'
-              trigger={['hover']}
+              trigger={['hover', 'focus']}
               overlay={<Tooltip className='right'>Facebook</Tooltip>}
             >
               <img

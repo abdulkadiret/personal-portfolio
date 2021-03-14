@@ -104,7 +104,8 @@
   height: 20px;
 }
 
-.indicator span:hover {
+.indicator span:hover,
+.indicator span:focus {
   border-right: 3px solid var(--text-color);
   border-bottom: 3px solid var(--text-color);
 }
@@ -129,6 +130,7 @@
   filter: brightness(var(--brightness)) invert(var(--invert));
 }
 
-.slideUp__icon:hover {
+.slideUp__icon:hover,
+.slideUp__icon:focus {
   transform: translateY(-2px);
 }

@@ -49,7 +49,7 @@ const About = ({ className, aboutSectionRef }) => {
             Skills
           </h2>
           <Container>
-            <div class='row justify-content-between'>
+            <div className='row justify-content-between'>
               {data.map(({ id, domainName, skills }) => (
                 <ul
                   key={id}

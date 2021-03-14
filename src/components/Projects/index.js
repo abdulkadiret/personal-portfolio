@@ -25,7 +25,7 @@ const Projects = ({ className }) => {
               link,
               image,
             }) => (
-              <div class='projects__container'>
+              <div className='projects__container'>
                 <div
                   key={id}
                   className='row horizontal__card justify-content-md-center'
@@ -46,12 +46,12 @@ const Projects = ({ className }) => {
                           href={link}
                           target='_blank'
                           rel='noopener noreferrer'
-                          class='live__app__link position-absolute'
+                          className='live__app__link position-absolute'
                           style={{ top: 0, left: -15 }}
                         >
                           <OverlayTrigger
                             placement='top'
-                            trigger={['hover']}
+                            trigger={['hover', 'focus']}
                             overlay={
                               <Tooltip className='right'>Live demo</Tooltip>
                             }
@@ -70,12 +70,12 @@ const Projects = ({ className }) => {
                           href={sourceCode}
                           target='_blank'
                           rel='noopener noreferrer'
-                          class='source__code__link position-absolute'
+                          className='source__code__link position-absolute'
                           style={{ top: 50, left: -15 }}
                         >
                           <OverlayTrigger
                             placement='bottom'
-                            trigger={['hover']}
+                            trigger={['hover', 'focus']}
                             overlay={
                               <Tooltip className='right'>Source code</Tooltip>
                             }
@@ -90,8 +90,8 @@ const Projects = ({ className }) => {
                         </a>
                       </span>
                     </div>
-                    <div class='row tech'>
-                      <div class='inner__left'>
+                    <div className='row tech'>
+                      <div className='inner__left'>
                         <ul className='technologies d-flex flex-wrap pl-0'>
                           {technologies.map((technology, index) => (
                             <li key={index} className='pr-1 mt-1'>

@@ -62,7 +62,7 @@ const Hero = ({ aboutSectionRef }) => {
         <div className='indicator'>
           <OverlayTrigger
             placement='top'
-            trigger={['hover']}
+            trigger={['hover', 'focus']}
             overlay={<Tooltip className='top'>Scroll down</Tooltip>}
           >
             <span></span>
@@ -76,7 +76,7 @@ const Hero = ({ aboutSectionRef }) => {
             <span className='point__up__emoji'>
               <OverlayTrigger
                 placement='top'
-                trigger={['hover']}
+                trigger={['hover', 'focus']}
                 overlay={<Tooltip className='top'>Back to top</Tooltip>}
               >
                 <img
