@@ -15,7 +15,8 @@
 .DS_Store
 
 # to ignore any .env files
-.env.* 
+.env
+.env.*
 
 #eslintcache
 .eslintcache
