@@ -64,6 +64,7 @@ const Contact = ({ className }) => {
                       pauseOnHover: true,
                       draggable: true,
                       progress: undefined,
+                      className: 'toast__class',
                     }
                   );
                 })
@@ -78,6 +79,7 @@ const Contact = ({ className }) => {
                       pauseOnHover: true,
                       draggable: true,
                       progress: undefined,
+                      className: 'toast__class',
                     }
                   );
                 });

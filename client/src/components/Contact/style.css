@@ -150,3 +150,22 @@
 .error {
   border-bottom: 1.3px solid #ff5050;
 }
+
+.toast__class {
+  font-size: 14px;
+  padding: 0px 5px 0px 5px !important;
+}
+
+.Toastify__toast-body {
+  padding: 0px 5px 0px 5px !important;
+  margin: 5px 0px !important;
+}
+
+.Toastify__toast {
+  min-height: 52px !important;
+}
+
+.Toastify__toast-container--bottom-right {
+  bottom: 0px !important;
+  right: 1px !important;
+}
