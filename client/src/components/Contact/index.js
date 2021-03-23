@@ -1,10 +1,15 @@
 import React from 'react';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './style.css';
 import { Container, Form, Col, Card } from 'react-bootstrap';
 import TextareaAutosize from 'react-autosize-textarea';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 import axios from 'axios';
+
+//call configure method
+toast.configure();
 
 // Schema for yup
 const validationSchema = Yup.object().shape({
@@ -49,10 +54,32 @@ const Contact = ({ className }) => {
                   message: values.message,
                 })
                 .then(function (response) {
-                  console.log(response);
+                  toast.success(
+                    'Thank you! Your message has been successfully sent 😎',
+                    {
+                      position: 'bottom-right',
+                      autoClose: 3000,
+                      hideProgressBar: true,
+                      closeOnClick: true,
+                      pauseOnHover: true,
+                      draggable: true,
+                      progress: undefined,
+                    }
+                  );
                 })
                 .catch(function (error) {
-                  console.log(error);
+                  toast.error(
+                    'Failed to send your message. Please try again later.',
+                    {
+                      position: 'bottom-right',
+                      autoClose: 3000,
+                      hideProgressBar: true,
+                      closeOnClick: true,
+                      pauseOnHover: true,
+                      draggable: true,
+                      progress: undefined,
+                    }
+                  );
                 });
               resetForm();
               setSubmitting(false);
