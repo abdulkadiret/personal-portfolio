@@ -4,16 +4,17 @@ import { Container, Form, Col, Card } from 'react-bootstrap';
 import TextareaAutosize from 'react-autosize-textarea';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
+import axios from 'axios';
 
 // Schema for yup
 const validationSchema = Yup.object().shape({
-  fullname: Yup.string().trim().max(50, 'Too long!').required('Required'),
+  fullname: Yup.string().trim().max(30, 'Too long!').required('Required'),
   email: Yup.string()
     .trim()
     .email('Invalid email address')
-    .max(100, 'Too long!')
+    .max(30, 'Too long!')
     .required('Required'),
-  subject: Yup.string().trim().max(80, 'Too long!').required('Required'),
+  subject: Yup.string().trim().max(70, 'Too long!').required('Required'),
   message: Yup.string().trim().required('Required'),
 });
 
@@ -40,10 +41,21 @@ const Contact = ({ className }) => {
             validationSchema={validationSchema}
             onSubmit={(values, { setSubmitting, resetForm }) => {
               setSubmitting(true);
-              setTimeout(() => {
-                resetForm();
-                setSubmitting(false);
-              }, 500);
+              axios
+                .post('/api/sendmail', {
+                  fullname: values.fullname,
+                  email: values.email,
+                  subject: values.subject,
+                  message: values.message,
+                })
+                .then(function (response) {
+                  console.log(response);
+                })
+                .catch(function (error) {
+                  console.log(error);
+                });
+              resetForm();
+              setSubmitting(false);
             }}
           >
             {(formik) => (
@@ -52,7 +64,6 @@ const Contact = ({ className }) => {
                   <Form.Group
                     as={Col}
                     md={5}
-                    controlId='formGridFullname'
                     className='form__group'
                     data-aos='fade-up'
                   >
@@ -60,6 +71,7 @@ const Contact = ({ className }) => {
                       required
                       type='text'
                       name='fullname'
+                      id='fullname'
                       placeholder='Enter Full Name'
                       className={
                         formik.touched.fullname && formik.errors.fullname
@@ -78,7 +90,6 @@ const Contact = ({ className }) => {
                   <Form.Group
                     as={Col}
                     md={5}
-                    controlId='formGridEmail'
                     className='form__group ml-auto'
                     data-aos='fade-up'
                   >
@@ -86,6 +97,7 @@ const Contact = ({ className }) => {
                       required
                       type='email'
                       name='email'
+                      id='email'
                       placeholder='Enter Email'
                       className={
                         formik.touched.email && formik.errors.email
@@ -106,7 +118,6 @@ const Contact = ({ className }) => {
                   <Form.Group
                     as={Col}
                     md={12}
-                    controlId='formGridSubject'
                     className='form__group'
                     data-aos='fade-up'
                   >
@@ -114,6 +125,7 @@ const Contact = ({ className }) => {
                       required
                       type='text'
                       name='subject'
+                      id='subject'
                       placeholder='Enter Subject'
                       className={
                         formik.touched.subject && formik.errors.subject
@@ -137,7 +149,6 @@ const Contact = ({ className }) => {
                   <Form.Group
                     as={Col}
                     md={12}
-                    controlId='formGridMessage'
                     className='form__group'
                     id='text__area'
                     data-aos='fade-up'
@@ -148,6 +159,7 @@ const Contact = ({ className }) => {
                       rows={1}
                       type='text'
                       name='message'
+                      id='message'
                       placeholder='Write Message'
                       className={
                         formik.touched.message && formik.errors.message
@@ -175,6 +187,7 @@ const Contact = ({ className }) => {
                   data-aos-anchor='#text__area'
                 >
                   <button
+                    type='submit'
                     className='send__btn btn'
                     disabled={!formik.isValid || formik.isSubmitting}
                   >
