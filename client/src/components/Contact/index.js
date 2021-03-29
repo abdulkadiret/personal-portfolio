@@ -30,7 +30,7 @@ const Contact = ({ className }) => {
         <Card className='content__wrapper p-3' data-aos='fade-up'>
           <div data-aos='fade-up'>
             <h1 className='center'>Get in touch</h1>
-            <p className='text-center pb-3' style={{ fontSize: '18px' }}>
+            <p className='text-center pb-3'>
               Whether you want to get in touch, talk about a project
               collaboration, or just say hi,
               <span className='d-block'>feel free to shoot me an email!</span>
@@ -45,46 +45,47 @@ const Contact = ({ className }) => {
             }}
             validationSchema={validationSchema}
             onSubmit={(values, { setSubmitting, resetForm }) => {
-              setSubmitting(true);
-              axios
-                .post('/api/sendmail', {
-                  fullname: values.fullname,
-                  email: values.email,
-                  subject: values.subject,
-                  message: values.message,
-                })
-                .then(function (response) {
-                  toast.success(
-                    'Thank you! Your message has been successfully sent 😎',
-                    {
-                      position: 'bottom-right',
-                      autoClose: 3000,
-                      hideProgressBar: true,
-                      closeOnClick: true,
-                      pauseOnHover: true,
-                      draggable: true,
-                      progress: undefined,
-                      className: 'toast__class',
-                    }
-                  );
-                })
-                .catch(function (error) {
-                  toast.error(
-                    'Failed to send your message. Please try again later.',
-                    {
-                      position: 'bottom-right',
-                      autoClose: 3000,
-                      hideProgressBar: true,
-                      closeOnClick: true,
-                      pauseOnHover: true,
-                      draggable: true,
-                      progress: undefined,
-                      className: 'toast__class',
-                    }
-                  );
-                });
-              resetForm();
-              setSubmitting(false);
+              setTimeout(() => {
+                axios
+                  .post('/api/sendmail', {
+                    fullname: values.fullname,
+                    email: values.email,
+                    subject: values.subject,
+                    message: values.message,
+                  })
+                  .then((response) => {
+                    toast.success(
+                      'Thank you! Your message has been successfully sent 😎',
+                      {
+                        position: 'bottom-right',
+                        autoClose: 3000,
+                        hideProgressBar: true,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                        className: 'toast__class',
+                      }
+                    );
+                  })
+                  .catch((error) => {
+                    toast.error(
+                      'Failed to send your message. Please try again later.',
+                      {
+                        position: 'bottom-right',
+                        autoClose: 3000,
+                        hideProgressBar: true,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                        className: 'toast__class',
+                      }
+                    );
+                  });
+                resetForm();
+                setSubmitting(false);
+              }, 500);
             }}
           >
             {(formik) => (
