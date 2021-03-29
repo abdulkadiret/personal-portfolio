@@ -40,7 +40,7 @@ const About = ({ className, aboutSectionRef }) => {
             <li data-aos='fade-up'>
               I also enjoy socialising with friends, playing and watching
               football, cooking and keeping myself active by taking a walk in
-              green spaces while reconnecting with nature. &#x26BD;
+              green spaces while reconnecting with nature &#x26BD;
             </li>
           </ul>
         </>
