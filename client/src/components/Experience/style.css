@@ -28,7 +28,7 @@
 }
 
 .btn-primary:hover {
-  color: var(--daisy);
+  color: var(--primary-color);
   background: transparent;
   border-color: var(--text-color);
   font-weight: bold;
