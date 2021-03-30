@@ -5,6 +5,7 @@
   height: 30px;
   filter: grayscale(0%);
   border: none;
+  outline: none;
   border-radius: 50%;
   background-color: #151b5459;
   transition: background-color 0.3s ease-in-out, filter 0.3s ease-in-out;
