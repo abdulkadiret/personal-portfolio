@@ -125,19 +125,14 @@
 
 .source__code__icon,
 .live__app__icon {
-  width: 27px;
-  height: 27px;
-  padding: 3px;
+  width: 22px;
+  height: 22px;
+  padding: 1px;
   transition: all 0.5s ease-in-out;
+  background-color: #f0f0f0;
 }
 
 .source__code__icon:hover,
 .live__app__icon:hover {
   box-shadow: 0 0 3px 3px var(--primary-color);
-}
-
-@media (max-width: 576px) {
-  .horizontal__card {
-    padding-left: 20px;
-  }
 }

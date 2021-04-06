@@ -1,7 +1,7 @@
 .right__side {
   width: 50px;
   position: fixed;
-  top: 49%;
+  top: 50%;
   transform: translate(0, -50%);
   left: auto;
   right: 0;
@@ -42,10 +42,11 @@
   position: relative;
   left: 0rem;
   padding-bottom: 17px;
+  margin-bottom: 0px;
 }
 
 .left__side__socialLinks > li {
-  margin-top: 10px;
+  margin-top: 12px;
 }
 
 .left__side__socialLinks > li > a {
@@ -73,4 +74,22 @@
 
 .email__link {
   color: var(--lighter-gray);
+}
+
+.toggle__side__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.side__content__toggle__btn {
+  color: var(--lighter-gray);
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.side__content__toggle__btn:hover {
+  color: var(--primary-color);
 }

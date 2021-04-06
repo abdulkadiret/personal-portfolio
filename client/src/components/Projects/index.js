@@ -47,10 +47,10 @@ const Projects = ({ className }) => {
                           target='_blank'
                           rel='noopener noreferrer'
                           className='live__app__link position-absolute'
-                          style={{ top: 0, left: -15 }}
+                          style={{ top: 0, right: 18 }}
                         >
                           <OverlayTrigger
-                            placement='top'
+                            placement='left'
                             trigger={['hover', 'focus']}
                             overlay={
                               <Tooltip className='right'>Live demo</Tooltip>
@@ -71,10 +71,10 @@ const Projects = ({ className }) => {
                           target='_blank'
                           rel='noopener noreferrer'
                           className='source__code__link position-absolute'
-                          style={{ top: 50, left: -15 }}
+                          style={{ top: 50, right: 18 }}
                         >
                           <OverlayTrigger
-                            placement='bottom'
+                            placement='left'
                             trigger={['hover', 'focus']}
                             overlay={
                               <Tooltip className='right'>Source code</Tooltip>

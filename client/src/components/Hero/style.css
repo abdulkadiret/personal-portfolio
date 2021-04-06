@@ -98,16 +98,16 @@
 .indicator span {
   display: block;
   border: none;
-  border-right: 5px solid var(--chevron-color);
-  border-bottom: 5px solid var(--chevron-color);
+  border-right: 5px solid var(--lighter-gray);
+  border-bottom: 5px solid var(--lighter-gray);
   width: 20px;
   height: 20px;
 }
 
 .indicator span:hover,
 .indicator span:focus {
-  border-right: 3px solid var(--text-color);
-  border-bottom: 3px solid var(--text-color);
+  border-right: 3px solid var(--primary-color);
+  border-bottom: 3px solid var(--primary-color);
 }
 
 .scroll__to__top {

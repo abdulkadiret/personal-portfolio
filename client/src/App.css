@@ -46,7 +46,7 @@ body.light {
   --buttonText-color: var(--white);
   --label-color: var(--daisy);
   --background-color: var(--gray);
-  --chevron-color: var(--lighter-gray);
+  --chevron-color: var(--text-color);
   --frame-color: var(--transparent-grey);
   --transparent-bg: var(--transparent-gray);
 }
