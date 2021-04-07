@@ -3,12 +3,8 @@ const nodemailer = require('nodemailer');
 
 //auth config object
 const auth = {
-  type: 'OAuth2',
   user: process.env.MAIL_USERNAME,
-  clientId: process.env.CLIENT_ID,
-  clientSecret: process.env.CLIENT_SECRET,
-  redirectUri: process.env.REDIRECT_URI,
-  refreshToken: process.env.REFRESH_TOKEN,
+  pass: process.env.PASSWORD,
 };
 
 //create transport
