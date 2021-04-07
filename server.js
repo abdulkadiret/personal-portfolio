@@ -11,6 +11,9 @@ const { json, urlencoded } = express;
 app.use(json());
 app.use(urlencoded({ extended: true }));
 
+//serve any static files
+app.use(express.static(path.join(__dirname, 'client/build')));
+
 app.post('/api/sendmail', (req, res) => {
   // expect to receive some data from client
   const { fullname, email, subject, message } = req.body;
@@ -28,15 +31,6 @@ app.post('/api/sendmail', (req, res) => {
     }
   });
 });
-
-if (process.env.NODE_ENV === 'production') {
-  //serve any static files
-  app.use(express.static(path.join(__dirname, 'client/build')));
-  //Handle react routing, all requests to React App
-  app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
-  });
-}
 
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => console.log(`Server is running on port: ${PORT}`));
