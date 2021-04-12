@@ -55,7 +55,7 @@ const Contact = ({ className }) => {
                   })
                   .then((response) => {
                     toast.error(
-                      'Whoops, sorry for the inconvenience! this section is under construction. It should be fixed quite soon. But in the meantime you can in touch with me using the others social links.',
+                      'Whoops, sorry for the inconvenience! this section is under construction. It should be fixed quite soon. But in the meantime you can in touch with me using the other social links on the page.',
                       {
                         position: 'bottom-right',
                         autoClose: 4000,
