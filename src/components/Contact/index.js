@@ -54,11 +54,11 @@ const Contact = ({ className }) => {
                     message: values.message,
                   })
                   .then((response) => {
-                    toast.success(
-                      'Thank you! Your message has been successfully sent 😎',
+                    toast.error(
+                      'Whoops, sorry for the inconvenience! this section is under construction. It should be fixed quite soon. But in the meantime you can in touch with me using the others social links.',
                       {
                         position: 'bottom-right',
-                        autoClose: 3000,
+                        autoClose: 4000,
                         hideProgressBar: true,
                         closeOnClick: true,
                         pauseOnHover: true,
@@ -73,7 +73,7 @@ const Contact = ({ className }) => {
                       'Failed to send your message. Please try again later.',
                       {
                         position: 'bottom-right',
-                        autoClose: 3000,
+                        autoClose: 4000,
                         hideProgressBar: true,
                         closeOnClick: true,
                         pauseOnHover: true,
