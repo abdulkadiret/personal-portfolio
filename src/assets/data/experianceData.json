@@ -2,6 +2,7 @@
     {
       "id": 1,
       "company": "CodeYourFuture",
+      "companyURL": "https://codeyourfuture.io",
       "location": "Glasgow, UK",
       "title": "Technical Mentor (Volunteer role)",
       "date": "January 2019 – ongoing",
@@ -12,6 +13,7 @@
     {
       "id": 2,
       "company": "CodeYourFuture",
+      "companyURL": "https://codeyourfuture.io",
       "location": "Glasgow, UK",
       "title": "Full Stack Developer",
       "date": "April 2020 – November 2020",
@@ -22,11 +24,25 @@
     {
       "id": 3,
       "company": "CodeYourFuture",
+      "companyURL": "https://codeyourfuture.io",
       "location": "Glasgow, UK",
       "title": "Trainee Full Stack Developer",
       "date": "Jan 2018 – Sep 2018",
       "role": [
         "I worked on both the frontend and backend of the project taking responsibility for building new features and fixing bugs.", "I participated in Scrum ceremonies from sprint planning, daily standups and retrospectives. I used project management tools like Trello to track my progress throughout each sprint, opened PRs and implemented any code review comments while remaining active and communicative on slack.", "The app was built in an Agile environment following the Model View Controller(MVC) design pattern using different technologies, tools and processes such as React, Node, PostgreSQL, Bootstrap, Git, GitHub, VSCode and Heroku."
+      ]
+    },
+    {
+      "id": 4,
+      "company": "Many Studio",
+      "companyURL": "https://www.manystudios.co.uk",
+      "location": "Glasgow, UK",
+      "title": "Freelance Full Stack Developer",
+      "date": "Feb 2021 – Apr 2021",
+      "role": [
+        "I developed an interactive online exhibition 'For Good or Ill' for  Many Studios. I worked closely with the program manager and a tech lead, building an interactive website using vanilla HTML and CSS, and jQuery.",
+        "We followed an agile approach with weekly sprints including sprint planning, async standups and end of sprint demos.",
+        "My role involved developing the microsite, cross-browser testing, debugging and ensuring its deployment in production."
       ]
     }
   ]

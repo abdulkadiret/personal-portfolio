@@ -38,6 +38,7 @@ const Experience = ({ className }) => {
             {myExperience === 1 && <ExperienceDetail id='1' />}
             {myExperience === 2 && <ExperienceDetail id='2' />}
             {myExperience === 3 && <ExperienceDetail id='3' />}
+            {myExperience === 4 && <ExperienceDetail id='4' />}
           </div>
         </Container>
       </section>
@@ -79,7 +80,7 @@ const ExperienceDetail = ({ id }) => {
               <span className='pr-1 at'>@</span>
               <span className='at'>
                 <a
-                  href='https://codeyourfuture.io/'
+                  href={foundExperience.companyURL}
                   target='_blank'
                   rel='noopener noreferrer'
                   className='company__name'
