@@ -22,37 +22,37 @@ Screenshots of Desktop, Mobile and Ipad views on dark and light mode:
 #### Landing section
 
 <kbd>
-<img src='client/images/screenshots/hero-section.png' alt="landing section" aria-hidden="true">
+<img src='images/screenshots/hero-section.png' alt="landing section" aria-hidden="true">
 </kbd>
 
 #### About section
 
 <kbd>
-<img src='client/images/screenshots/about-section.png' alt="about section" aria-hidden="true">
+<img src='images/screenshots/about-section.png' alt="about section" aria-hidden="true">
 </kbd>
 
 #### Experience section
 
 <kbd>
-<img src='client/images/screenshots/experience-section.png' alt="experience section" aria-hidden="true">
+<img src='images/screenshots/experience-section.png' alt="experience section" aria-hidden="true">
 </kbd>
 
 #### Projects section
 
 <kbd>
-<img src='client/images/screenshots/projects-section.png' alt="projects section" aria-hidden="true">
+<img src='images/screenshots/projects-section.png' alt="projects section" aria-hidden="true">
 </kbd>
 
 #### Contact section
 
 <kbd>
-<img src='client/images/screenshots/contact-section.png' alt="contact section" aria-hidden="true">
+<img src='images/screenshots/contact-section.png' alt="contact section" aria-hidden="true">
 </kbd>
 
 #### 404 page
 
 <kbd>
-<img src='client/images/screenshots/404 page.png' alt="404 page" aria-hidden="true">
+<img src='images/screenshots/404 page.png' alt="404 page" aria-hidden="true">
 </kbd>
 
 ### Live Demo
