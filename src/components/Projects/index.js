@@ -45,6 +45,7 @@ const Projects = ({ className }) => {
                         <a
                           href={link}
                           target='_blank'
+                          aria-label='live app'
                           rel='noopener noreferrer'
                           className='live__app__link position-absolute'
                           style={{ top: 0, right: 18 }}
@@ -69,6 +70,7 @@ const Projects = ({ className }) => {
                         <a
                           href={sourceCode}
                           target='_blank'
+                          aria-label='source code'
                           rel='noopener noreferrer'
                           className='source__code__link position-absolute'
                           style={{ top: 50, right: 18 }}

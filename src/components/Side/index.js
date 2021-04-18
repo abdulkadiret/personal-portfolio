@@ -45,6 +45,7 @@ const SideElements = () => {
                 href='https://github.com/abdulkadiret'
                 target='_blank'
                 rel='noopener noreferrer'
+                aria-label='github'
               >
                 <OverlayTrigger
                   placement='right'
@@ -65,6 +66,7 @@ const SideElements = () => {
                 href='https://www.linkedin.com/in/abdulkadir-awel-23781a1a4/'
                 target='_blank'
                 rel='noopener noreferrer'
+                aria-label='linkedin'
               >
                 <OverlayTrigger
                   placement='right'
@@ -85,6 +87,7 @@ const SideElements = () => {
                 href='https://twitter.com/home'
                 target='_blank'
                 rel='noopener noreferrer'
+                aria-label='twitter'
               >
                 <OverlayTrigger
                   placement='right'
@@ -101,7 +104,12 @@ const SideElements = () => {
               </a>
             </li>
             <li>
-              <a href='#' target='_blank' rel='noopener noreferrer'>
+              <a
+                href='#'
+                target='_blank'
+                rel='noopener noreferrer'
+                aria-label='facebook'
+              >
                 <OverlayTrigger
                   placement='right'
                   trigger={['hover', 'focus']}
@@ -123,6 +131,7 @@ const SideElements = () => {
         <div className='toggle__side__content' data-aos='fade-right'>
           {showContent === true ? (
             <button
+              aria-label='side content toggle button'
               onClick={toggleSideContents}
               className='side__content__toggle__btn'
             >
@@ -130,6 +139,7 @@ const SideElements = () => {
             </button>
           ) : (
             <button
+              aria-label='side content toggle button'
               onClick={toggleSideContents}
               className='side__content__toggle__btn'
             >
@@ -156,6 +166,7 @@ const SideElements = () => {
         <div className='toggle__side__content' data-aos='fade-left'>
           {showContent === true ? (
             <button
+              aria-label='side content toggle button'
               onClick={toggleSideContents}
               className='side__content__toggle__btn'
             >
@@ -163,6 +174,7 @@ const SideElements = () => {
             </button>
           ) : (
             <button
+              aria-label='side content toggle button'
               onClick={toggleSideContents}
               className='side__content__toggle__btn'
             >

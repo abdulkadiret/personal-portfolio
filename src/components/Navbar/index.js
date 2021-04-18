@@ -53,8 +53,9 @@ const Navigation = () => {
       />
       <Navbar.Collapse id='responsive-navbar-nav'>
         <Nav className='ml-auto'>
-          <Nav.Link data-aos='fade-down'>
+          <span>
             <Link
+              data-aos='fade-down'
               href='#about'
               activeClass='active'
               to='about'
@@ -67,10 +68,10 @@ const Navigation = () => {
             >
               About
             </Link>
-          </Nav.Link>
-
-          <Nav.Link data-aos='fade-down'>
+          </span>
+          <span>
             <Link
+              data-aos='fade-down'
               href='#experience'
               activeClass='active'
               to='experience'
@@ -83,10 +84,10 @@ const Navigation = () => {
             >
               Experience
             </Link>
-          </Nav.Link>
-
-          <Nav.Link data-aos='fade-down'>
+          </span>
+          <span>
             <Link
+              data-aos='fade-down'
               href='#projects'
               activeClass='active'
               to='projects'
@@ -99,10 +100,10 @@ const Navigation = () => {
             >
               Projects
             </Link>
-          </Nav.Link>
-
-          <Nav.Link data-aos='fade-down'>
+          </span>
+          <span>
             <Link
+              data-aos='fade-down'
               href='#contact'
               activeClass='active'
               to='contact'
@@ -115,7 +116,7 @@ const Navigation = () => {
             >
               Contact
             </Link>
-          </Nav.Link>
+          </span>
         </Nav>
         <span>
           <a

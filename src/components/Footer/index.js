@@ -13,11 +13,12 @@ const Footer = () => {
           <span>Copyright © AkeyDev 2021</span>
         </div>
         <ul className='footer__social__content d-lg-none'>
-          <li className='mx-2'>
+          <li className='mx-2 px-1 py-2'>
             <a
               href='https://github.com/abdulkadiret'
               target='_blank'
               rel='noopener noreferrer'
+              aria-label='github'
             >
               <img
                 src={Github}
@@ -27,11 +28,12 @@ const Footer = () => {
               />
             </a>
           </li>
-          <li className='mx-2'>
+          <li className='mx-2 px-1 py-2'>
             <a
               href='https://www.linkedin.com/in/abdulkadir-awel-23781a1a4/'
               target='_blank'
               rel='noopener noreferrer'
+              aria-label='linkedin'
             >
               <img
                 src={Linkedin}
@@ -41,11 +43,12 @@ const Footer = () => {
               />
             </a>
           </li>
-          <li className='mx-2'>
+          <li className='mx-2 px-1 py-2'>
             <a
               href='https://twitter.com/home'
               target='_blank'
               rel='noopener noreferrer'
+              aria-label='twitter'
             >
               <img
                 src={Twitter}
@@ -55,8 +58,13 @@ const Footer = () => {
               />
             </a>
           </li>
-          <li className='mx-2'>
-            <a href='#' target='_blank' rel='noopener noreferrer'>
+          <li className='mx-2 px-1 py-2'>
+            <a
+              href='#'
+              target='_blank'
+              rel='noopener noreferrer'
+              aria-label='facebook'
+            >
               <img
                 src={Facebook}
                 className='social__icons'

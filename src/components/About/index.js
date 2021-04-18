@@ -51,21 +51,21 @@ const About = ({ className, aboutSectionRef }) => {
           <Container>
             <div className='row justify-content-between'>
               {data.map(({ id, domainName, skills }) => (
-                <ul
+                <div
                   key={id}
-                  className='skills__list d-flex flex-column align-items-center col-md-6 col-xl-3 ml-auto'
+                  className='d-flex flex-column align-items-center col-md-6 col-xl-3 ml-auto'
                 >
                   <h3 className='domain align-self-center' data-aos='fade-up'>
                     {domainName}
                   </h3>
-                  <div className='d-flex flex-column'>
+                  <ul className='skills__list d-flex flex-column'>
                     {skills.map((skill, index) => (
                       <li key={index} className='ml-3 pl-2' data-aos='fade-up'>
                         {skill}
                       </li>
                     ))}
-                  </div>
-                </ul>
+                  </ul>
+                </div>
               ))}
             </div>
           </Container>

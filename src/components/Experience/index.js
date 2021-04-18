@@ -38,7 +38,6 @@ const Experience = ({ className }) => {
             {myExperience === 1 && <ExperienceDetail id='1' />}
             {myExperience === 2 && <ExperienceDetail id='2' />}
             {myExperience === 3 && <ExperienceDetail id='3' />}
-            {myExperience === 4 && <ExperienceDetail id='4' />}
           </div>
         </Container>
       </section>
