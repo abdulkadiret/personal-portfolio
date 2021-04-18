@@ -114,8 +114,14 @@
   position: fixed;
   z-index: 20;
   bottom: 0.5rem;
-  right: 1.5rem;
+  right: 1.2rem;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 641px) {
+  .scroll__to__top {
+    right: 0.6rem;
+  }
 }
 
 .slideUp__icon {
