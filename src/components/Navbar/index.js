@@ -123,7 +123,7 @@ const Navigation = () => {
             href='https://drive.google.com/file/d/1BsuZFuWce9dsfdkxsdzKedplYJ8TgNEt/view'
             target='_blank'
             rel='noopener noreferrer'
-            className='cv__link btn mr-3'
+            className='cv__link btn mr-lg-3'
             data-aos='fade-down'
           >
             CV
