@@ -1,6 +1,65 @@
 export default [
   {
     id: 1,
+    title: 'E-Fashion E-Commerce Web App',
+    description:
+      'E-Fashion is a full-featured e-commerce platform developed as part of my Honours Project. Built with the MERN stack, it delivers a seamless shopping experience with product filtering, sorting, keyword-based search, wishlist and cart management, and both guest and authenticated checkout workflows. It also features a secure admin interface for full product management (CRUD) and data visualizations. The app emphasizes performance, accessibility, and a clean user experience across devices.',
+    technologies: [
+      'Bcrypt',
+      'Bootstrap',
+      'Bootstrap Icons',
+      'Cloudinary',
+      'ExpressJS',
+      'Firebase',
+      'JWT',
+      'MangoDB',
+      'Mongoose',
+      'Multer',
+      'NodeJs',
+      'ReactJS',
+      'Recharts',
+      'Redux Persist',
+      'Redux Toolkit',
+      'Render',
+      'Streamifier',
+      'Swiper.js',
+    ],
+    sourceCode: 'https://github.com/abdulkadiret/ecommerce-website',
+    link: 'https://e-fashion-frontend.onrender.com',
+    image: `${process.env.PUBLIC_URL}/images/e-fashion.png`,
+  },
+  {
+    id: 2,
+    title: 'Expense Management System',
+    description:
+      'A full-stack web application developed as part of my Industrial Project module, based on a real client use case. The system streamlines employee expense submissions and approval workflows, with role-specific access for employees, line managers, and finance/admin staff. Key features include secure authentication (email/password, Google, Facebook), password recovery, rate limiting, account lockout, and real-time tracking of expense status from submission to reimbursement. Built on the MERN stack (MongoDB, Express.js, React, Node.js), the application integrates various supporting tools, libraries, and cloud services to enable file uploads (PDFs/images), role-based access control (RBAC), and a scalable, maintainable architecture.',
+    technologies: [
+      'Bcrypt',
+      'Bootstrap',
+      'Bootstrap Icons',
+      'Brevo',
+      'Cloudinary',
+      'ExpressJS',
+      'Firebase',
+      'JWT',
+      'MangoDB',
+      'Mongoose',
+      'Multer',
+      'NodeJs',
+      'ReactJS',
+      'Recharts',
+      'Redux Persist',
+      'Redux Toolkit',
+      'Render',
+      'Streamifier',
+      'Swiper.js',
+    ],
+    sourceCode: 'https://github.com/abdulkadiret/Expenses-App',
+    link: 'https://expenses-app-wx53.onrender.com',
+    image: `${process.env.PUBLIC_URL}/images/expense-app.png`,
+  },
+  {
+    id: 3,
     title: 'CYF Quiz',
     description:
       'It is a learning evaluation tool to help CYF students test their knowledge on training modules.',
@@ -22,7 +81,7 @@ export default [
     image: `${process.env.PUBLIC_URL}/images/quiz-app-1.png`,
   },
   {
-    id: 2,
+    id: 4,
     title: 'Edesia',
     description:
       'A full stack web application to connect food banks with volunteer drivers to collect surplus food from local stores around Glasgow. The app displays the store locations and available food on a map and registered drivers can pick up delivery requests. It uses JWT for both authentication and authorization. It has a login system and displays different content for drivers and administrators. The admin can add, delete and update deliveries. Drivers can view and update their personal details once registered.',
@@ -40,7 +99,7 @@ export default [
     image: `${process.env.PUBLIC_URL}/images/edesia-1.png`,
   },
   {
-    id: 3,
+    id: 5,
     title: 'Booking App',
     description:
       'This app allows to capture details of reservations and the restaurant concierge will look at the list of reservations that have been made, and allows the guests to mark their status as seated when they arrive.',
@@ -59,7 +118,7 @@ export default [
     image: `${process.env.PUBLIC_URL}/images/booking-app-1.png`,
   },
   {
-    id: 4,
+    id: 6,
     title: 'ToDo App',
     description:
       'It Add a todo item/ Display todo items in a list/ Edit a todo item/ Delete a todo item/ Mark a todo item as: completed/ Undo mark completed/ Clear-completed todo items/ Toggle/Un-toggle all todo items/ Filter todo items as: All, Active, Completed',
