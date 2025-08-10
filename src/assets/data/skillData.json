@@ -12,23 +12,28 @@
         "SCSS",
         "Bootstrap",
         "React-bootstrap",
-        "Emotion.js"
+        "Emotion.js",
+        "Angular.js",
+        "Tailwind CSS",
+        "Shadcn",
+        "React Native",
+        "PWAs"
       ]
     },
     {
       "id": 2,
       "domainName": "Backend",
-      "skills": ["Node.js", "Express.js"]
+      "skills": ["Node.js", "Express.js", "Java", "GraphQL", "C#", ".NET Core", "ASP.NET Core (MVC and Razor)", "PHP", "Laravel", "Wordpress", "Squarespace", "Strapi"]
     },
     {
       "id": 3,
       "domainName": "Database",
-      "skills": ["PostgreSQL", "SQLite", "MongoDB"]
+      "skills": ["MongoDB", "PostgreSQL", "MySQL", "SQLite"]
     },
     {
       "id": 4,
       "domainName": "Tools",
-      "skills": ["Git", "Github", "Gitlab", "Postman", "Heroku", "AWS"]
+      "skills": ["Git", "Github", "Gitlab", "Postman", "Heroku", "AWS", "VSCode", "Trello", "Project Libre", "Microsoft Project", "Figma", "Photoshop", "Canva", "Inkscape"]
     }
   ]
   
