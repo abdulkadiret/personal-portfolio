@@ -107,7 +107,7 @@ const Projects = ({ className }) => {
                   <div className='col col-md-5 col-sm-6 d-none d-md-block'>
                     <Card className='card__right'>
                       <Card.Body className='right__card__body'>
-                        <Card.Title className='right__card__title'>
+                        <Card.Title className='right__card__title underline-title'>
                           {title}
                         </Card.Title>
                         <Card.Text className='right__card__text project__description p-2'>

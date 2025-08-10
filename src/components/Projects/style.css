@@ -89,7 +89,6 @@
 }
 
 .right__card__title {
-  text-align: center;
   font-family: 'Arvo', serif, 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono',
     monospace;
   font-weight: bold;
@@ -100,15 +99,26 @@
 .right__card__text {
   max-height: 195px;
   overflow: auto;
-  padding: 0 !important;
+  padding-right: 15px !important;
+  margin-bottom: 15px !important;
   font-family: 'Lato', sans-serif, 'Times New Roman';
   font-size: 16px;
-  scrollbar-width: none;
+  scrollbar-width: thin; /* for Firefox */
+  text-align: justify;
 }
 
-/*hide scrollbar*/
-::-webkit-scrollbar {
-  display: none;
+/* Custom scrollbar for WebKit (Chrome, Edge, Safari) */
+.right__card__text::-webkit-scrollbar {
+  width: 6px;
+}
+
+.right__card__text::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.right__card__text::-webkit-scrollbar-track {
+  background: transparent;
 }
 
 .projects__container {
@@ -136,3 +146,21 @@
 .live__app__icon:hover {
   box-shadow: 0 0 3px 3px var(--primary-color);
 }
+
+.underline-title {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.underline-title::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 50%;
+  height: 5px;
+  background: var(--primary-color);
+  opacity: 0.5;
+}
+

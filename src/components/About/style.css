@@ -14,10 +14,10 @@
   content: '';
   display: block;
   width: 4rem;
-  height: 0.1rem;
+  height: 5px;
   margin: 0.75rem auto 1.5rem;
-  background: var(--link-color);
-  opacity: 0.25;
+  background: var(--primary-color);
+  opacity: 0.5;
 }
 
 .skills__list {
