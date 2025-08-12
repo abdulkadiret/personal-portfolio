@@ -3,7 +3,7 @@ export default [
     id: 1,
     title: 'E-Fashion E-Commerce Web App',
     description:
-      'E-Fashion is a full-featured e-commerce platform developed as part of my Honours Project. Built with the MERN stack, it delivers a seamless shopping experience with product filtering, sorting, keyword-based search, wishlist and cart management, and both guest and authenticated checkout workflows. It also features a secure admin interface for full product management (CRUD) and data visualizations. The app emphasizes performance, accessibility, and a clean user experience across devices.',
+      'E-Fashion is a comprehensive e-commerce platform developed as part of my Honours Project. Built with the MERN stack, it offers a seamless shopping experience featuring product filtering, sorting, keyword search, wishlist and cart management, and both guest and authenticated checkout options. The app includes a secure admin interface for full product management (CRUD) and insightful data visualizations. The app emphasizes performance, accessibility, and a clean user experience across devices.',
     technologies: [
       'Bcrypt',
       'Bootstrap',
@@ -32,7 +32,7 @@ export default [
     id: 2,
     title: 'Expense Management System',
     description:
-      'A full-stack web application developed as part of my Industrial Project module, based on a real client use case. The system streamlines employee expense submissions and approval workflows, with role-specific access for employees, line managers, and finance/admin staff. Key features include secure authentication (email/password, Google, Facebook), password recovery, rate limiting, account lockout, and real-time tracking of expense status from submission to reimbursement. Built on the MERN stack (MongoDB, Express.js, React, Node.js), the application integrates various supporting tools, libraries, and cloud services to enable file uploads (PDFs/images), role-based access control (RBAC), and a scalable, maintainable architecture.',
+      'A full-stack web application developed as part of my Industrial Project module, based on a real client use case. The system streamlines employee expense submissions and approval workflows, providing role-specific access for employees, line managers, and finance/admin staff. Key features include secure authentication (email/password, Google, Facebook), password recovery, rate limiting, account lockout, and real-time tracking of expense status from submission through reimbursement. Built on the MERN stack (MongoDB, Express.js, React, Node.js), the app leverages various tools, libraries, and cloud services to support file uploads (PDFs/images), implement role-based access control (RBAC), and ensure a scalable, maintainable architecture.',
     technologies: [
       'Bcrypt',
       'Bootstrap',
@@ -62,7 +62,7 @@ export default [
     id: 3,
     title: 'CYF Quiz',
     description:
-      'It is a learning evaluation tool to help CYF students test their knowledge on training modules.',
+      'CYF Quiz is a MERN full-stack application that serves as an interactive learning tool for CYF students to evaluate their knowledge across various training modules. It offers diverse question formats—including checkbox, multiple choice, and radio button questions—spanning topics such as HTML, CSS, JavaScript, React, and Node.js.',
     technologies: [
       'React (React Hooks)',
       'Express.js',
@@ -84,7 +84,7 @@ export default [
     id: 4,
     title: 'Edesia',
     description:
-      'A full stack web application to connect food banks with volunteer drivers to collect surplus food from local stores around Glasgow. The app displays the store locations and available food on a map and registered drivers can pick up delivery requests. It uses JWT for both authentication and authorization. It has a login system and displays different content for drivers and administrators. The admin can add, delete and update deliveries. Drivers can view and update their personal details once registered.',
+      'Edesia is a full-stack web application designed to connect food banks with volunteer drivers for collecting surplus food from local stores around Glasgow. The app features an interactive map displaying store locations and available food items. Registered drivers can browse and accept delivery requests. Secure authentication and authorization are handled using JWT, supporting distinct roles with tailored content: administrators can manage deliveries by adding, updating, or deleting them, while drivers can view and update their personal profiles after registration.',
     technologies: [
       'React',
       'Node.js',
@@ -102,7 +102,7 @@ export default [
     id: 5,
     title: 'Booking App',
     description:
-      'This app allows to capture details of reservations and the restaurant concierge will look at the list of reservations that have been made, and allows the guests to mark their status as seated when they arrive.',
+      'The Booking App enables efficient management of restaurant reservations by capturing all booking details. The restaurant concierge can easily view the list of upcoming reservations and update each guest’s status to "seated" upon their arrival, streamlining the check-in process and improving customer service.',
     technologies: [
       'React (React Hooks)',
       'Redux',
@@ -121,7 +121,7 @@ export default [
     id: 6,
     title: 'ToDo App',
     description:
-      'It Add a todo item/ Display todo items in a list/ Edit a todo item/ Delete a todo item/ Mark a todo item as: completed/ Undo mark completed/ Clear-completed todo items/ Toggle/Un-toggle all todo items/ Filter todo items as: All, Active, Completed',
+      'This is a full-featured Todo App that allows users to manage their tasks efficiently. Users can add new todo items, view them in a dynamic list, edit existing tasks, and delete individual items. The app supports marking tasks as completed and undoing that action if needed. It also includes the ability to clear all completed todos in one click and toggle all items as completed or uncompleted. Additionally, users can filter their task list by status — viewing all tasks, only active ones, or just the completed items — for a more organized experience.',
     technologies: ['React (React Hooks)', 'React-bootstrap', 'Bootstrap'],
     sourceCode: 'https://github.com/abdulkadiret/Todo-App',
     link: 'https://epic-payne-61e591.netlify.app/',
