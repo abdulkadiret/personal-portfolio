@@ -62,7 +62,7 @@ const Experience = ({ className }) => {
             Experience
           </h1>
 
-          <div className='scroll-wrapper' data-aos='fade-up'>
+          <div className='scroll-wrapper mb-1' data-aos='fade-up'>
             {canScrollLeft && (
               <button
                 className='scroll-btn left'
