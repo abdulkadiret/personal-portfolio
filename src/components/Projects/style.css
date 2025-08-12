@@ -97,7 +97,7 @@
 }
 
 .right__card__text {
-  max-height: 195px;
+  max-height: 220px;
   overflow: auto;
   padding-right: 15px !important;
   margin-bottom: 15px !important;
@@ -105,6 +105,7 @@
   font-size: 16px;
   scrollbar-width: thin; /* for Firefox */
   text-align: justify;
+  word-break: break-word;
 }
 
 /* Custom scrollbar for WebKit (Chrome, Edge, Safari) */
