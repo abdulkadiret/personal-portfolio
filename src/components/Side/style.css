@@ -90,6 +90,6 @@
   outline: none;
 }
 
-.side__content__toggle__btn:hover {
+.side__content__toggle__btn.hovered {
   color: var(--primary-color);
 }

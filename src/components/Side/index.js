@@ -14,6 +14,7 @@ import {
 
 const SideElements = () => {
   const [showContent, setShowContent] = useState(true);
+  const [isHovered, setIsHovered] = useState(false);
 
   const toggleSideContents = (e) => {
     e.preventDefault();
@@ -133,7 +134,11 @@ const SideElements = () => {
             <button
               aria-label='side content toggle button'
               onClick={toggleSideContents}
-              className='side__content__toggle__btn'
+              className={`side__content__toggle__btn ${
+                isHovered ? 'hovered' : ''
+              }`}
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
             >
               <FontAwesomeIcon icon={faChevronLeft} />
             </button>
@@ -141,7 +146,11 @@ const SideElements = () => {
             <button
               aria-label='side content toggle button'
               onClick={toggleSideContents}
-              className='side__content__toggle__btn'
+              className={`side__content__toggle__btn ${
+                isHovered ? 'hovered' : ''
+              }`}
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
             >
               <FontAwesomeIcon icon={faChevronRight} />
             </button>
