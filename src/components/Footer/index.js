@@ -10,7 +10,7 @@ const Footer = () => {
     <footer id='footer'>
       <div className='footer__content py-2'>
         <div className='footer__copyright'>
-          <span>Copyright © AkeyDev 2021</span>
+          <span>Copyright © AkeyDev {new Date().getFullYear()}</span>
         </div>
         <ul className='footer__social__content d-lg-none'>
           <li className='mx-2 px-1 py-2'>
