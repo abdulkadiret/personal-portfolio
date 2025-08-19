@@ -1,17 +1,30 @@
 [
-    {
+  {
       "id": 1,
+      "company": "Many Studios",
+      "companyURL": "https://www.manystudios.co.uk",
+      "location": "Glasgow, UK",
+      "title": "Freelance Full Stack Web Developer",
+      "date": "January 2021 – April 2021",
+      "role": [
+        "I developed an interactive online exhibition, 'For Good or ill', for Many Studios by building a custom microsite within the Squarespace platform using HTML, CSS, and jQuery to create an engaging and interactive user experience.",
+        "Worked closely with program manager and technical lead, following an agile process with weekly sprints, async standups, and sprint demos.",
+        "My role included building the microsite, optimizing images while preserving the visual quality of the artworks, cross-browser testing, and debugging,and ensuring smooth deployment and performance within the Squarespace environment."
+      ]
+    },
+    {
+      "id": 2,
       "company": "CodeYourFuture",
       "companyURL": "https://codeyourfuture.io",
       "location": "Glasgow, UK",
       "title": "Technical Mentor (Volunteer role)",
-      "date": "January 2019 – ongoing",
+      "date": "January 2019 – September 2021",
       "role": [
         "I use the skills I learned as a trainee at CYF to give back to the community.", "I also utilise my organisational skills from my public health career by helping organise delivery of classes and supporting as a teaching assistant to deliver the CYF Full Stack curriculum.", "I also provide support to trainees through 1-to-1 mentorship and giving constructive feedback.", "Alongside that, I work as part of a small developer team consisting of trainees and mentors on internal CYF projects."
       ]
     },
     {
-      "id": 2,
+      "id": 3,
       "company": "CodeYourFuture",
       "companyURL": "https://codeyourfuture.io",
       "location": "Glasgow, UK",
@@ -22,7 +35,7 @@
       ]
     },
     {
-      "id": 3,
+      "id": 4,
       "company": "CodeYourFuture",
       "companyURL": "https://codeyourfuture.io",
       "location": "Glasgow, UK",
