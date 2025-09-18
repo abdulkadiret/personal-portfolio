@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './style.css';
 import Video from '../../assets/videos/video_1.mp4';
-import SlideUp from '../../assets/images/slide-up.png';
+import { IoIosArrowDown } from 'react-icons/io';
+import { MdOutlineKeyboardArrowUp } from 'react-icons/md';
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Tooltip from 'react-bootstrap/Tooltip';
 
@@ -57,37 +58,37 @@ const Hero = ({ aboutSectionRef }) => {
         className='scroll__to__ref'
         data-aos='fade-up'
         data-aos-anchor='#hero_content'
-        onClick={() => scrollToRef(aboutSectionRef)}
       >
-        <div className='indicator'>
-          <OverlayTrigger
-            placement='top'
-            trigger={['hover', 'focus']}
-            overlay={<Tooltip className='top'>Scroll down</Tooltip>}
+        <OverlayTrigger
+          placement='top'
+          trigger={['hover', 'focus']}
+          overlay={<Tooltip className='top'>Scroll down</Tooltip>}
+        >
+          <button
+            className='scroll__icon__btn'
+            onClick={() => scrollToRef(aboutSectionRef)}
+            aria-label='Scroll to about section'
           >
-            <span></span>
-          </OverlayTrigger>
-        </div>
+            <IoIosArrowDown className='scrollDown__icon' />
+          </button>
+        </OverlayTrigger>
       </div>
 
       <div className='scroll__to__top'>
         {showPointUpIcon && (
-          <div onClick={() => scrollToTop()}>
-            <span className='point__up__emoji'>
-              <OverlayTrigger
-                placement='top'
-                trigger={['hover', 'focus']}
-                overlay={<Tooltip className='top'>Back to top</Tooltip>}
-              >
-                <img
-                  className='slideUp__icon'
-                  src={SlideUp}
-                  alt='point up icon'
-                  aria-hidden='true'
-                />
-              </OverlayTrigger>
-            </span>
-          </div>
+          <OverlayTrigger
+            placement='top-end'
+            trigger={['hover', 'focus']}
+            overlay={<Tooltip className='top'>Back to top</Tooltip>}
+          >
+            <button
+              className='scroll__icon__btn'
+              onClick={scrollToTop}
+              aria-label='Back to top'
+            >
+              <MdOutlineKeyboardArrowUp className='scrollUp__icon' />
+            </button>
+          </OverlayTrigger>
         )}
       </div>
     </section>
