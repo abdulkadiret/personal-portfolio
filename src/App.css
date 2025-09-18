@@ -98,3 +98,39 @@ body {
 body::-webkit-scrollbar {
   display: none;
 }
+
+/* Scroll buttons for horizontal scrolling of skills and experiences section*/
+.scroll-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    cursor: pointer;
+    border: 1px solid var(--chevron-color);
+    width: 44px;
+    height: 44px;
+    color: var(--text-color);
+    opacity: 0.25;
+    z-index: 2;
+    transition: color 0.3s ease;
+}
+
+.scroll-btn.left {
+  margin-right: 5px;
+}
+
+.scroll-btn.right {
+  margin-left: 5px;
+}
+
+.scroll-btn.left:hover,
+.scroll-btn.right:hover {
+  color: var(--text-color);
+  border-color: var(--primary-color);
+  opacity: 1;
+  box-shadow: 0 0 3px 3px var(--primary-color);
+}
+
+.slider-icon {
+  font-size: 2rem;
+}
