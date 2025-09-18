@@ -1,14 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './style.css';
 import data from '../../assets/data/experianceData';
-import { Container, ButtonGroup, Button } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import DownloadIcon from '../../assets/images/download-icon.gif';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faChevronLeft,
-  faChevronRight,
-} from '@fortawesome/free-solid-svg-icons';
+import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md';
 
 const Experience = ({ className }) => {
   const [myExperience, setMyExperience] = useState(1);
@@ -21,22 +17,19 @@ const Experience = ({ className }) => {
     if (!el) return;
 
     const { scrollLeft, scrollWidth, clientWidth } = el;
-    const tolerance = 2; // adjust as needed for your layout
+    const tolerance = 2;
 
     setCanScrollLeft(scrollLeft > tolerance);
     setCanScrollRight(scrollLeft + clientWidth < scrollWidth - tolerance);
   };
 
-  const scroll = (scrollOffset) => {
+  const scroll = (offset) => {
     const el = scrollRef.current;
-    if (el) {
-      el.scrollBy({ left: scrollOffset, behavior: 'smooth' });
+    if (!el) return;
 
-      // Delay to let the scroll finish
-      setTimeout(() => {
-        checkScroll();
-      }, 300);
-    }
+    el.scrollBy({ left: offset, behavior: 'smooth' });
+
+    setTimeout(checkScroll, 300);
   };
 
   useEffect(() => {
@@ -44,7 +37,6 @@ const Experience = ({ className }) => {
     if (!el) return;
 
     checkScroll();
-
     el.addEventListener('scroll', checkScroll);
     window.addEventListener('resize', checkScroll);
 
@@ -55,84 +47,88 @@ const Experience = ({ className }) => {
   }, []);
 
   return (
-    <>
-      <section id='experience' className={className}>
-        <Container className='experience__content px-sm-1 px-md-5 px-lg-1 px-xl-5 col-lg-8 col-lg-offset-2'>
+    <section>
+      <div id='experience' className={`${className} pb-5`}>
+        <Container className='experience__content px-sm-1 px-md-5 px-lg-1 px-xl-5 col-lg-9 col-lg-offset-2'>
           <h1 className='center' data-aos='fade-up'>
             Experience
           </h1>
 
-          <div className='scroll-wrapper mb-1' data-aos='fade-up'>
+          <div
+            className='nav-tabs-scroll-container d-flex align-items-center position-relative'
+            data-aos='fade-up'
+          >
+            {/* Left Scroll Button */}
             {canScrollLeft && (
               <button
                 className='scroll-btn left'
                 onClick={() => scroll(-150)}
                 aria-label='Scroll left'
               >
-                <FontAwesomeIcon icon={faChevronLeft} />
+                <MdKeyboardArrowLeft className='slider-icon left' />
               </button>
             )}
 
-            <ButtonGroup
+            {/* Scrollable Tabs */}
+            <div
+              className='nav-tabs-wrapper flex-grow-1 overflow-auto'
               ref={scrollRef}
-              className='button__group text-center d-flex'
-              size='md'
-              role='group'
-              onMouseEnter={() =>
-                scrollRef.current.classList.add('scroll-visible')
-              }
-              onMouseLeave={() =>
-                scrollRef.current.classList.remove('scroll-visible')
-              }
             >
-              {data.map(({ id, title }) => (
-                <Button
-                  type='button'
-                  key={id}
-                  id={`${id}`}
-                  active={id === myExperience}
-                  className='btn experience__btn'
-                  onClick={() => setMyExperience(id)}
-                >
-                  <span>{title}</span>
-                </Button>
-              ))}
-            </ButtonGroup>
+              <ul
+                className='nav nav-tabs flex-nowrap border-bottom-0'
+                id='experienceTabs'
+              >
+                {data.map(({ id, title }) => (
+                  <li className='nav-item' key={id}>
+                    <button
+                      className={`nav-link rounded-0 pb-1 pt-2 m-1 ${
+                        myExperience === id ? 'active' : ''
+                      }`}
+                      onClick={() => setMyExperience(id)}
+                    >
+                      {title}
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
+            {/* Right Scroll Button */}
             {canScrollRight && (
               <button
                 className='scroll-btn right'
                 onClick={() => scroll(150)}
                 aria-label='Scroll right'
               >
-                <FontAwesomeIcon icon={faChevronRight} />
+                <MdKeyboardArrowRight className='slider-icon right' />
               </button>
             )}
           </div>
 
-          <div className='col px-0' data-aos='fade-up'>
-            <ExperienceDetail id={myExperience.toString()} />
-          </div>
+          <ExperienceDetail id={myExperience.toString()} />
         </Container>
-      </section>
-      <div className='banner d-flex justify-content-center align-items-center'>
-        <a
-          href='https://drive.google.com/file/d/1BsuZFuWce9dsfdkxsdzKedplYJ8TgNEt/view'
-          target='_blank'
-          rel='noopener noreferrer'
-          className='cv__link__2 btn'
-          data-aos='zoom-in-up'
-        >
-          CV
-          <img
-            className='download__icon__2'
-            src={DownloadIcon}
-            alt='download icon'
-            aria-hidden='true'
-          />
-        </a>
       </div>
-    </>
+
+      <div className='banner d-flex justify-content-center align-items-center'>
+        <div className='cv__box'>
+          <a
+            href='https://drive.google.com/file/d/1BsuZFuWce9dsfdkxsdzKedplYJ8TgNEt/view'
+            target='_blank'
+            rel='noopener noreferrer'
+            className='cv__link__2 btn'
+            data-aos='zoom-in-up'
+          >
+            CV
+            <img
+              className='download__icon__2'
+              src={DownloadIcon}
+              alt='download icon'
+              aria-hidden='true'
+            />
+          </a>
+        </div>
+      </div>
+    </section>
   );
 };
 
@@ -141,7 +137,11 @@ const ExperienceDetail = ({ id }) => {
   if (!foundExperience) return null;
 
   return (
-    <TransitionGroup key={foundExperience.id} className='experience__wrapper'>
+    <TransitionGroup
+      key={foundExperience.id}
+      className='experience__wrapper'
+      data-aos='fade-up'
+    >
       <CSSTransition
         key={foundExperience.id}
         appear={true}
