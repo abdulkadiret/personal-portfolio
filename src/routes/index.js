@@ -4,7 +4,7 @@ import Content from '../content';
 import Navbar from '../components/Navbar';
 import NotFoundPage from '../components/404Page';
 
-export default () => (
+const AppRoutes = () => (
   <>
     <Navbar />
     <Switch>
@@ -13,3 +13,5 @@ export default () => (
     </Switch>
   </>
 );
+
+export default AppRoutes;
