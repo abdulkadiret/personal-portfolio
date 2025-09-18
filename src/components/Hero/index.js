@@ -26,7 +26,11 @@ const Hero = ({ aboutSectionRef }) => {
 
   useEffect(() => {
     window.addEventListener('scroll', toggleIconVisibility);
-  });
+
+    return () => {
+      window.removeEventListener('scroll', toggleIconVisibility);
+    };
+  }, []);
 
   const scrollToRef = (ref) => {
     window.scroll({
