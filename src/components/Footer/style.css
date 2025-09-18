@@ -8,6 +8,12 @@
   background: var(--background-color);
 }
 
+@media (max-width: 991px) {
+  .footer__content {
+  height: 6rem;
+  }
+}
+
 .footer__social__content {
   display: flex;
   margin: auto;
@@ -26,4 +32,10 @@
   margin: auto;
   justify-content: center;
   align-items: center;
+}
+
+@media  (max-width: 991px) {
+  .footer__copyright {
+  margin-top: 1rem;
+ }
 }
