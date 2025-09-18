@@ -1,4 +1,4 @@
-export default [
+const projectData = [
   {
     id: 1,
     title: 'E-Fashion E-Commerce Web App',
@@ -57,6 +57,32 @@ export default [
     sourceCode: 'https://github.com/abdulkadiret/Expenses-App',
     link: 'https://expenses-app-wx53.onrender.com',
     image: `${process.env.PUBLIC_URL}/images/expense-app.png`,
+  },
+  {
+    id: 0,
+    title: 'Portfolio Website - with WordPress',
+    description:
+      'A responsive 4-page WordPress portfolio built using the Kubio builder. It features tabbed project filtering, a contact form, and SEO-friendly responsive design. To optimize performance and security, the site was converted into a static site using a static page generator plugin and deployed to Netlify—resulting in faster load times, improved security, and zero server maintenance.',
+    technologies: [
+      'WordPress',
+      'Kubio Builder',
+      'Astra Theme',
+      'PHP',
+      'CSS3',
+      'JavaScript',
+      'Contact Form 7',
+      'WP Super Cache',
+      'Yoast SEO',
+      'Envira Gallery Lite',
+      'Font Awesome',
+      'Google Fonts',
+      'Responsive Design',
+      'Simply Static',
+      'Netlify',
+    ],
+    sourceCode: 'https://github.com/',
+    link: 'https://akeyportfolio.netlify.app/',
+    image: `${process.env.PUBLIC_URL}/images/portfolio-wp.png`,
   },
   {
     id: 3,
@@ -128,3 +154,5 @@ export default [
     image: `${process.env.PUBLIC_URL}/images/todo-app-1.png`,
   },
 ];
+
+export default projectData;
