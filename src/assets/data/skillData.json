@@ -1,39 +1,206 @@
 [
-    {
-      "id": 1,
-      "domainName": "Frontend",
-      "skills": [
-        "HTML5",
-        "CSS3",
-        "JavaScript (ES6)",
-        "React.js (Hook)",
-        "Redux",
-        "Java",
-        "SCSS",
-        "Bootstrap",
-        "React-bootstrap",
-        "Emotion.js",
-        "Angular.js",
-        "Tailwind CSS",
-        "Shadcn",
-        "React Native",
-        "PWAs"
-      ]
-    },
-    {
-      "id": 2,
-      "domainName": "Backend",
-      "skills": ["Node.js", "Express.js", "Java", "GraphQL", "C#", ".NET Core", "ASP.NET Core (MVC and Razor)", "PHP", "Laravel", "Wordpress", "Squarespace", "Strapi"]
-    },
-    {
-      "id": 3,
-      "domainName": "Database",
-      "skills": ["MongoDB", "PostgreSQL", "MySQL", "SQLite"]
-    },
-    {
-      "id": 4,
-      "domainName": "Tools",
-      "skills": ["Git", "Github", "Gitlab", "Postman", "Heroku", "AWS", "VSCode", "Trello", "Project Libre", "Microsoft Project", "Figma", "Photoshop", "Canva", "Inkscape"]
-    }
-  ]
-  
+  {
+    "id": 1,
+    "domainName": "Frontend",
+    "skills": [
+      {
+        "name": "HTML5",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+      },
+      {
+        "name": "CSS3",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+      },
+      {
+        "name": "JavaScript",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+      },
+      {
+        "name": "React.js",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+      },
+      {
+        "name": "React Native",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+      },
+      {
+        "name": "Redux",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg"
+      },
+      {
+        "name": "Angular.js",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg"
+      },
+      {
+        "name": "SCSS",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg"
+      },
+      {
+        "name": "Bootstrap",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
+      },
+      {
+        "name": "Emotion.js",
+        "icon": "https://raw.githubusercontent.com/emotion-js/emotion/main/emotion.png"
+      },
+      {
+        "name": "Tailwind CSS",
+        "icon": "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/tailwind-css-icon.png"
+      },
+      {
+        "name": "PWA",
+        "icon": "https://www.svgrepo.com/show/354234/pwa.svg"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "domainName": "Backend",
+    "skills": [
+      {
+        "name": "Node.js",
+        "icon": "https://www.svgrepo.com/show/373929/node.svg"
+      },
+      {
+        "name": "Express.js",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
+      },
+      {
+        "name": "GraphQL",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg"
+      },
+      {
+        "name": "Java",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+      },
+      {
+        "name": "C#",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg"
+      },
+      {
+        "name": "ASP.NET Core",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-original.svg"
+      },
+      {
+        "name": "PHP",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
+      },
+      {
+        "name": "Laravel",
+        "icon": "https://www.svgrepo.com/show/353985/laravel.svg"
+      },
+      {
+        "name": "Wordpress",
+        "icon": "https://www.svgrepo.com/show/475696/wordpress-color.svg"
+      },
+      {
+        "name": "Squarespace",
+        "icon": "https://www.svgrepo.com/show/360785/squarespace.svg"
+      },
+      {
+        "name": "Strapi",
+        "icon": "https://www.svgrepo.com/show/354399/strapi-icon.svg"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "domainName": "Database",
+    "skills": [
+      {
+        "name": "MongoDB",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+      },
+      {
+        "name": "PostgreSQL",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+      },
+      {
+        "name": "MySQL",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+      },
+      {
+        "name": "SQLite",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg"
+      },
+      {
+        "name": "SQL Server",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "domainName": "Tools",
+    "skills": [
+      {
+        "name": "Git",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+      },
+      {
+        "name": "Github",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+      },
+      {
+        "name": "Gitlab",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg"
+      },
+      {
+        "name": "Postman",
+        "icon": "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg"
+      },
+      {
+        "name": "AWS",
+        "icon": "https://www.svgrepo.com/show/331300/aws.svg"
+      },
+      {
+        "name": "Heroku",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/heroku/heroku-original.svg"
+      },
+      {
+        "name": "Vercel",
+        "icon": "https://assets.vercel.com/image/upload/q_auto/front/favicon/vercel/180x180.png"
+      },
+      {
+        "name": "Render",
+        "icon": "https://cdn.brandfetch.io/id8LeMTX5r/theme/dark/symbol.svg?c=1bxid64Mup7aczewSAYMX&t=1696085450746"
+      },
+      {
+        "name": "Netlify",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/netlify/netlify-original.svg"
+      },
+      {
+        "name": "Firebase",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg"
+      },
+      {
+        "name": "VSCode",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
+      },
+      {
+        "name": "Android Studio",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/androidstudio/androidstudio-original.svg"
+      },
+      {
+        "name": "Trello",
+        "icon": "https://cdn.worldvectorlogo.com/logos/trello.svg"
+      },
+      {
+        "name": "Figma",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
+      },
+      {
+        "name": "Photoshop",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg"
+      },
+      {
+        "name": "Canva",
+        "icon": "https://static.canva.com/static/images/apple-touch-icon.png"
+      },
+      {
+        "name": "Inkscape",
+        "icon": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Inkscape_Logo.svg"
+      }
+    ]
+  }
+]
