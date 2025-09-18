@@ -5,8 +5,6 @@
   justify-content: center;
   align-items: center;
   position: relative;
-
-  
 }
 
 .hero_background {
@@ -35,6 +33,7 @@
   font: 100px Georgia, 'Lora', Serif;
   letter-spacing: 1px;
   z-index: 1;
+
   padding: 2rem 0.5rem;
   background: var(--glassy-bg);
   backdrop-filter: blur(5px);
@@ -94,58 +93,59 @@
 
 .scroll__to__ref {
   position: absolute;
-  bottom: 3rem;
+  bottom: 1rem;
   cursor: pointer;
 }
 
-.indicator {
-  width: 40px;
-  margin-top: -2rem;
-  transform: rotate(45deg);
-}
-
-.indicator span {
-  display: block;
-  border: none;
-  border-right: 5px solid var(--lighter-gray);
-  border-bottom: 5px solid var(--lighter-gray);
-  width: 20px;
-  height: 20px;
-}
-
-.indicator span:hover,
-.indicator span:focus {
-  border-right: 3px solid var(--primary-color);
-  border-bottom: 3px solid var(--primary-color);
+.scrollDown__icon,
+.scrollUp__icon {
+  color: var(--lighter-gray);
+  font-size: 1.75rem;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .scroll__to__top {
   position: fixed;
   z-index: 20;
-  bottom: 0.5rem;
-  right: 1.2rem;
+  bottom: 1.5rem;
+  right: 0.75rem;
   cursor: pointer;
 }
 
-@media only screen and (max-width: 641px) {
-  .scroll__to__top {
-    right: 0.6rem;
-  }
+.scroll__icon__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  color: var(--lighter-gray);
+  background-color: transparent;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
-.slideUp__icon {
-  height: 32px;
-  width: auto;
-  position: relative;
-  bottom: 6px;
-  left: auto;
-  right: -0.3rem;
-  z-index: 10;
-  transition: top ease 0.5s;
-  filter: brightness(var(--brightness)) invert(var(--invert));
+.scroll__icon__btn:hover {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 3px 3px var(--primary-color);
 }
 
-.slideUp__icon:hover,
-.slideUp__icon:focus {
-  transform: translateY(-2px);
+.scroll__icon__btn .scrollDown__icon {
+  transform: translateY(-7px);
 }
+
+.scroll__icon__btn .scrollUp__icon {
+  transform: translateY(7px); 
+}
+
+.scroll__icon__btn:hover .scrollDown__icon {
+  color: var(--text-color);
+  transform: translateY(4px);
+}
+
+.scroll__icon__btn:hover .scrollUp__icon {
+  color: var(--text-color);
+  transform: translateY(-4px); 
+}
+
