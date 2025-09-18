@@ -92,16 +92,16 @@ const About = ({ className, aboutSectionRef }) => {
             {/* Text content */}
             <div className='text-wrap-area'>
               <p className='personal__description' data-aos='fade-up'>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                fringilla fringilla nisi, vel facilisis tellus consectetur vel.
-                Quisque est ante, viverra at odio iaculis, molestie efficitur
-                mi. Sed nec blandit lectus. Proin maximus velit tortor, non
-                ultricies ex porta quis. Maecenas neque odio, imperdiet eget
-                elementum quis, auctor condimentum lectus. Fusce vitae justo
-                vitae urna placerat dapibus. Sed quis viverra magna. Fusce vel
-                erat non velit porttitor interdum at ut ligula. Sed vitae luctus
-                tellus, in posuere magna. Quisque condimentum tellus et lectus
-                consectetur hendrerit.
+                I am a full stack web developer with previous experience as a
+                public health professional. Having changed my career to software
+                engineering with CodeYourFuture, I am now looking for a new
+                opportunity to work on exciting digital products. I am eager to
+                work in a positive, friendly and collaborative environment where
+                I can both learn from talented colleagues and use my versatile
+                skill set to help others grow and thrive. I am highly motivated,
+                quick to learn new skills. I am open to new ideas and always
+                excited to take on new challenges and tasks that help me further
+                develop my skills.
               </p>
 
               <ul className='personal__description emoji-list'>
