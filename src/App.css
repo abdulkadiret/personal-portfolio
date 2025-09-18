@@ -9,15 +9,15 @@
   --blue-black: #090f21;
   --indigo: #4b0082;
   --blue: #007bff;
+  --midnight-blue: #020617;
   --transparent-midnight-blue: #131324dc;
-  --midnight-blue: #131324;
-  --light-blue: #393947be;
+  --transparent-gray: #f0f0f0dc;
+  --light-blue: rgba(57, 57, 71, 0.745);
   --transparent-grey: rgba(210, 210, 210, 0.8);
   --light-navy: #172a45;
   --lightest-navy: #303c55;
   --white: #e5e5e5;
-  --transparent-gray: #f0f0f0dc;
-  --gray: #f0f0f0;
+  --gray: #f4f4f4;
   --light-cyan: #e0ffff;
   --light-yellow: #ffffe0;
   --iridium: #9c9c92;
@@ -31,7 +31,11 @@
   --bright-pink: #ff007f;
   --accent-color: #dfdfa7;
   --lighter-gray: #505050;
+  --primary-color: #0388fc, rgba(252, 195, 3, 1), #64ffda;
   --primary-color: #0388fc;
+
+  --transparent-black: rgba(0,0,0,0.25);
+  --transparent-white: rgba(255,255,255,0.25);
 }
 
 body.light {
@@ -48,7 +52,13 @@ body.light {
   --background-color: var(--gray);
   --chevron-color: var(--text-color);
   --frame-color: var(--transparent-grey);
+  --transparent-border: var(--transparent-black);
   --transparent-bg: var(--transparent-gray);
+  --shadow-light: 6px 6px 12px rgba(0, 0, 0, 0.2);      
+  --shadow-dark: -6px -6px 12px rgba(255, 255, 255, 0.7);
+  --glass-bg: rgba(240, 240, 240, 0.4);
+  --glass-shadow: rgba(19, 19, 36, 0.2);
+  --glass-border: rgba(0, 0, 0, 0.1);
 }
 
 body.dark {
@@ -65,7 +75,13 @@ body.dark {
   --background-color: var(--midnight-blue);
   --chevron-color: var(--iridium);
   --frame-color: var(--light-blue);
+  --transparent-border: var(--transparent-white);
   --transparent-bg: var(--transparent-midnight-blue);
+  --shadow-light: 6px 6px 12px rgba(0, 0, 0, 0.4);        
+  --shadow-dark: -6px -6px 12px rgba(255, 255, 255, 0.08);
+  --glass-bg: rgba(19, 19, 36, 0.4);
+  --glass-shadow: rgba(255, 255, 255, 0.2);
+  --glass-border: rgba(255, 255, 255, 0.08);
 }
 
 body {
@@ -76,6 +92,7 @@ body {
   background: var(--background-color);
   color: var(--text-color);
   transition: color 0.6s ease-in-out;
+  font-size: 1.07rem; 
 }
 
 body::-webkit-scrollbar {
