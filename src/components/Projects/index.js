@@ -2,125 +2,113 @@ import React from 'react';
 import './style.css';
 import { Container, Card } from 'react-bootstrap';
 import data from '../../assets/data/projectData';
-import LiveApp from '../../assets/images/external-link.svg';
-import SourceCode from '../../assets/images/source-code.svg';
+import { RxExternalLink } from 'react-icons/rx';
+import { TbBrandGithub } from 'react-icons/tb';
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Tooltip from 'react-bootstrap/Tooltip';
 
 const Projects = ({ className }) => {
   return (
     <section id='projects' className={className}>
-      <Container className='about__content px-sm-1 px-md-5 px-lg-1 px-xl-5 col-lg-8 col-lg-offset-2'>
+      <Container className='project__content px-sm-1 px-md-5 px-lg-1 px-xl-5 col-lg-9 col-lg-offset-2'>
         <h1 className='center' data-aos='fade-up'>
           Projects
         </h1>
-        <div>
-          {data.map(
-            ({
-              id,
-              title,
-              description,
-              technologies,
-              sourceCode,
-              link,
-              image,
-            }) => (
-              <div className='projects__container'>
-                <div
-                  key={id}
-                  className='row horizontal__card justify-content-md-center'
-                  data-aos='fade-up'
-                >
-                  <div className='col card__left col-md-7'>
-                    <div className='img__container'>
-                      <img
-                        src={image}
-                        alt='screenshot of the project'
-                        className='position-relative'
-                      />
-                      <span>{title}</span>
-                    </div>
-                    <div>
-                      <span>
-                        <a
-                          href={link}
-                          target='_blank'
-                          aria-label='live app'
-                          rel='noopener noreferrer'
-                          className='live__app__link position-absolute'
-                          style={{ top: 0, right: 18 }}
-                        >
-                          <OverlayTrigger
-                            placement='left'
-                            trigger={['hover', 'focus']}
-                            overlay={
-                              <Tooltip className='right'>Live demo</Tooltip>
-                            }
-                          >
-                            <img
-                              src={LiveApp}
-                              className='live__app__icon'
-                              alt='demo of the project'
-                              aria-hidden='true'
-                            />
-                          </OverlayTrigger>
-                        </a>
-                      </span>
-                      <span>
-                        <a
-                          href={sourceCode}
-                          target='_blank'
-                          aria-label='source code'
-                          rel='noopener noreferrer'
-                          className='source__code__link position-absolute'
-                          style={{ top: 50, right: 18 }}
-                        >
-                          <OverlayTrigger
-                            placement='left'
-                            trigger={['hover', 'focus']}
-                            overlay={
-                              <Tooltip className='right'>Source code</Tooltip>
-                            }
-                          >
-                            <img
-                              src={SourceCode}
-                              className='source__code__icon'
-                              alt='source code'
-                              aria-hidden='true'
-                            />
-                          </OverlayTrigger>
-                        </a>
-                      </span>
-                    </div>
-                    <div className='row tech'>
-                      <div className='inner__left'>
-                        <ul className='technologies d-flex flex-wrap pl-0'>
-                          {technologies.map((technology, index) => (
-                            <li key={index} className='pr-1 mt-1'>
-                              <span className='technology'>{technology}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    </div>
+
+        {data.map(
+          ({
+            id,
+            title,
+            description,
+            technologies,
+            sourceCode,
+            link,
+            image,
+          }) => (
+            <div className='projects__container' key={id}>
+              <div
+                className='row horizontal__card justify-content-md-center'
+                data-aos='fade-up'
+              >
+                {/* Left Side */}
+                <div className='col col-lg-7 card__left'>
+                  <div className='img__container'>
+                    <img
+                      src={image}
+                      alt={`Screenshot of ${title}`}
+                      className='project__image'
+                    />
+                    <span className='project__title-overlay'>{title}</span>
                   </div>
-                  <div className='col col-md-5 col-sm-6 d-none d-md-block'>
-                    <Card className='card__right'>
-                      <Card.Body className='right__card__body'>
-                        <Card.Title className='right__card__title underline-title'>
-                          {title}
-                        </Card.Title>
-                        <Card.Text className='right__card__text project__description p-2'>
-                          {description}
-                        </Card.Text>
-                      </Card.Body>
-                    </Card>
+                  <div className='links__panel position-absolute d-flex flex-column justify-content-between align-items-center'>
+                    <OverlayTrigger
+                      placement='left'
+                      trigger={['hover', 'focus']}
+                      overlay={<Tooltip className='right'>Live demo</Tooltip>}
+                    >
+                      <a
+                        href={link}
+                        target='_blank'
+                        aria-label={`Live demo of ${title}`}
+                        rel='noopener noreferrer'
+                        className='live__app__link'
+                      >
+                        <RxExternalLink
+                          className='live__app__icon'
+                          aria-hidden='true'
+                        />
+                      </a>
+                    </OverlayTrigger>
+
+                    <OverlayTrigger
+                      placement='left'
+                      trigger={['hover', 'focus']}
+                      overlay={<Tooltip className='right'>Source code</Tooltip>}
+                    >
+                      <a
+                        href={sourceCode}
+                        target='_blank'
+                        aria-label={`Source code of ${title}`}
+                        rel='noopener noreferrer'
+                        className='source__code__link'
+                      >
+                        <TbBrandGithub
+                          className='source__code__icon'
+                          aria-hidden='true'
+                        />
+                      </a>
+                    </OverlayTrigger>
+                  </div>
+                  <div className='row tech'>
+                    <div className='inner__left'>
+                      <ul className='technologies d-flex flex-wrap pl-0'>
+                        {technologies.map((technology, index) => (
+                          <li key={index} className='pr-2 mt-1'>
+                            <span className='technology'>{technology}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
                 </div>
+
+                {/* Right Side */}
+                <div className='col col-lg-5 col-sm-6 d-none d-lg-block'>
+                  <Card className='card__right'>
+                    <Card.Body className='right__card__body'>
+                      <Card.Title className='right__card__title underline-title'>
+                        {title}
+                      </Card.Title>
+                      <Card.Text className='right__card__text project__description p-2'>
+                        {description}
+                      </Card.Text>
+                    </Card.Body>
+                  </Card>
+                </div>
               </div>
-            )
-          )}
-        </div>
+            </div>
+          )
+        )}
       </Container>
     </section>
   );
