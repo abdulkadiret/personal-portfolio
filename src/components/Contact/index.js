@@ -3,8 +3,9 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './style.css';
 import { Container, Form, Col, Card } from 'react-bootstrap';
-import TextareaAutosize from 'react-autosize-textarea';
+import TextareaAutosize from 'react-textarea-autosize';
 import { Formik } from 'formik';
+import { LuSend } from 'react-icons/lu';
 import * as Yup from 'yup';
 import axios from 'axios';
 
@@ -27,7 +28,7 @@ const Contact = ({ className }) => {
   return (
     <section id='contact' className={className}>
       <Container className='contact__content px-sm-1 px-md-5 px-lg-1 px-xl-5 col-lg-8 col-lg-offset-2'>
-        <Card className='content__wrapper p-3' data-aos='fade-up'>
+        <Card className='content__wrapper p-5' data-aos='fade-up'>
           <div data-aos='fade-up'>
             <h1 className='center'>Get in touch</h1>
             <p className='text-center pb-3'>
@@ -212,16 +213,30 @@ const Contact = ({ className }) => {
                   </Form.Group>
                 </Form.Row>
                 <div
-                  className='d-flex justify-content-center col-md-4 col-sm-12 m-auto py-1'
+                  className='d-flex justify-content-center m-auto py-1'
                   data-aos='fade-up'
                   data-aos-anchor='#text__area'
                 >
                   <button
                     type='submit'
-                    className='send__btn btn'
+                    className='send__btn btn btn-primary col-12 col-sm-6 col-lg-4 d-flex align-items-center justify-content-center'
                     disabled={!formik.isValid || formik.isSubmitting}
                   >
-                    Send Message
+                    {formik.isSubmitting ? (
+                      <>
+                        <span
+                          className='spinner-border spinner-border-sm mr-2'
+                          role='status'
+                          aria-hidden='true'
+                        ></span>
+                        Sending...
+                      </>
+                    ) : (
+                      <>
+                        <LuSend className='h5 mb-0 mr-2' />
+                        Send Message
+                      </>
+                    )}
                   </button>
                 </div>
               </Form>
