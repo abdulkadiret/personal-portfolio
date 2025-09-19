@@ -141,7 +141,6 @@ const About = ({ className, aboutSectionRef }) => {
 
               <div
                 className='nav-tabs-wrapper flex-grow-1 overflow-auto'
-                data-aos='fade-up'
                 ref={scrollRef}
               >
                 {/* Bootstrap Nav Tabs */}
