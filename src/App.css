@@ -106,8 +106,8 @@ body::-webkit-scrollbar {
     background: none;
     cursor: pointer;
     border: 1px solid var(--chevron-color);
-    width: 45px;
-    height: 45px;
+    width: 2.34rem;
+    height: 2.34rem;
     color: var(--text-color);
     opacity: 0.25;
     z-index: 2;
