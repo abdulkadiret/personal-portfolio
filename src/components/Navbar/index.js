@@ -71,9 +71,9 @@ const Navigation = () => {
 
       {/* Dark Mode for Mobile */}
       <div className='navbar-extras-mobile' data-aos='fade-down'>
-        <span className='darkMode-mobile'>
+        <div className='darkMode-mobile'>
           <DarkMode />
-        </span>
+        </div>
 
         <Navbar.Toggle
           className='nav_toggle'
@@ -83,7 +83,7 @@ const Navigation = () => {
         />
       </div>
 
-      <Navbar.Collapse className='my-2' id='responsive-navbar-nav'>
+      <Navbar.Collapse id='responsive-navbar-nav'>
         <Nav className='ml-auto'>
           {navItems.map(({ label, to }) => (
             <Nav.Item key={to} className=' mb-2'>
@@ -110,7 +110,7 @@ const Navigation = () => {
             href='https://drive.google.com/file/d/1BsuZFuWce9dsfdkxsdzKedplYJ8TgNEt/view'
             target='_blank'
             rel='noopener noreferrer'
-            className='cv__link btn mr-lg-3 pt-1'
+            className='cv__link btn ml-lg-3 mr-lg-4'
             aria-label='Download CV'
           >
             CV
@@ -123,9 +123,9 @@ const Navigation = () => {
         </div>
 
         {/* Dark Mode for Desktop */}
-        <span className='darkMode-desktop' data-aos='fade-down'>
+        <div className='darkMode-desktop' data-aos='fade-down'>
           <DarkMode />
-        </span>
+        </div>
       </Navbar.Collapse>
     </Navbar>
   );
