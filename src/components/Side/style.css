@@ -33,6 +33,8 @@
 
 .email__link {
   color: var(--lighter-gray);
+  text-decoration: none;
+  font-family: "Fira Code", monospace;
 }
 
 .left__side__socialLinks {
