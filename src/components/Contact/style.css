@@ -21,20 +21,14 @@
   font-weight: normal;
   padding: 1rem;
   border-radius: 0;
-   border: 2px solid var(--text-color);
+  border: 1px solid var(--text-color);
 }
 
-.send__btn:hover {
-  background-color: var(--background-color);
-  color: var(--text-color) !important;
-  border: 2px solid transparent !important;
-  box-shadow: 0 0 3px 3px var(--primary-color); 
-}
-
+.send__btn:hover,
 .send__btn:focus {
-  background-color: var(--background-color);
+  /* background-color: var(--background-color); */
   color: var(--text-color) !important;
-  border: 2px solid var(--text-color) !important;
+  border: 1px solid transparent !important;
   box-shadow: 0 0 3px 3px var(--primary-color); 
 }
 
@@ -52,19 +46,6 @@
   border: 1px solid var(--text-color) !important;
   cursor: not-allowed;
   background-color: var(--frame-color)
-}
-
-.btn {
-  border-radius: 0;
-  background: transparent;
-  outline: none;
-}
-
-.btn-primary:focus,
-.btn-primary.focus,
-.btn:focus,
-.btn.focus {
-  box-shadow: none;
 }
 
 .form__group {

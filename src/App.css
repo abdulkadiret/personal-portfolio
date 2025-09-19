@@ -10,8 +10,6 @@
   --indigo: #4b0082;
   --blue: #007bff;
   --midnight-blue: #020617;
-  --transparent-midnight-blue: #131324dc;
-  --transparent-gray: #f0f0f0dc;
   --light-blue: rgba(57, 57, 71, 0.745);
   --transparent-grey: rgba(210, 210, 210, 0.8);
   --light-navy: #172a45;
@@ -53,7 +51,8 @@ body.light {
   --chevron-color: var(--text-color);
   --frame-color: var(--transparent-grey);
   --transparent-border: var(--transparent-black);
-  --transparent-bg: var(--transparent-gray);
+  --transparent-bg-overlay: rgba(244, 244, 244, 0.82);
+  --transparent-bg: rgba(244, 244, 244, 0.13);
   --shadow-light: 6px 6px 12px rgba(0, 0, 0, 0.2);      
   --shadow-dark: -6px -6px 12px rgba(255, 255, 255, 0.7);
   --glass-bg: rgba(240, 240, 240, 0.4);
@@ -76,7 +75,8 @@ body.dark {
   --chevron-color: var(--iridium);
   --frame-color: var(--light-blue);
   --transparent-border: var(--transparent-white);
-  --transparent-bg: var(--transparent-midnight-blue);
+  --transparent-bg-overlay: rgba(2, 6, 23, 0.84);
+  --transparent-bg: rgba(2, 6, 23, 0.68);
   --shadow-light: 6px 6px 12px rgba(0, 0, 0, 0.4);        
   --shadow-dark: -6px -6px 12px rgba(255, 255, 255, 0.08);
   --glass-bg: rgba(19, 19, 36, 0.4);
@@ -107,8 +107,8 @@ body::-webkit-scrollbar {
     background: none;
     cursor: pointer;
     border: 1px solid var(--chevron-color);
-    width: 44px;
-    height: 44px;
+    width: 45px;
+    height: 45px;
     color: var(--text-color);
     opacity: 0.25;
     z-index: 2;

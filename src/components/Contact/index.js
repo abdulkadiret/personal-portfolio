@@ -219,7 +219,7 @@ const Contact = ({ className }) => {
                 >
                   <button
                     type='submit'
-                    className='send__btn btn btn-primary col-12 col-sm-6 col-lg-4 d-flex align-items-center justify-content-center'
+                    className='send__btn btn col-12 col-sm-6 col-lg-4 d-flex align-items-center justify-content-center'
                     disabled={!formik.isValid || formik.isSubmitting}
                   >
                     {formik.isSubmitting ? (

@@ -51,7 +51,7 @@
 }
 
 .left__side__socialLinks > li > a {
-  background-color: var(--background-color);
+  background-color: var(--transparent-bg);
   border: 1px solid var(--lighter-gray);
   margin: 10px 0 0;
   position: relative;
@@ -60,6 +60,7 @@
 }
 
 .left__side__socialLinks > li > a:hover {
+  background-color: var(--background-color);
   box-shadow: 0 0 3px 3px var(--primary-color);
   border-color: var(--primary-color);
   transform: translateY(-4px);
@@ -87,10 +88,6 @@
   text-decoration: none;
 }
 
-.social__icon__btn:hover {
-  color: var(--primary-color);
-}
-
 /* Toggle Button */
 .side__content__toggle__btn {
   color: var(--lighter-gray);
@@ -109,6 +106,7 @@
 }
 
 .side__content__toggle__btn.hovered {
+  /* background-color: var(--background-color); */
   border: 1px solid var(--primary-color);
   box-shadow: 0 0 3px 3px var(--primary-color);
 }
