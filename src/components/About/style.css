@@ -106,13 +106,12 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  transition: transform 0.2s;
   box-shadow: none;
+  transition: box-shadow 0.15s ease-in-out;
 }
 
 .skill-box:hover {
   box-shadow: 0 0 0 1px var(--primary-color);
-  transition: box-shadow 0.3s linear;
 }
 
 .skill-icon {
