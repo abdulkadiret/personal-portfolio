@@ -92,31 +92,63 @@ const About = ({ className, aboutSectionRef }) => {
             {/* Text content */}
             <div className='text-wrap-area'>
               <p className='personal__description' data-aos='fade-up'>
-                I am a full stack web developer with previous experience as a
-                public health professional. Having changed my career to software
-                engineering with CodeYourFuture, I am now looking for a new
-                opportunity to work on exciting digital products. I am eager to
-                work in a positive, friendly and collaborative environment where
-                I can both learn from talented colleagues and use my versatile
-                skill set to help others grow and thrive. I am highly motivated,
-                quick to learn new skills. I am open to new ideas and always
-                excited to take on new challenges and tasks that help me further
-                develop my skills.
+                I’m a full-stack web developer with a background in public
+                health and a strong foundation in both frontend and backend
+                technologies. My coding journey began through{' '}
+                <a
+                  href='https://www.codeyourfuture.io/'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  CodeYourFuture
+                </a>
+                ’s intensive training programme, where I discovered my passion
+                for problem-solving and collaboration.
+              </p>
+
+              <p className='personal__description' data-aos='fade-up'>
+                To deepen my skills, I completed an HND in Web Development at{' '}
+                <a
+                  href='https://www.cityofglasgowcollege.ac.uk/'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  City of Glasgow College
+                </a>
+                . I recently graduated with a BSc (Hons) in Web & Mobile
+                Development from the{' '}
+                <a
+                  href='https://www.uws.ac.uk/'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  University of the West of Scotland (UWS)
+                </a>{' '}
+                with First Class honours. These experiences have prepared me to
+                build scalable, user-focused solutions that follow industry best
+                practices.
+              </p>
+
+              <p className='personal__description' data-aos='fade-up'>
+                I’m motivated, a fast learner, and adaptable. I’m eager to
+                contribute to a collaborative team, learn from experienced
+                developers, and help deliver high-quality, impactful digital
+                products.
               </p>
 
               <ul className='personal__description emoji-list'>
                 <li data-aos='fade-up'>
-                  I love coding, problem solving and working in collaboration
+                  I love coding, problem-solving, and working in collaboration
                   with others 💜
                 </li>
                 <li data-aos='fade-up'>
-                  I like applying my coding skills to develop something that has
-                  a positive impact on people's lives 👍
+                  I enjoy using my skills to create products that make a
+                  positive impact on people's lives 👍
                 </li>
                 <li data-aos='fade-up'>
-                  I also enjoy socialising with friends, playing and watching
-                  football, cooking and keeping myself active by taking a walk
-                  in green spaces while reconnecting with nature ⚽
+                  Outside of tech, I like socialising with friends, playing and
+                  watching football, cooking, and taking walks in nature to
+                  recharge ⚽
                 </li>
               </ul>
             </div>
