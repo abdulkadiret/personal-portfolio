@@ -46,6 +46,7 @@
   padding: 0.15rem 0.3rem;
   text-decoration: none;
   font-size: 1.025rem;
+  font-weight: 600;
   font-family: "Fira Code", monospace;
   text-transform: uppercase;
 }
@@ -131,6 +132,7 @@
   padding: 0.15rem 0.3rem;
   text-decoration: none;
   font-size: 1.025rem;
+  font-weight: 600;
   font-family: "Fira Code", monospace;
   text-transform: uppercase;
 }
