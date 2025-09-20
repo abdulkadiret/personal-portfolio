@@ -122,8 +122,7 @@ body::-webkit-scrollbar {
   margin-left: 5px;
 }
 
-.scroll-btn.left:hover,
-.scroll-btn.right:hover {
+.scroll-btn.left:hover {
   color: var(--text-color);
   border-color: var(--primary-color);
   opacity: 1;
