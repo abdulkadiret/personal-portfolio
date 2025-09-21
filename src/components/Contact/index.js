@@ -33,8 +33,7 @@ const Contact = ({ className }) => {
             <h1 className='center'>Get in touch</h1>
             <p className='text-center pb-3'>
               Whether you want to get in touch, talk about a project
-              collaboration, or just say hi,
-              <span className='d-block'>feel free to shoot me an email!</span>
+              collaboration, or just say hi, feel free to shoot me an email!
             </p>
           </div>
           <Formik

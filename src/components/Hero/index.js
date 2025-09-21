@@ -59,7 +59,7 @@ const Hero = ({ aboutSectionRef }) => {
         </h1>
       </div>
       <div
-        className='scroll__to__ref'
+        className='scroll__to scroll__to__ref'
         data-aos='fade-up'
         data-aos-anchor='#hero_content'
       >
@@ -78,7 +78,7 @@ const Hero = ({ aboutSectionRef }) => {
         </OverlayTrigger>
       </div>
 
-      <div className='scroll__to__top'>
+      <div className='scroll__to scroll__to__top'>
         {showPointUpIcon && (
           <OverlayTrigger
             placement='top-end'

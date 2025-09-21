@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState, useMemo } from 'react';
 import './style.css';
 import { Container } from 'react-bootstrap';
-import ProfilePicture from '../../assets/images/profile-picture-v1.jpg';
+import ProfilePicture from '../../assets/images/profile-picture.png';
 import skillsData from '../../assets/data/skillData';
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md';
 

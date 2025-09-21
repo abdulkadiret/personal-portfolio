@@ -32,47 +32,44 @@
   position: relative;
   z-index: 2;
   float: right;
-  height: 20rem;
+  width: 45%;
   margin: 0 0 1rem 2rem;
-  padding: 0 0 0.95rem 1rem;
-  border-top: none;
-  border-right: none;
-  border-bottom-left-radius: 10px;
-  border-top-right-radius: 10px;
+  padding: 0 0 1rem 1rem;
+  border-top-right-radius: 8px;
+  border-bottom-left-radius: 8px;
   overflow: hidden;
   background-color: var(--frame-color);
-  box-shadow: 4px 4px 2px 2px rgba(3, 136, 252, 0); 
-  transition: box-shadow 1.5s ease-in-out;
-}
-
-.float-image-wrapper:hover {
-  box-shadow: 4px 4px 4px 4px var(--primary-color);
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1), filter 0.6s ease-in-out;
+  will-change: transform, filter;
 }
 
 .float-image {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
-  border-top: none;
-  border-right: none;
-  border-bottom-left-radius: 5px;
-  border-top-right-radius: 5px;
-  transform-origin: center center;
+  border-top-right-radius: 8px;
+  border-bottom-left-radius: 8px;
   filter: grayscale(100%);
-  transition: filter 1.5s ease-in-out, transform 1.5s ease-in-out;
+  transition: filter 0.5s ease-in-out, transform 0.5s ease-in-out;
+  will-change: transform, filter;
 }
 
 .float-image-wrapper:hover .float-image {
   filter: grayscale(0%);
-  transform: scale(1.1);
+  transform: translateY(1rem) translateX(-1rem) scale(1.02);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 991.98px) {
   .float-image-wrapper {
     float: none;
     display: block;
     margin: 0 auto 1.5rem;
-    padding: 0 0 0.7rem 0.7rem;
+    padding: 1rem;
+    width: 100%;
+  }
+
+  .float-image-wrapper:hover .float-image {
+    transform: scale(1.035);
   }
 }
 

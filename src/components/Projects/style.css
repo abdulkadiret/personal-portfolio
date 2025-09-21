@@ -141,7 +141,7 @@
   height: 120px;
   padding: 10px;
   border: 1px solid var(--frame-color);
-  border-radius: 8px;
+  border-radius: 5px;
   box-shadow: var(--shadow-light), var(--shadow-dark);
 }
 
