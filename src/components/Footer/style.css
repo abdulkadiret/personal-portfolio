@@ -24,7 +24,7 @@
 }
 
 .footer__social__content > li > a:hover {
-  box-shadow: 0 0 3px 3px var(--primary-color);
+  box-shadow: 0 0 3px 3px var(--primary-color-01);
 }
 
 .footer__copyright {

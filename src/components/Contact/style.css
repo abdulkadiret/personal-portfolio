@@ -29,7 +29,7 @@
   /* background-color: var(--background-color); */
   color: var(--text-color) !important;
   border: 1px solid transparent !important;
-  box-shadow: 0 0 3px 3px var(--primary-color); 
+  box-shadow: 0 0 3px 3px var(--primary-color-01); 
 }
 
 .send__btn:disabled {

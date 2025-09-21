@@ -151,11 +151,13 @@
   padding: 5px;
   transition: all 0.25s ease-in-out;
   border-radius: 50%;
+  border: 1px solid transparent;
 }
 
 .source__code__icon:hover,
 .live__app__icon:hover {
-  box-shadow: 0 0 3px 3px var(--primary-color);
+  border-color: transparent;
+  box-shadow: 0 0 3px 3px var(--primary-color-01);
 }
 
 .underline-title {

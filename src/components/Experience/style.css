@@ -116,7 +116,7 @@
   /* background-color: var(--background-color); */
   color: var(--text-color);
   border: 1px solid transparent;
-  box-shadow: 0 0 3px 3px var(--primary-color); 
+  box-shadow: 0 0 3px 3px var(--primary-color-01); 
   font-weight: bold;
   transform: scale(1.02);
 }

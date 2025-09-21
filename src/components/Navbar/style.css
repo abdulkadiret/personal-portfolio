@@ -142,9 +142,8 @@
 .cv__link:active {
   background-color: transparent;
   color: var(--text-color);
-  border-color: transparent;
   outline: 0;
-  box-shadow: 0 0 3px 3px var(--primary-color);
+  box-shadow: 0 0 3px 3px var(--primary-color-01);
 }
 
 .download__icon {
