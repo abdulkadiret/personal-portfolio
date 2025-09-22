@@ -32,8 +32,8 @@
   position: relative;
   z-index: 2;
   float: right;
-  width: 45%;
-  margin: 0 0 1rem 2rem;
+  width: 40%;
+  margin: 0 0 1rem 2.2rem;
   padding: 0 0 1rem 1rem;
   border-top-right-radius: 8px;
   border-bottom-left-radius: 8px;
@@ -79,13 +79,34 @@
 
 .emoji-list {
   margin-top: 1rem;
-  padding-left: 1.5rem;
+  padding-left: 1.2rem;
 }
 
 .emoji-list li {
-  list-style: '👉 ';
-  list-style-position: outside;
+  list-style: none;
   margin-bottom: 0.5rem;
+  position: relative;
+  padding-left: 2em;
+}
+
+.emoji-list li::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.25em;
+}
+
+.emoji-list li:nth-child(1)::before {
+  content: "💻";
+}
+
+.emoji-list li:nth-child(2)::before {
+  content: "✨";
+
+}
+
+.emoji-list li:nth-child(3)::before {
+  content: "🌍";
 }
 
 .skills-grid {

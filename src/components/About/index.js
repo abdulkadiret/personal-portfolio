@@ -103,7 +103,7 @@ const About = ({ className, aboutSectionRef }) => {
                   CodeYourFuture
                 </a>
                 ’s intensive training programme, where I discovered my passion
-                for problem-solving and collaboration.
+                for programming.
               </p>
 
               <p className='personal__description' data-aos='fade-up'>
@@ -139,16 +139,16 @@ const About = ({ className, aboutSectionRef }) => {
               <ul className='personal__description emoji-list'>
                 <li data-aos='fade-up'>
                   I love coding, problem-solving, and working in collaboration
-                  with others 💜
+                  with others.
                 </li>
                 <li data-aos='fade-up'>
                   I enjoy using my skills to create products that make a
-                  positive impact on people's lives 👍
+                  positive impact on people's lives.
                 </li>
                 <li data-aos='fade-up'>
                   Outside of tech, I like socialising with friends, playing and
                   watching football, cooking, and taking walks in nature to
-                  recharge ⚽
+                  recharge.
                 </li>
               </ul>
             </div>
