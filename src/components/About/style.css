@@ -34,7 +34,7 @@
   float: right;
   width: 40%;
   margin: 0 0 1rem 2.2rem;
-  padding: 0 0 1rem 1rem;
+  padding: 0 0 0.85rem 0.85rem;
   border-top-right-radius: 8px;
   border-bottom-left-radius: 8px;
   overflow: hidden;
@@ -64,12 +64,12 @@
     float: none;
     display: block;
     margin: 0 auto 1.5rem;
-    padding: 1rem;
+    padding: 0.75rem;
     width: 100%;
   }
 
   .float-image-wrapper:hover .float-image {
-    transform: scale(1.035);
+    transform: scale(1.025);
   }
 }
 
