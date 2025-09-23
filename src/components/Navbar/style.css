@@ -166,14 +166,21 @@
 }
 
 @media (max-width: 992px) {
-  .navbar {
-  /* background: var(--glass);  */
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid var(--glass-border);
-  box-shadow: 0 4px 30px var(--glass-shadow);
-  transition: all 0.5s ease;
-  z-index: 999;
+  .navbar--transparent {
+    background: transparent;
+    backdrop-filter: none;
+    border-bottom: none;
+    box-shadow: none;
+    transition: all 0.5s ease;
+  }
+
+  .navbar--transparent:has(.navbar-collapse.show) {
+    background: var(--glass);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--glass-border);
+    box-shadow: 0 4px 30px var(--glass-shadow);
+    z-index: 999;
   }
 }
 
