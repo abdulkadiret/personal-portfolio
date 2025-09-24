@@ -116,6 +116,7 @@
 }
 
 .toggle-icon {
+  color: var(--lighter-gray);
   font-size: 1.75rem;
   transition: transform 0.3s ease, color 0.3s ease;
 }
@@ -139,7 +140,7 @@
 .side__line__1,
 .side__line__2
  {
-  width: 2px;
+  width: 1px;
   height: 70px;
   background-color: var(--lighter-gray);
   margin-top: 1rem;
