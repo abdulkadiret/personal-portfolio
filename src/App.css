@@ -52,7 +52,7 @@ body.light {
   --frame-color: var(--transparent-grey);
   --transparent-border: var(--transparent-black);
   --transparent-bg-overlay: rgba(244, 244, 244, 0.82);
-  --transparent-bg: rgba(244, 244, 244, 0.13);
+  --transparent-bg: rgba(244, 244, 244, 0.4);
   --shadow-light: 6px 6px 12px rgba(0, 0, 0, 0.2);      
   --shadow-dark: -6px -6px 12px rgba(255, 255, 255, 0.7);
   --glass-bg: rgba(240, 240, 240, 0.4);
@@ -76,7 +76,7 @@ body.dark {
   --frame-color: var(--light-blue);
   --transparent-border: var(--transparent-white);
   --transparent-bg-overlay: rgba(2, 6, 23, 0.84);
-  --transparent-bg: rgba(5, 12, 36, 0.75);
+  --transparent-bg: rgba(5, 12, 36, 0.6);
   --shadow-light: 6px 6px 12px rgba(0, 0, 0, 0.4);        
   --shadow-dark: -6px -6px 12px rgba(255, 255, 255, 0.08);
   --glass-bg: rgba(5, 12, 36, 0.65);
