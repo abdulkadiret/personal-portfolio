@@ -16,12 +16,15 @@
 }
 
 .right__side__mailto {
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
+  border-radius: 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
+
+  background: var(--glassy-bg);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
 }
 
 .right__side__mailto > a {

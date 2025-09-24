@@ -35,7 +35,7 @@ const Footer = () => {
               link: 'https://openprocessing.org/user/223890#sketches',
             },
           ].map((social, idx) => (
-            <li key={idx} className='mx-2 px-1 py-2'>
+            <li key={idx} className='mx-2 p-1'>
               <a
                 href={social.link}
                 target='_blank'
