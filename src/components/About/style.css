@@ -86,13 +86,13 @@
   list-style: none;
   margin-bottom: 0.5rem;
   position: relative;
-  padding-left: 2em;
+  padding-left: 2.25em;
 }
 
 .emoji-list li::before {
   position: absolute;
   left: 0;
-  top: 0;
+  top: -3px;
   font-size: 1.25em;
 }
 
