@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './style.css';
 import data from '../../assets/data/experianceData';
+import CV from '../../assets/CV.pdf';
 import { Container } from 'react-bootstrap';
 import DownloadIcon from '../../assets/images/download-icon.gif';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
@@ -112,7 +113,7 @@ const Experience = ({ className }) => {
       <div className='banner d-flex justify-content-center align-items-center'>
         <div className='cv__box'>
           <a
-            href='https://drive.google.com/file/d/1BsuZFuWce9dsfdkxsdzKedplYJ8TgNEt/view'
+            href={CV}
             target='_blank'
             rel='noopener noreferrer'
             className='cv__link__2 btn'

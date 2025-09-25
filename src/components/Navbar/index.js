@@ -4,6 +4,7 @@ import { Navbar, Nav } from 'react-bootstrap';
 import { Link, animateScroll as scroll } from 'react-scroll';
 import logo from '../../assets/images/logo.png';
 import DownloadIcon from '../../assets/images/download-icon.gif';
+import CV from '../../assets/CV.pdf';
 import DarkMode from '../DarkMode/index';
 
 const navItems = [
@@ -107,7 +108,7 @@ const Navigation = () => {
 
         <div className='pl-3 pl-lg-0' data-aos='fade-down'>
           <a
-            href='https://drive.google.com/file/d/1BsuZFuWce9dsfdkxsdzKedplYJ8TgNEt/view'
+            href={CV}
             target='_blank'
             rel='noopener noreferrer'
             className='cv__link btn ml-lg-3 mr-lg-4'
