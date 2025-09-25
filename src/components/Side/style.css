@@ -38,6 +38,14 @@
   color: var(--lighter-gray);
   text-decoration: none;
   font-family: "Fira Code", monospace;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.email__link:hover,
+.email__link:focus {
+  transform: translateY(-4px);
+  outline: none;
+  color: var(--primary-color);
 }
 
 .left__side__socialLinks {
