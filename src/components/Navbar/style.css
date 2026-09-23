@@ -33,8 +33,9 @@
 }
 
 .logo {
-  width: 7rem;
-  object-fit: contain;
+  width: 5.2rem;
+  height: auto;
+  display: block;
 }
 
 .nav-links {

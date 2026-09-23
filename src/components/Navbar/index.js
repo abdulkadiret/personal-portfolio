@@ -1,17 +1,17 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import './style.css';
-import { Navbar, Nav } from 'react-bootstrap';
-import { Link, animateScroll as scroll } from 'react-scroll';
-import logo from '../../assets/images/logo.png';
-import DownloadIcon from '../../assets/images/download-icon.gif';
-import CV from '../../assets/CV.pdf';
-import DarkMode from '../DarkMode/index';
+import React, { useState, useEffect, useCallback } from "react";
+import "./style.css";
+import { Navbar, Nav } from "react-bootstrap";
+import { Link, animateScroll as scroll } from "react-scroll";
+import logo from "../../assets/images/logo.png";
+import DownloadIcon from "../../assets/images/download-icon.gif";
+import CV from "../../assets/CV.pdf";
+import DarkMode from "../DarkMode/index";
 
 const navItems = [
-  { label: 'About', to: 'about' },
-  { label: 'Experience', to: 'experience' },
-  { label: 'Projects', to: 'projects' },
-  { label: 'Contact', to: 'contact' },
+  { label: "About", to: "about" },
+  { label: "Experience", to: "experience" },
+  { label: "Projects", to: "projects" },
+  { label: "Contact", to: "contact" },
 ];
 
 const Navigation = () => {
@@ -35,15 +35,15 @@ const Navigation = () => {
   }, [lastScrollY]);
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, [handleScroll]);
 
   const getNavbarClass = () => {
-    if (navbar.show && !navbar.bg) return 'navbar--transparent';
-    if (navbar.show && navbar.bg) return 'navbar--solid';
-    if (!navbar.show) return 'navbar--hidden';
-    return '';
+    if (navbar.show && !navbar.bg) return "navbar--transparent";
+    if (navbar.show && navbar.bg) return "navbar--solid";
+    if (!navbar.show) return "navbar--hidden";
+    return "";
   };
 
   const handleNavItemClick = () => {
@@ -56,48 +56,48 @@ const Navigation = () => {
     <Navbar
       className={getNavbarClass()}
       collapseOnSelect
-      expand='lg'
-      variant='light'
-      fixed='top'
+      expand="lg"
+      variant="light"
+      fixed="top"
       expanded={expanded}
     >
       <Navbar.Brand
         onClick={() => scroll.scrollToTop()}
-        className='navbar-logo'
-        data-aos='fade-down'
-        style={{ cursor: 'pointer' }}
+        className="navbar-logo"
+        data-aos="fade-down"
+        style={{ cursor: "pointer" }}
       >
-        <img className='logo' src={logo} alt='akey logo' />
+        <img className="logo" src={logo} alt="AA" />
       </Navbar.Brand>
 
       {/* Dark Mode for Mobile */}
-      <div className='navbar-extras-mobile' data-aos='fade-down'>
-        <div className='darkMode-mobile'>
+      <div className="navbar-extras-mobile" data-aos="fade-down">
+        <div className="darkMode-mobile">
           <DarkMode />
         </div>
 
         <Navbar.Toggle
-          className='nav_toggle'
-          aria-controls='responsive-navbar-nav'
-          aria-label='Toggle navigation'
+          className="nav_toggle"
+          aria-controls="responsive-navbar-nav"
+          aria-label="Toggle navigation"
           onClick={() => setExpanded(!expanded)}
         />
       </div>
 
-      <Navbar.Collapse id='responsive-navbar-nav'>
-        <Nav className='ml-auto'>
+      <Navbar.Collapse id="responsive-navbar-nav">
+        <Nav className="ml-auto">
           {navItems.map(({ label, to }) => (
-            <Nav.Item key={to} className=' mb-2'>
+            <Nav.Item key={to} className=" mb-2">
               <Link
-                data-aos='fade-down'
+                data-aos="fade-down"
                 to={to}
                 spy={true}
                 smooth={true}
                 offset={-67}
                 duration={500}
                 delay={300}
-                className='nav-links'
-                activeClass='active'
+                className="nav-links"
+                activeClass="active"
                 onClick={handleNavItemClick}
               >
                 {label}
@@ -106,25 +106,25 @@ const Navigation = () => {
           ))}
         </Nav>
 
-        <div className='pl-3 pl-lg-0' data-aos='fade-down'>
+        <div className="pl-3 pl-lg-0" data-aos="fade-down">
           <a
             href={CV}
-            target='_blank'
-            rel='noopener noreferrer'
-            className='cv__link btn ml-lg-3 mr-lg-4'
-            aria-label='Download CV'
+            target="_blank"
+            rel="noopener noreferrer"
+            className="cv__link btn ml-lg-3 mr-lg-4"
+            aria-label="Download CV"
           >
             CV
             <img
-              className='download__icon'
+              className="download__icon"
               src={DownloadIcon}
-              alt='download icon'
+              alt="download icon"
             />
           </a>
         </div>
 
         {/* Dark Mode for Desktop */}
-        <div className='darkMode-desktop' data-aos='fade-down'>
+        <div className="darkMode-desktop" data-aos="fade-down">
           <DarkMode />
         </div>
       </Navbar.Collapse>

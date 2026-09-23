@@ -54,7 +54,7 @@ const Hero = ({ aboutSectionRef }) => {
           <span className='greeting'>Hi!</span>
           <span className='wave__hand'>&#128075;</span>
           <span className='intro_text'>my name is</span>
-          <span className='name'>Abdulkadir</span>
+          <span className='name'>Abdulkadir Awel</span>
           <span className='role'>I'm a Full-Stack Developer</span>
         </h1>
       </div>
