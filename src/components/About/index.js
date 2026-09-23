@@ -77,7 +77,7 @@ const About = ({ className, aboutSectionRef }) => {
       <div id='about' className={`${className} pb-5`} ref={aboutSectionRef}>
         <Container className='about__content px-sm-1 px-md-5 px-lg-1 px-xl-5 col-lg-9 col-lg-offset-2'>
           <h1 className='center' data-aos='fade-up'>
-            about myself
+            about me
           </h1>
 
           <div className='about__section'>
