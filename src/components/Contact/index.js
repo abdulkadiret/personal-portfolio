@@ -1,4 +1,5 @@
 import React from 'react';
+import emailjs from '@emailjs/browser';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './style.css';
@@ -7,7 +8,6 @@ import TextareaAutosize from 'react-textarea-autosize';
 import { Formik } from 'formik';
 import { LuSend } from 'react-icons/lu';
 import * as Yup from 'yup';
-import axios from 'axios';
 
 //call configure method
 toast.configure();
@@ -32,8 +32,7 @@ const Contact = ({ className }) => {
           <div data-aos='fade-up'>
             <h1 className='center'>Get in touch</h1>
             <p className='text-center pb-3'>
-              Whether you want to get in touch, talk about a project
-              collaboration, or just say hi, feel free to shoot me an email!
+              I'm always open to new opportunities, interesting projects, and meaningful conversations. Feel free to drop me a message!
             </p>
           </div>
           <Formik
@@ -44,48 +43,67 @@ const Contact = ({ className }) => {
               message: '',
             }}
             validationSchema={validationSchema}
-            onSubmit={(values, { setSubmitting, resetForm }) => {
-              setTimeout(() => {
-                axios
-                  .post('/api/sendmail', {
-                    fullname: values.fullname,
-                    email: values.email,
-                    subject: values.subject,
-                    message: values.message,
-                  })
-                  .then((response) => {
-                    toast.error(
-                      'Whoops, sorry for the inconvenience! this section is under construction. It should be fixed quite soon. But in the meantime you can in touch with me using the other social links on the page.',
-                      {
-                        position: 'bottom-right',
-                        autoClose: 4000,
-                        hideProgressBar: true,
-                        closeOnClick: true,
-                        pauseOnHover: true,
-                        draggable: true,
-                        progress: undefined,
-                        className: 'toast__class',
-                      }
-                    );
-                  })
-                  .catch((error) => {
-                    toast.error(
-                      'Failed to send your message. Please try again later.',
-                      {
-                        position: 'bottom-right',
-                        autoClose: 4000,
-                        hideProgressBar: true,
-                        closeOnClick: true,
-                        pauseOnHover: true,
-                        draggable: true,
-                        progress: undefined,
-                        className: 'toast__class',
-                      }
-                    );
-                  });
+            onSubmit={async (values, { setSubmitting, resetForm }) => {
+              try {
+                const now = new Date();
+
+                const date = now.toLocaleDateString('en-GB', {
+                  day: 'numeric',
+                  month: 'long',
+                  year: 'numeric',
+                });
+
+                const time = now.toLocaleTimeString('en-GB', {
+                  hour: 'numeric',
+                  minute: '2-digit',
+                  hour12: true,
+                });
+
+                const templateParams = {
+                  fullname: values.fullname,
+                  email: values.email,
+                  subject: values.subject,
+                  message: values.message,
+                  date,
+                  time,
+                };
+
+                await emailjs.send(
+                  process.env.REACT_APP_EMAILJS_SERVICE_ID,
+                  process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+                  templateParams,
+                  process.env.REACT_APP_EMAILJS_PUBLIC_KEY,
+                );
+
+                toast.success('Your message has been sent successfully!', {
+                  position: 'bottom-right',
+                  autoClose: 4000,
+                  hideProgressBar: true,
+                  closeOnClick: true,
+                  pauseOnHover: true,
+                  draggable: true,
+                  className: 'toast__class',
+                });
+
                 resetForm();
+              } catch (error) {
+                console.error('Contact form submission error:', error);
+
+                toast.error(
+                  'Failed to send your message. Please try again later.',
+                  {
+                    position: 'bottom-right',
+                    autoClose: 4000,
+                    hideProgressBar: true,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    className: 'toast__class',
+                  },
+                );
+              } finally {
                 setSubmitting(false);
-              }, 500);
+              }
             }}
           >
             {(formik) => (
