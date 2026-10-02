@@ -7,15 +7,22 @@ import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md';
 
 const About = ({ className, aboutSectionRef }) => {
   const [activeTab, setActiveTab] = useState('All');
-  const scrollRef = useRef(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(false);
+
+  const scrollRef = useRef(null);
+  const activeTabRef = useRef(null);
+
+  const domains = useMemo(
+    () => ['All', ...skillsData.map((d) => d.domainName)],
+    [],
+  );
 
   const allSkills = skillsData.flatMap((domain) =>
     domain.skills.map((skill) => ({
       ...skill,
       domain: domain.domainName,
-    }))
+    })),
   );
 
   const filteredSkills =
@@ -23,25 +30,15 @@ const About = ({ className, aboutSectionRef }) => {
       ? allSkills
       : allSkills.filter((skill) => skill.domain === activeTab);
 
-  const domains = useMemo(
-    () => ['All', ...skillsData.map((d) => d.domainName)],
-    []
-  );
-
   const checkScroll = () => {
-    requestAnimationFrame(() => {
-      const el = scrollRef.current;
-      if (!el) return;
+    const el = scrollRef.current;
+    if (!el) return;
 
-      const precision = 2;
+    const { scrollLeft, scrollWidth, clientWidth } = el;
+    const tolerance = 2;
 
-      const atStart = el.scrollLeft <= precision;
-      const atEnd =
-        el.scrollLeft + el.clientWidth >= el.scrollWidth - precision;
-
-      setCanScrollLeft(!atStart);
-      setCanScrollRight(!atEnd);
-    });
+    setCanScrollLeft(scrollLeft > tolerance);
+    setCanScrollRight(scrollLeft + clientWidth < scrollWidth - tolerance);
   };
 
   useEffect(() => {
@@ -53,23 +50,47 @@ const About = ({ className, aboutSectionRef }) => {
 
     // Scroll listener
     el.addEventListener('scroll', checkScroll);
-
     // Resize observer to detect layout changes
-    const resizeObserver = new ResizeObserver(checkScroll);
-    resizeObserver.observe(el);
+    window.addEventListener('resize', checkScroll);
 
     return () => {
       el.removeEventListener('scroll', checkScroll);
-      resizeObserver.disconnect();
+      window.removeEventListener('resize', checkScroll);
     };
-  }, [domains]);
+  }, []);
 
-  const scrollLeft = () => {
-    scrollRef.current?.scrollBy({ left: -150, behavior: 'smooth' });
-  };
+  useEffect(() => {
+    const container = scrollRef.current;
+    const activeTabElement = activeTabRef.current;
 
-  const scrollRight = () => {
-    scrollRef.current?.scrollBy({ left: 150, behavior: 'smooth' });
+    if (!container || !activeTabElement) return;
+
+    const containerRect = container.getBoundingClientRect();
+    const tabRect = activeTabElement.getBoundingClientRect();
+
+    const offset =
+      tabRect.left -
+      containerRect.left -
+      container.clientWidth / 2 +
+      tabRect.width / 2;
+
+    container.scrollTo({
+      left: container.scrollLeft + offset,
+      behavior: 'smooth',
+    });
+
+    // Recheck arrow visibility after the tab has moved
+    requestAnimationFrame(checkScroll);
+  }, [activeTab]);
+
+  const handleTabNavigation = (direction) => {
+    const currentIndex = domains.indexOf(activeTab);
+
+    const nextIndex = currentIndex + direction;
+
+    if (nextIndex < 0 || nextIndex >= domains.length) return;
+
+    setActiveTab(domains[nextIndex]);
   };
 
   return (
@@ -77,7 +98,7 @@ const About = ({ className, aboutSectionRef }) => {
       <div id='about' className={`${className} pb-5`} ref={aboutSectionRef}>
         <Container className='about__content px-sm-1 px-md-5 px-lg-1 px-xl-5 col-lg-9 col-lg-offset-2'>
           <h1 className='center' data-aos='fade-up'>
-          about me
+            about me
           </h1>
 
           <div className='about__section'>
@@ -164,22 +185,27 @@ const About = ({ className, aboutSectionRef }) => {
               className='nav-tabs-scroll-container d-flex align-items-center position-relative mb-3'
               data-aos='fade-up'
             >
-              {/* Left Scroll Button */}
+              {/* Previous Skill Tab */}
               {canScrollLeft && (
-                <button className='scroll-btn left' onClick={scrollLeft}>
-                  <MdKeyboardArrowLeft className='slider-icon' />
+                <button
+                  type='button'
+                  className='scroll-btn left'
+                  onClick={() => handleTabNavigation(-1)}
+                  aria-label='Previous skill category'
+                >
+                  <MdKeyboardArrowLeft
+                    className='slider-icon left'
+                    aria-hidden='true'
+                  />
                 </button>
               )}
 
-              <div
-                className='nav-tabs-wrapper flex-grow-1 overflow-auto'
-                ref={scrollRef}
-              >
-                {/* Bootstrap Nav Tabs */}
+              <div className='nav-tabs-wrapper' ref={scrollRef}>
                 <ul className='nav nav-tabs border-bottom-0' id='skillsTab'>
                   {domains.map((domain) => (
                     <li className='nav-item' key={domain}>
                       <button
+                        ref={activeTab === domain ? activeTabRef : null}
                         className={`nav-link rounded-0 pb-1 pt-2 m-1 ${
                           activeTab === domain ? 'active' : ''
                         }`}
@@ -192,10 +218,18 @@ const About = ({ className, aboutSectionRef }) => {
                 </ul>
               </div>
 
-              {/* Right Scroll Button */}
+              {/* Next Skill Tab */}
               {canScrollRight && (
-                <button className='scroll-btn right' onClick={scrollRight}>
-                  <MdKeyboardArrowRight className='slider-icon' />
+                <button
+                  type='button'
+                  className='scroll-btn right'
+                  onClick={() => handleTabNavigation(1)}
+                  aria-label='Next skill category'
+                >
+                  <MdKeyboardArrowRight
+                    className='slider-icon right'
+                    aria-hidden='true'
+                  />
                 </button>
               )}
             </div>

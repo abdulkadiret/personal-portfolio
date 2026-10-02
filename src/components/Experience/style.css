@@ -171,8 +171,11 @@
 }
 
 .nav-tabs-wrapper {
-  overflow-x: auto;
+  min-width: 0;
   flex-grow: 1;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
@@ -182,9 +185,14 @@
 }
 
 .nav-tabs {
+  display: flex;
   flex-wrap: nowrap;
-  white-space: nowrap;
+  width: max-content;
   margin-bottom: 0;
+}
+
+.nav-tabs .nav-item {
+  flex: 0 0 auto;
 }
 
 #experienceTabs > .nav-item > button {

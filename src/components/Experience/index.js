@@ -12,6 +12,7 @@ const Experience = ({ className }) => {
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(false);
   const scrollRef = useRef(null);
+  const activeTabRef = useRef(null);
 
   const checkScroll = () => {
     const el = scrollRef.current;
@@ -24,13 +25,14 @@ const Experience = ({ className }) => {
     setCanScrollRight(scrollLeft + clientWidth < scrollWidth - tolerance);
   };
 
-  const scroll = (offset) => {
-    const el = scrollRef.current;
-    if (!el) return;
+  const handleTabNavigation = (direction) => {
+    const currentIndex = data.findIndex((item) => item.id === myExperience);
 
-    el.scrollBy({ left: offset, behavior: 'smooth' });
+    const nextIndex = currentIndex + direction;
 
-    setTimeout(checkScroll, 300);
+    if (nextIndex < 0 || nextIndex >= data.length) return;
+
+    setMyExperience(data[nextIndex].id);
   };
 
   useEffect(() => {
@@ -47,6 +49,27 @@ const Experience = ({ className }) => {
     };
   }, []);
 
+  useEffect(() => {
+    const container = scrollRef.current;
+    const activeTab = activeTabRef.current;
+
+    if (!container || !activeTab) return;
+
+    const containerRect = container.getBoundingClientRect();
+    const tabRect = activeTab.getBoundingClientRect();
+
+    const offset =
+      tabRect.left -
+      containerRect.left -
+      container.clientWidth / 2 +
+      tabRect.width / 2;
+
+    container.scrollTo({
+      left: container.scrollLeft + offset,
+      behavior: 'smooth',
+    });
+  }, [myExperience]);
+
   return (
     <section>
       <div id='experience' className={`${className} pb-5`}>
@@ -62,19 +85,20 @@ const Experience = ({ className }) => {
             {/* Left Scroll Button */}
             {canScrollLeft && (
               <button
+                type='button'
                 className='scroll-btn left'
-                onClick={() => scroll(-150)}
-                aria-label='Scroll left'
+                onClick={() => handleTabNavigation(-1)}
+                aria-label='Previous experience'
               >
-                <MdKeyboardArrowLeft className='slider-icon left' />
+                <MdKeyboardArrowLeft
+                  className='slider-icon left'
+                  aria-hidden='true'
+                />
               </button>
             )}
 
             {/* Scrollable Tabs */}
-            <div
-              className='nav-tabs-wrapper flex-grow-1 overflow-auto'
-              ref={scrollRef}
-            >
+            <div className='nav-tabs-wrapper' ref={scrollRef}>
               <ul
                 className='nav nav-tabs flex-nowrap border-bottom-0'
                 id='experienceTabs'
@@ -82,6 +106,7 @@ const Experience = ({ className }) => {
                 {data.map(({ id, title }) => (
                   <li className='nav-item' key={id}>
                     <button
+                      ref={myExperience === id ? activeTabRef : null}
                       className={`nav-link rounded-0 pb-1 pt-2 m-1 ${
                         myExperience === id ? 'active' : ''
                       }`}
@@ -97,11 +122,15 @@ const Experience = ({ className }) => {
             {/* Right Scroll Button */}
             {canScrollRight && (
               <button
+                type='button'
                 className='scroll-btn right'
-                onClick={() => scroll(150)}
-                aria-label='Scroll right'
+                onClick={() => handleTabNavigation(1)}
+                aria-label='Next experience'
               >
-                <MdKeyboardArrowRight className='slider-icon right' />
+                <MdKeyboardArrowRight
+                  className='slider-icon right'
+                  aria-hidden='true'
+                />
               </button>
             )}
           </div>
@@ -143,12 +172,7 @@ const ExperienceDetail = ({ id }) => {
       className='experience__wrapper'
       data-aos='fade-up'
     >
-      <CSSTransition
-        key={foundExperience.id}
-        appear={true}
-        timeout={10000}
-        classNames='fade'
-      >
+      <CSSTransition key={foundExperience.id} appear={true} timeout={10000} classNames='fade'>
         <div>
           <h2 className='experience'>
             <span className='roles pr-1'>{foundExperience.title}</span>
