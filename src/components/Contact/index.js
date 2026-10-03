@@ -75,7 +75,7 @@ const Contact = ({ className }) => {
                   process.env.REACT_APP_EMAILJS_PUBLIC_KEY,
                 );
 
-                toast.success('Your message has been sent successfully!', {
+                toast.success("Thanks for reaching out! I'll get back to you soon.", {
                   position: 'bottom-right',
                   autoClose: 4000,
                   hideProgressBar: true,
@@ -90,7 +90,7 @@ const Contact = ({ className }) => {
                 console.error('Contact form submission error:', error);
 
                 toast.error(
-                  'Failed to send your message. Please try again later.',
+                  'Message failed to send. Please try again.',
                   {
                     position: 'bottom-right',
                     autoClose: 4000,
