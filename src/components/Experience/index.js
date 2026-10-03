@@ -5,7 +5,7 @@ import CV from '../../assets/CV.pdf';
 import { Container } from 'react-bootstrap';
 import DownloadIcon from '../../assets/images/download-icon.gif';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
-import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md';
+import { MdKeyboardArrowLeft, MdKeyboardArrowRight  } from 'react-icons/md';
 
 const Experience = ({ className }) => {
   const [myExperience, setMyExperience] = useState(1);
@@ -172,6 +172,10 @@ const ExperienceDetail = ({ id }) => {
       className='experience__wrapper'
       data-aos='fade-up'
     >
+      <span className="corner corner__top__left"></span>
+      <span className="corner corner__top__right"></span>
+      <span className="corner corner__bottom__left"></span>
+      <span className="corner corner__bottom__right"></span>
       <CSSTransition key={foundExperience.id} appear={true} timeout={10000} classNames='fade'>
         <div>
           <h2 className='experience'>
@@ -189,13 +193,14 @@ const ExperienceDetail = ({ id }) => {
             </span>
           </h2>
           <h3 className='date'>{foundExperience.date}</h3>
-          <ul className='experiences__list'>
-            {foundExperience.role.map((list, index) => (
-              <li className='list__items' key={index}>
-                {list}
-              </li>
-            ))}
-          </ul>
+         <ul className="experiences__list">
+          {foundExperience.role.map((list, index) => (
+            <li className="list__items" key={index}>
+              <MdKeyboardArrowRight className="experience__icon" />
+              <span>{list}</span>
+            </li>
+          ))}
+        </ul>
         </div>
       </CSSTransition>
     </TransitionGroup>
