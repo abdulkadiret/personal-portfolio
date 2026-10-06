@@ -122,8 +122,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 45px;
-  height: 45px;
+  width: 36px;
+  height: 36px;
   border-radius: 5px;
   color: var(--lighter-gray);
   background-color: transparent;
@@ -133,9 +133,8 @@
 }
 
 .scroll__icon__btn:hover {
-  /* background-color: var(--background-color); */
-  border-color: transparent;
-  box-shadow: 0 0 3px 3px var(--primary-color-01);
+  border: 1px solid transparent;
+  box-shadow: 0 0 2px 2px var(--primary-color-01);
 }
 
 .scroll__icon__btn .scrollDown__icon {

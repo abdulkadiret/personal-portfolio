@@ -1,53 +1,13 @@
-.right__side,
 .left__side {
   width: 50px;
   position: fixed;
   top: 50%;
+  left: 0;
   transform: translateY(-50%);
   z-index: 10;
 }
 
-.right__side {
-  right: 0.5rem;
-}
-
-.left__side {
-  left: 0;
-}
-
-.right__side__mailto {
-  border-radius: 5px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-
-  background: var(--glassy-bg);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-}
-
-.right__side__mailto > a {
-  display: flex;
-  align-items: center;
-  writing-mode: vertical-rl;
-  margin: 15px auto;
-}
-
-.email__link {
-  color: var(--lighter-gray);
-  text-decoration: none;
-  font-family: "Fira Code", monospace;
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.email__link:hover,
-.email__link:focus {
-  transform: translateY(-4px);
-  outline: none;
-  color: var(--primary-color);
-}
-
+/* Social links */
 .left__side__socialLinks {
   display: flex;
   flex-direction: column;
@@ -71,13 +31,17 @@
   margin: 10px 0 0;
   position: relative;
   left: -20px;
-  transition: all 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
 }
 
 .left__side__socialLinks > li > a:hover {
   background-color: var(--background-color);
-  border: 1px solid transparent;
-  box-shadow: 0 0 3px 3px var(--primary-color-01);
+  border-color: transparent;
+  box-shadow: 0 0 2px 2px var(--primary-color-01);
   transform: translateY(-4px);
 }
 
@@ -88,22 +52,21 @@
 .social__icons {
   font-size: 2rem;
   color: var(--lighter-gray);
-  transition: transform 0.3s ease, color 0.3s ease;
+  transition: color 0.3s ease;
 }
 
 .social__icon__btn {
-  width: 45px;
-  height: 45px;
+  width: 42px;
+  height: 42px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  transition: all 0.3s ease;
   color: inherit;
   text-decoration: none;
 }
 
-/* Toggle Button */
+/* Toggle button */
 .side__content__toggle__btn {
   color: var(--lighter-gray);
   background-color: var(--glassy);
@@ -111,35 +74,33 @@
   -webkit-backdrop-filter: blur(5px);
   position: fixed;
   left: 0.75rem;
-  width: 40px;
-  height: 40px;
+  width: 38px;
+  height: 38px;
   border: 1px solid transparent;
   border-radius: 5px;
-  outline: none;
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: border 0.3s ease, box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease;
 }
 
-.side__content__toggle__btn.hovered {
-  /* background-color: var(--background-color); */
-  border: 1px solid transparent;
-  box-shadow: 0 0 3px 3px var(--primary-color-01);
+.side__content__toggle__btn:hover {
+  box-shadow: 0 0 2px 2px var(--primary-color-01);
 }
 
-.toggle-icon {
-  color: var(--lighter-gray);
-  font-size: 1.75rem;
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.side__content__toggle__btn.hovered .toggle-icon {
+.toggle__side__content .toggle-icon {
   color: var(--text-color);
+  font-size: 1.75rem;
+  opacity: 0.3;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease,
+    color 0.3s ease;
 }
 
-.side__content__toggle__btn .toggle-icon.left {
-  transform: translateX(2px);
+.toggle__side__content:hover .toggle-icon {
+  opacity: 1;
+  color: var(--primary-color);
 }
 
 .side__content__toggle__btn:hover .toggle-icon.left {
@@ -148,14 +109,4 @@
 
 .side__content__toggle__btn:hover .toggle-icon.right {
   transform: translateX(5px);
-}
-
-.side__line__1,
-.side__line__2
- {
-  width: 1px;
-  height: 70px;
-  background-color: var(--lighter-gray);
-  margin-top: 1rem;
-  margin-bottom: 1rem;
 }

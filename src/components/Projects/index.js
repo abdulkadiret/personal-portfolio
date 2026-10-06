@@ -16,30 +16,32 @@ const Projects = ({ className }) => {
         </h1>
 
         {data.map(
-          ({
-            id,
-            title,
-            description,
-            technologies,
-            sourceCode,
-            link,
-            image,
-          }) => (
+          (
+            { id, title, description, technologies, sourceCode, link, image },
+            index,
+          ) => (
             <div className='projects__container' key={id}>
               <div
                 className='row horizontal__card justify-content-md-center'
                 data-aos='fade-up'
               >
                 {/* Left Side */}
-                <div className='col col-lg-7 card__left'>
+                <div className='col-12 col-lg-7 card__left'>
+                  <Card.Title className='project__title'>
+                    <span className='project__number'>
+                      {String(index + 1).padStart(2, '0')}.
+                    </span>{' '}
+                    {title}
+                  </Card.Title>
                   <div className='img__container'>
                     <img
                       src={image}
                       alt={`Screenshot of ${title}`}
                       className='project__image'
                     />
-                    <span className='project__title-overlay'>{title}</span>
                   </div>
+
+                  {/* Project links */}
                   <div className='links__panel position-absolute d-flex flex-column justify-content-between align-items-center'>
                     <OverlayTrigger
                       placement='left'
@@ -51,7 +53,7 @@ const Projects = ({ className }) => {
                         target='_blank'
                         aria-label={`Live demo of ${title}`}
                         rel='noopener noreferrer'
-                        className='live__app__link'
+                        className='live__app__link project__link'
                       >
                         <RxExternalLink
                           className='live__app__icon'
@@ -70,7 +72,7 @@ const Projects = ({ className }) => {
                         target='_blank'
                         aria-label={`Source code of ${title}`}
                         rel='noopener noreferrer'
-                        className='source__code__link'
+                        className='source__code__link project__link'
                       >
                         <TbBrandGithub
                           className='source__code__icon'
@@ -79,27 +81,28 @@ const Projects = ({ className }) => {
                       </a>
                     </OverlayTrigger>
                   </div>
+
+                  {/* Technologies */}
                   <div className='row tech'>
                     <div className='inner__left'>
-                      <ul className='technologies d-flex flex-wrap pl-0'>
-                        {technologies.map((technology, index) => (
-                          <li key={index} className='pr-2 mt-1'>
-                            <span className='technology'>{technology}</span>
-                          </li>
-                        ))}
-                      </ul>
+                      <div className='technologies'>
+                        <div className='technologies__list'>
+                          {technologies.map((technology, index) => (
+                            <span key={index} className='technology'>
+                              {technology}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
 
                 {/* Right Side */}
-                <div className='col col-lg-5 col-sm-6 d-none d-lg-block'>
+                <div className='col-12 col-lg-5'>
                   <Card className='card__right'>
                     <Card.Body className='right__card__body'>
-                      <Card.Title className='right__card__title underline-title'>
-                        {title}
-                      </Card.Title>
-                      <Card.Text className='right__card__text project__description p-2'>
+                      <Card.Text className='right__card__text project__description'>
                         {description}
                       </Card.Text>
                     </Card.Body>
@@ -107,7 +110,7 @@ const Projects = ({ className }) => {
                 </div>
               </div>
             </div>
-          )
+          ),
         )}
       </Container>
     </section>

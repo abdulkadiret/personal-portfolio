@@ -98,20 +98,19 @@ body::-webkit-scrollbar {
   display: none;
 }
 
-/* Scroll buttons for horizontal scrolling of skills and experiences section*/
+/* Scroll buttons for horizontal scrolling of skills and experiences section */
 .scroll-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: none;
-    cursor: pointer;
-    border: 1px solid var(--chevron-color);
-    width: 2.34rem;
-    height: 2.34rem;
-    color: var(--text-color);
-    opacity: 0.25;
-    z-index: 2;
-    transition: color 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  cursor: pointer;
+  border: 1px solid color-mix(in srgb, var(--chevron-color) 30%, transparent);
+  border-radius: 3px;
+  width: 36px;
+  height: 36px;
+  color: var(--text-color);
+  z-index: 2;
 }
 
 .scroll-btn.left {
@@ -122,14 +121,25 @@ body::-webkit-scrollbar {
   margin-left: 5px;
 }
 
-.scroll-btn.left:hover,
-.scroll-btn.right:hover {
-  color: var(--text-color);
-  border-color: transparent;
+.slider-icon {
+  font-size: 2rem;
+  opacity: 0.3;
+  transition:
+    color 0.3s ease,
+    opacity 0.3s ease;
+}
+
+/* Hover: only the icon becomes fully visible */
+.scroll-btn:hover .slider-icon {
+  color: var(--primary-color);
   opacity: 1;
-  box-shadow: 0 0 3px 3px var(--primary-color-01);
 }
 
 .slider-icon {
   font-size: 2rem;
+}
+
+.nav-link {
+    display: block;
+    padding: 0.4rem 0.75rem;
 }
