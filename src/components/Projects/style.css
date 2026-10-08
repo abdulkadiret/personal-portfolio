@@ -8,7 +8,7 @@
 
 /* Technologies */
 .technologies {
-  width: 97%;
+  width: 96%;
   overflow-x: auto;
   overflow-y: hidden;
   margin-bottom: 10px;
@@ -149,7 +149,7 @@
 
 /* Technologies Area */
 .inner__left {
-  width: 96%;
+  width: 95%;
   display: inline-block;
   margin-left: 1rem;
   vertical-align: top;
@@ -190,7 +190,7 @@
     'Fira Mono',
     'Roboto Mono',
     monospace;
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.12em;
 }
