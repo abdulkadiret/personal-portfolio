@@ -59,7 +59,8 @@
   bottom: 0;
   left: 50%;                   
   width: 50%;                 
-  height: 3px;
+  height: 2.5px;
+  border-radius: 5px;
   background: var(--primary-color);
   transform: translateX(-50%) scaleX(0); 
   transform-origin: center;

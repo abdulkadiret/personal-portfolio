@@ -26,7 +26,7 @@
 
 /* Horizontal scrollbar */
 .technologies::-webkit-scrollbar {
-  height: 3.5px;
+  height: 3px;
 }
 
 .technologies::-webkit-scrollbar-track {
@@ -226,7 +226,7 @@
 
 /* Description Scrollbar Chrome / Edge / Safari */
 .right__card__text::-webkit-scrollbar {
-  width: 3.5px;
+  width: 3px;
 }
 
 .right__card__text::-webkit-scrollbar-track {
