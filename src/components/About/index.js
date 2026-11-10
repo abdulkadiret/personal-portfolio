@@ -206,7 +206,7 @@ const About = ({ className, aboutSectionRef }) => {
                     <li className='nav-item' key={domain}>
                       <button
                         ref={activeTab === domain ? activeTabRef : null}
-                        className={`nav-link rounded-0 m-1 ${
+                        className={`nav-link m-1 ${
                           activeTab === domain ? 'active' : ''
                         }`}
                         onClick={() => setActiveTab(domain)}

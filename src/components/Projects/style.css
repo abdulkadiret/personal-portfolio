@@ -106,8 +106,7 @@
   top: 0;
   right: 2px;
   width: 48px;
-  min-height: 96px;
-  padding: 6px;
+  padding: 3px;
   background-color: var(--frame-color);
   border: 1px solid var(--frame-color);
   border-radius: 3px;
@@ -119,6 +118,7 @@
   .project__link {
   width: 36px;
   height: 36px;
+  margin: 3px auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -165,7 +165,7 @@
   position: relative;
   height: 97%;
   background-color: transparent;
-  padding: 1rem 1.25rem;
+  padding: 1rem 0 1rem 1rem;
   border: 1px solid var(--frame-color);
   border-radius: 3px;
   transition:
@@ -218,8 +218,6 @@
   padding-right: 15px !important;
   margin-bottom: 0 !important;
   font-family: 'Lato', sans-serif, 'Times New Roman';
-  font-size: 1rem;
-  line-height: 1.7;
   text-align: left;
   word-break: break-word;
 }
@@ -264,10 +262,8 @@
 
   .card__right {
     width: 97%;
-
     margin-top: 0.75rem;
     margin-bottom: 1.5rem;
-
     padding: 1rem;
   }
 
@@ -280,15 +276,12 @@
 @media (max-width: 575px) {
   .projects__container {
     padding-top: 0.75rem;
-    padding-bottom: 1.5rem;
   }
 
   .links__panel {
     top: 0;
     right: 0;
-    width: 44px;
-    min-height: 88px;
-    padding: 5px;
+    width: 47px;
   }
 
   .project__link {
@@ -308,10 +301,6 @@
   .right__card__text {
     font-size: 0.95rem;
   }
-
-  .technology {
-    font-size: 0.75rem;
-  }
 }
 
 /* Reduced Motion */
@@ -324,4 +313,101 @@
   .live__app__icon {
     transition: none;
   }
+}
+
+/* Hide details icon on desktop */
+.project__details__link {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+}
+
+.project__details__icon {
+  font-size: 1.8rem;
+}
+
+/* Hide mobile description on desktop */
+.project__mobile__details {
+  display: none;
+}
+
+@media (max-width: 991.98px) {
+  .project__details__link {
+    display: flex;
+  }
+
+  .project__mobile__details {
+    display: grid;
+    grid-template-rows: 0fr;
+    opacity: 0;
+    transition:
+      grid-template-rows 0.35s ease,
+      opacity 0.35s ease;
+  }
+
+  .project__mobile__details.is-open {
+    grid-template-rows: 1fr;
+    opacity: 1;
+  }
+
+  .project__mobile__description {
+    min-height: 0;
+  }
+
+  .project__mobile__details.is-open
+  .project__mobile__description {
+    padding: 0.85rem;
+    background-color: transparent;
+    box-sizing: border-box;
+    border: 1.25px dashed var(--transparent-border);
+    border-radius: 0;
+    transition:
+      background-color 0.4s ease;
+  }
+
+  .horizontal__card:hover .project__mobile__details {
+    background-color: var(--frame-color);
+  }
+}
+
+/* Common corner style */
+.corner {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Top-left */
+.details__corner__top__left {
+  top: 0;
+  left: 15px;
+  border-top: 1.5px solid var(--primary-color);
+  border-left: 1.5px solid var(--primary-color);
+}
+
+/* Top-right */
+.details__corner__top__right {
+  top: 0;
+  right: 15px;
+  border-top: 1.5px solid var(--primary-color);
+  border-right: 1.5px solid var(--primary-color);
+}
+
+/* Bottom-left */
+.details__corner__bottom__left {
+  bottom: 0;
+  left: 15px;
+  border-bottom: 1.5px solid var(--primary-color);
+  border-left: 1.5px solid var(--primary-color);
+}
+
+/* Bottom-right */
+.details__corner__bottom__right {
+  bottom: 0;
+  right: 15px;
+  border-bottom: 1.5px solid var(--primary-color);
+  border-right: 1.5px solid var(--primary-color);
 }

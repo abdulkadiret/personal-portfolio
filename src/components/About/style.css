@@ -74,10 +74,6 @@
   }
 }
 
-.personal__description {
-  text-align: justify;
-}
-
 .emoji-list {
   margin-top: 1rem;
   padding-left: 1.2rem;
@@ -141,14 +137,14 @@
 }
 
 .skill-name {
-  font-size: 0.85rem;
+  font-size: 0.7rem;
   color: var(--text-color);
 }
 
 #skillsTab > .nav-item > button {
-  border: 1px solid var(--transparent-border);
   color: var(--text-color);
   background-color: var(--frame-color);
+  border-radius: 3px;
 }
 
 .nav-tabs .nav-item:first-child .nav-link {
@@ -166,8 +162,11 @@
 }
 
 #skillsTab > .nav-item > button:hover {
-  border: 1px solid var(--text-color);
   color: var(--primary-color);
+}
+
+.nav-tabs .nav-link:hover {
+  border-color: transparent;
 }
 
 .nav-tabs-scroll-container {

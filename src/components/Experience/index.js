@@ -107,7 +107,7 @@ const Experience = ({ className }) => {
                   <li className='nav-item' key={id}>
                     <button
                       ref={myExperience === id ? activeTabRef : null}
-                      className={`nav-link rounded-0 m-1 ${
+                      className={`nav-link m-1 ${
                         myExperience === id ? 'active' : ''
                       }`}
                       onClick={() => setMyExperience(id)}

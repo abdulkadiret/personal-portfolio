@@ -218,9 +218,9 @@
 }
 
 #experienceTabs > .nav-item > button {
-  border: 1px solid var(--transparent-border);
   color: var(--text-color);
   background-color: var(--frame-color);
+  border-radius: 3px;
 }
 
 #experienceTabs > .nav-item > .active {
@@ -229,6 +229,5 @@
 }
 
 #experienceTabs > .nav-item > button:hover {
-  border: 1px solid var(--text-color);
   color: var(--primary-color);
 }
