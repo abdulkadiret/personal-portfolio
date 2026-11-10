@@ -57,47 +57,6 @@
   border-radius: 0;
 }
 
-/* Common corner style */
-.corner {
-  position: absolute;
-  width: 22px;
-  height: 22px;
-  pointer-events: none;
-  z-index: 1;
-}
-
-/* Top-left */
-.corner__top__left {
-  top: -1px;
-  left: -1px;
-  border-top: 1.5px solid var(--primary-color);
-  border-left: 1.5px solid var(--primary-color);
-}
-
-/* Top-right */
-.corner__top__right {
-  top: -1px;
-  right: -1px;
-  border-top: 1.5px solid var(--primary-color);
-  border-right: 1.5px solid var(--primary-color);
-}
-
-/* Bottom-left */
-.corner__bottom__left {
-  bottom: -1px;
-  left: -1px;
-  border-bottom: 1.5px solid var(--primary-color);
-  border-left: 1.5px solid var(--primary-color);
-}
-
-/* Bottom-right */
-.corner__bottom__right {
-  right: -1px;
-  bottom: -1px;
-  border-bottom: 1.5px solid var(--primary-color);
-  border-right: 1.5px solid var(--primary-color);
-}
-
 .roles {
   font-size: 18px;
   font-family: 'Arvo', serif, 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono',

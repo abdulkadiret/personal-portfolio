@@ -352,6 +352,7 @@
   }
 
   .project__mobile__description {
+    position: relative;
     min-height: 0;
   }
 
@@ -369,45 +370,4 @@
   .horizontal__card:hover .project__mobile__details {
     background-color: var(--frame-color);
   }
-}
-
-/* Common corner style */
-.corner {
-  position: absolute;
-  width: 22px;
-  height: 22px;
-  pointer-events: none;
-  z-index: 1;
-}
-
-/* Top-left */
-.details__corner__top__left {
-  top: 0;
-  left: 15px;
-  border-top: 1.5px solid var(--primary-color);
-  border-left: 1.5px solid var(--primary-color);
-}
-
-/* Top-right */
-.details__corner__top__right {
-  top: 0;
-  right: 15px;
-  border-top: 1.5px solid var(--primary-color);
-  border-right: 1.5px solid var(--primary-color);
-}
-
-/* Bottom-left */
-.details__corner__bottom__left {
-  bottom: 0;
-  left: 15px;
-  border-bottom: 1.5px solid var(--primary-color);
-  border-left: 1.5px solid var(--primary-color);
-}
-
-/* Bottom-right */
-.details__corner__bottom__right {
-  bottom: 0;
-  right: 15px;
-  border-bottom: 1.5px solid var(--primary-color);
-  border-right: 1.5px solid var(--primary-color);
 }
