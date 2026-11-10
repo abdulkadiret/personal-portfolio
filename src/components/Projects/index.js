@@ -31,8 +31,9 @@ const Projects = ({ className }) => {
             return (
               <div className="projects__container" key={id}>
                 <div
-                  className="row horizontal__card justify-content-md-center"
-                  data-aos="fade-up"
+                  className={`row horizontal__card justify-content-md-center ${
+                    index % 2 !== 0 ? "flex-lg-row-reverse" : ""
+                  }`}
                 >
                   {/* Left Side */}
                   <div className="col-12 col-lg-7 card__left">
