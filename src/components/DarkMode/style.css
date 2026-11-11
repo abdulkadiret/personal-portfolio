@@ -37,3 +37,9 @@
   background-color: #f2f27a93;
   cursor: pointer;
 }
+
+@media (max-width: 991.90px) {
+  #darkMode {
+    top: 0;
+  }
+}
