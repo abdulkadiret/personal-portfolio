@@ -1,8 +1,8 @@
 #darkMode {
   background: var(--toggleIcon) no-repeat center;
-  background-size: 20px 20px;
-  width: 30px;
-  height: 30px;
+  background-size: 15px 15px;
+  width: 25px;
+  height: 25px;
   filter: grayscale(0%);
   border: none;
   outline: none;
@@ -10,13 +10,7 @@
   background-color: #151b5459;
   transition: background-color 0.3s ease-in-out, filter 0.3s ease-in-out;
   position: relative;
-  top: 0;
-}
-
-@media (max-width: 991px) {
-  #darkMode {
-    margin-right: 0.75rem;
-  }
+  top: 3.5px;
 }
 
 #darkMode:hover {

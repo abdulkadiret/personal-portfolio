@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect, useCallback, useRef } from "react";
 import "./style.css";
 import { Navbar, Nav } from "react-bootstrap";
 import { Link, animateScroll as scroll } from "react-scroll";
@@ -16,28 +16,31 @@ const navItems = [
 
 const Navigation = () => {
   const [navbar, setNavbar] = useState({ show: true, bg: false });
-  const [lastScrollY, setLastScrollY] = useState(0);
+  const lastScrollY = useRef(0);
   const [expanded, setExpanded] = useState(false);
 
-  const handleScroll = useCallback(() => {
-    const currentScrollY = window.scrollY;
-    if (currentScrollY <= 0) {
-      setNavbar({ show: true, bg: false });
-    } else if (currentScrollY <= 180) {
-      setNavbar({ show: true, bg: false });
-    } else if (currentScrollY < lastScrollY) {
-      setNavbar({ show: true, bg: true });
-    } else {
-      setNavbar({ show: false, bg: false });
-    }
+ const handleScroll = useCallback(() => {
+  const currentScrollY = window.scrollY;
+  const previousScrollY = lastScrollY.current;
 
-    setLastScrollY(currentScrollY);
-  }, [lastScrollY]);
+  if (currentScrollY <= 180) {
+    setNavbar({ show: true, bg: false });
+  } else if (currentScrollY < previousScrollY) {
+    setNavbar({ show: true, bg: true });
+  } else if (currentScrollY > previousScrollY) {
+    setNavbar({ show: false, bg: false });
+  }
+
+  lastScrollY.current = currentScrollY;
+}, []);
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [handleScroll]);
+  window.addEventListener("scroll", handleScroll, { passive: true });
+
+  return () => {
+    window.removeEventListener("scroll", handleScroll);
+  };
+}, [handleScroll]);
 
   const getNavbarClass = () => {
     if (navbar.show && !navbar.bg) return "navbar--transparent";
@@ -46,21 +49,20 @@ const Navigation = () => {
     return "";
   };
 
-  const handleNavItemClick = () => {
-    if (window.innerWidth < 992) {
-      setExpanded(false);
-    }
-  };
+const handleNavItemClick = () => {
+  setExpanded(false);
+};
 
   return (
-    <Navbar
-      className={getNavbarClass()}
-      collapseOnSelect
-      expand="lg"
-      variant="light"
-      fixed="top"
-      expanded={expanded}
-    >
+   <Navbar
+  className={getNavbarClass()}
+  collapseOnSelect
+  expand="lg"
+  variant="light"
+  fixed="top"
+  expanded={expanded}
+  onToggle={setExpanded}
+>
       <Navbar.Brand
         onClick={() => scroll.scrollToTop()}
         className="navbar-logo"
@@ -76,12 +78,11 @@ const Navigation = () => {
           <DarkMode />
         </div>
 
-        <Navbar.Toggle
-          className="nav_toggle"
-          aria-controls="responsive-navbar-nav"
-          aria-label="Toggle navigation"
-          onClick={() => setExpanded(!expanded)}
-        />
+      <Navbar.Toggle
+  className="nav_toggle"
+  aria-controls="responsive-navbar-nav"
+  aria-label="Toggle navigation"
+/>
       </div>
 
       <Navbar.Collapse id="responsive-navbar-nav">
@@ -106,13 +107,13 @@ const Navigation = () => {
           ))}
         </Nav>
 
-        <div className="pl-3 pl-lg-0" data-aos="fade-down">
+        <div className="pl-0 pl-lg-0" data-aos="fade-down">
           <a
             href={CV}
             target="_blank"
             rel="noopener noreferrer"
             className="cv__link btn ml-lg-3 mr-lg-4"
-            aria-label="Download CV"
+            aria-label="View CV"
           >
             CV
             <img
