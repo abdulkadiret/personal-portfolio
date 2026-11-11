@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./style.css";
-import { Container, Card } from "react-bootstrap";
+import { Container, Card, Carousel } from "react-bootstrap";
 import data from "../../assets/data/projectData";
 import { RxExternalLink } from "react-icons/rx";
 import { TbBrandGithub, TbFileDescription } from "react-icons/tb";
@@ -23,7 +23,16 @@ const Projects = ({ className }) => {
 
         {data.map(
           (
-            { id, title, description, technologies, sourceCode, link, image },
+            {
+              id,
+              title,
+              description,
+              technologies,
+              sourceCode,
+              link,
+              image,
+              images,
+            },
             index,
           ) => {
             const detailsId = `project-details-${id}`;
@@ -44,11 +53,46 @@ const Projects = ({ className }) => {
                     </Card.Title>
 
                     <div className="img__container">
-                      <img
-                        src={image}
-                        alt={`Screenshot of ${title}`}
-                        className="project__image"
-                      />
+                      <Carousel
+                        fade
+                        interval={null}
+                        controls={images?.length > 1}
+                        indicators={images?.length > 1}
+                        touch
+                        pause="hover"
+                        className="project__carousel"
+                      >
+                        {(images?.length
+                          ? images
+                          : [
+                              {
+                                type: "image",
+                                src: image,
+                                alt: `Screenshot of ${title}`,
+                              },
+                            ]
+                        ).map((slide, slideIndex) => (
+                          <Carousel.Item key={slideIndex}>
+                            {slide.type === "video" ? (
+                              <video
+                                controls
+                                preload="metadata"
+                                className="project__image"
+                                aria-label={slide.alt}
+                              >
+                                <source src={slide.src} type="video/mp4" />
+                                Your browser does not support video playback.
+                              </video>
+                            ) : (
+                              <img
+                                src={slide.src}
+                                alt={slide.alt}
+                                className="project__image"
+                              />
+                            )}
+                          </Carousel.Item>
+                        ))}
+                      </Carousel>
                     </div>
 
                     {/* Project links over image */}
