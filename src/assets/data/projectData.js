@@ -186,7 +186,7 @@ const projectData = [
       "Heroku",
     ],
     sourceCode: "https://github.com/CodeYourFuture/project-quiz",
-    link: "https://mern-quiz-app.herokuapp.com",
+    link: "https://cyf-quiz.vercel.app/",
     images: [
       {
         type: "image",
