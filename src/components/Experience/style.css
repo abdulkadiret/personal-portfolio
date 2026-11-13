@@ -129,7 +129,6 @@
 .cv__link__2:active {
   /* background-color: var(--background-color); */
   color: var(--text-color);
-  border: 1px solid transparent;
   box-shadow: 0 0 2px 2px var(--primary-color-01); 
   font-weight: bold;
   transform: scale(1.02);
@@ -179,12 +178,14 @@
 #experienceTabs > .nav-item > button {
   color: var(--text-color);
   background-color: var(--frame-color);
+  border: 1px solid var(--frame-color);
   border-radius: 3px;
 }
 
 #experienceTabs > .nav-item > .active {
   color: var(--primary-color);
   background-color: var(--buttonHover-color);
+  border: 1px solid var(--buttonHover-color);
 }
 
 #experienceTabs > .nav-item > button:hover {
